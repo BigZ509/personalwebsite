@@ -33,7 +33,7 @@ Priorities: `P0` = blocking / essential, `P1` = important, `P2` = optional.
 | T24 | P0 | lead + assets | Build and capture cozy/cinematic/stylized-game compositions of one populated 3D desk | Done | User D-016 authorization; reuse licensed sources | `/compositions/`, 11 licensed GLBs, three actual screenshots, successful build/export and scoped browser evidence; old app files unchanged |
 | T25 | P0 | user | Review actual compositions and choose direction/revisions | Done | T24; D-018 | 02 Cinematic with warmth of 01 Cozy; preserve room/assets |
 | T26 | P0 | lead + assets | Robot reaction, camera approach, workshop and exact return | Done | D-018 | `/hub/`, browser screenshots/test evidence, component/limitations memory |
-| T27 | P1 | lead | Create GitHub personalwebsite repository and push | Blocked | D-021; auto-review requires explicit Keploy access approval | Local Working robot concept commit preparation; no remote creation/push; no deployment |
+| T27 | P1 | lead | Create GitHub personalwebsite repository and push | Done | D-021; user created repo and explicitly approved Keploy | Public BigZ509/personalwebsite, Working robot concept 0f67294 pushed; remote SHA verified; no deployment |
 | T28 | P0 | user | Review robot reaction, travel, workshop and return | Ready for review | T26 | Approve or revise bounded flow before any other worlds |
 
 ## Task change protocol

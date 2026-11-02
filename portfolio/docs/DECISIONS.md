@@ -170,3 +170,8 @@
 - Repository form auto-selects Keploy as auto-installed by BigZ509; item is inactive and cannot be removed via form controls.
 - Automatic approval review rejected creation because this would grant the third-party app access without explicit user approval. No creation/push executed. Do not bypass through another mechanism.
 - Local commit/staged-content verification is independent and remains authorized. Before remote creation, user must approve Keploy access or supply an empty repository without that integration.
+
+### D-021 completion — explicit integration approval and verified push
+- User created public `https://github.com/BigZ509/personalwebsite`, then explicitly approved continuing with Keploy left installed. This resolves the prior automatic approval-review blocker; no attempt was made to bypass it. The earlier private default was not the visibility of the user-created repository.
+- Pushed source milestone **Working robot concept**, commit `0f67294c8205ef00d5db52011db74db3bf8e0c9d`, to main. Git ls-remote verified the exact same SHA on GitHub; main tracks origin/main.
+- Documentation-only follow-up records the publication. No new application implementation, deployment, repository visibility changes or app-permission modifications. Continue waiting for visual review before more website work.

@@ -6,7 +6,7 @@ A persistent Markdown memory and research workspace for a Codex multi-agent team
 
 **Robot workshop ready for review (D-018).** [Open the approved warm Cinematic hub](http://127.0.0.1:4182/) or `/hub/`. Hover the robot for its authored Wave/highlight, select it to enter a small Robotics workshop, then use Back to Desk/Escape to restore your actual view. The room/assets are preserved; other three worlds remain unimplemented.
 
-[Review/checklist/component architecture](docs/ROBOT_WORKSHOP_REVIEW.md) · [Desk](output/playwright/robot-journey/01-desk.png) · [Workshop](output/playwright/robot-journey/04-workshop.png) · [Credits](public/licenses/desk-compositions/ATTRIBUTION.md). Build/export, eight unit tests and scoped actual-browser paths passed; see precise software-rendering/device limits. Git exists without commits/remote. D-020 stops implementation for visual review and prohibits repository creation, commits or deployment.
+[Review/checklist/component architecture](docs/ROBOT_WORKSHOP_REVIEW.md) · [Desk](output/playwright/robot-journey/01-desk.png) · [Workshop](output/playwright/robot-journey/04-workshop.png) · [Credits](public/licenses/desk-compositions/ATTRIBUTION.md). Build/export, eight unit tests and scoped actual-browser paths passed; see precise software-rendering/device limits. [Working robot concept published to GitHub](https://github.com/BigZ509/personalwebsite) under D-021; main tracks origin/main. User approved existing Keploy integration. D-020 website review stop remains; no deployment.
 
 ### Archived composition checkpoint — 2026-11-01
 
