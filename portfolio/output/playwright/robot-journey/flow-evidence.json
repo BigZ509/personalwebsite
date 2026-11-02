@@ -1,0 +1,330 @@
+{
+  "environment": {
+    "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+    "viewport": [
+      1600,
+      1100
+    ],
+    "canvases": 1
+  },
+  "initial": {
+    "camera": [
+      9.300000000000002,
+      7.15,
+      11.4
+    ],
+    "target": [
+      0,
+      2.9,
+      -0.1
+    ],
+    "robot": {
+      "asset": "/models/robot-expressive.glb",
+      "action": "Idle",
+      "actionTime": 0.8310666666428247,
+      "idleTime": 0.8310666666428247,
+      "waveTime": 0,
+      "mixerTime": 0.33106666664282486,
+      "running": true,
+      "reducedMotion": false,
+      "documentVisible": true,
+      "playing": true,
+      "waveStarts": 0,
+      "waveCompletions": 0,
+      "samples": 8,
+      "headWorld": [
+        2.258051717449104,
+        4.047279332077241,
+        -0.754095582115516
+      ],
+      "rightHandWorld": [
+        2.027204060468513,
+        3.352113778875743,
+        -0.31224853858941626
+      ],
+      "leftHandWorld": [
+        2.768118266130564,
+        3.3972363024853136,
+        -0.6925193834478225
+      ],
+      "headNode": "Head",
+      "rightHandNode": "Palm2R",
+      "leftHandNode": "Palm2L"
+    },
+    "world": "desk",
+    "calls": "237",
+    "triangles": "61478",
+    "screen": [
+      1042.3577077824848,
+      464.8810189935101
+    ]
+  },
+  "reactionStart": {
+    "camera": [
+      9.300000000000002,
+      7.15,
+      11.4
+    ],
+    "target": [
+      0,
+      2.9,
+      -0.1
+    ],
+    "robot": {
+      "asset": "/models/robot-expressive.glb",
+      "action": "Wave",
+      "actionTime": 0.13333333333333333,
+      "idleTime": 1.3784999999999998,
+      "waveTime": 0.13333333333333333,
+      "mixerTime": 0.8785,
+      "running": true,
+      "reducedMotion": false,
+      "documentVisible": true,
+      "playing": true,
+      "waveStarts": 1,
+      "waveCompletions": 0,
+      "samples": 17,
+      "headWorld": [
+        2.258051717449106,
+        4.065461135876788,
+        -0.7540955821155156
+      ],
+      "rightHandWorld": [
+        1.9434512238850448,
+        3.4454209398169198,
+        -0.2519014415122259
+      ],
+      "leftHandWorld": [
+        2.768118266130566,
+        3.4154181062848608,
+        -0.692519383447822
+      ],
+      "headNode": "Head",
+      "rightHandNode": "Palm2R",
+      "leftHandNode": "Palm2L"
+    },
+    "world": "desk",
+    "calls": "238",
+    "triangles": "61606",
+    "screen": [
+      1042.3577077824848,
+      464.8810189935101
+    ]
+  },
+  "reactionLater": {
+    "camera": [
+      9.300000000000002,
+      7.15,
+      11.4
+    ],
+    "target": [
+      0,
+      2.9,
+      -0.1
+    ],
+    "robot": {
+      "asset": "/models/robot-expressive.glb",
+      "action": "Wave",
+      "actionTime": 0.7586333333452542,
+      "idleTime": 1.4704666666785875,
+      "waveTime": 0.7586333333452542,
+      "mixerTime": 1.5038000000119207,
+      "running": true,
+      "reducedMotion": false,
+      "documentVisible": true,
+      "playing": true,
+      "waveStarts": 1,
+      "waveCompletions": 0,
+      "samples": 28,
+      "headWorld": [
+        2.258051717449104,
+        4.049345465135689,
+        -0.754095582115516
+      ],
+      "rightHandWorld": [
+        1.632205395245826,
+        4.188976534554532,
+        -0.4693114475647777
+      ],
+      "leftHandWorld": [
+        2.768118266130564,
+        3.3993024355437615,
+        -0.6925193834478225
+      ],
+      "headNode": "Head",
+      "rightHandNode": "Palm2R",
+      "leftHandNode": "Palm2L"
+    },
+    "world": "desk",
+    "calls": "238",
+    "triangles": "61606",
+    "screen": [
+      1042.3577077824848,
+      464.8810189935101
+    ]
+  },
+  "approaching": {
+    "camera": [
+      4.400856626874628,
+      4.966606984481131,
+      3.4689498246549615
+    ],
+    "target": [
+      2.0971787966223654,
+      3.869362643772116,
+      -0.7058516523575722
+    ],
+    "robot": {
+      "asset": "/models/robot-expressive.glb",
+      "action": "Wave",
+      "actionTime": 0.895866666684548,
+      "idleTime": 1.4704666666785875,
+      "waveTime": 0.895866666684548,
+      "mixerTime": 1.6410333333512144,
+      "running": true,
+      "reducedMotion": false,
+      "documentVisible": true,
+      "playing": true,
+      "waveStarts": 1,
+      "waveCompletions": 0,
+      "samples": 31,
+      "headWorld": [
+        2.2580517174491046,
+        4.052334384046827,
+        -0.7540955821155159
+      ],
+      "rightHandWorld": [
+        1.6055799672574695,
+        4.1649509456769795,
+        -0.45794023180931076
+      ],
+      "leftHandWorld": [
+        2.7681182661305646,
+        3.4022913544548996,
+        -0.6925193834478223
+      ],
+      "headNode": "Head",
+      "rightHandNode": "Palm2R",
+      "leftHandNode": "Palm2L"
+    },
+    "world": "desk",
+    "calls": "190",
+    "triangles": "50719",
+    "screen": [
+      851.7416752336926,
+      526.5038749059219
+    ]
+  },
+  "workshop": {
+    "camera": [
+      6.6,
+      5.5,
+      8.1
+    ],
+    "target": [
+      0,
+      2.65,
+      -0.3
+    ],
+    "robot": {
+      "asset": "/models/robot-expressive.glb",
+      "action": "Idle",
+      "actionTime": 1.3596333333154516,
+      "idleTime": 1.3596333333154516,
+      "waveTime": 0,
+      "mixerTime": 0.8596333333154519,
+      "running": true,
+      "reducedMotion": false,
+      "documentVisible": true,
+      "playing": true,
+      "waveStarts": 0,
+      "waveCompletions": 0,
+      "samples": 19,
+      "headWorld": [
+        0.012046718787277338,
+        3.9309723447677762,
+        0.09729914739945963
+      ],
+      "rightHandWorld": [
+        -0.4430339706562817,
+        2.980912755392396,
+        0.6043303824169357
+      ],
+      "leftHandWorld": [
+        0.6666467322000389,
+        3.0425802043254757,
+        0.35130019817663594
+      ],
+      "headNode": "Head",
+      "rightHandNode": "Palm2R",
+      "leftHandNode": "Palm2L"
+    },
+    "world": "workshop",
+    "calls": "130",
+    "triangles": "34580",
+    "screen": [
+      1136.4284419258536,
+      387.482616909467
+    ]
+  },
+  "returned": {
+    "camera": [
+      9.300000000000002,
+      7.15,
+      11.4
+    ],
+    "target": [
+      0,
+      2.9,
+      -0.1
+    ],
+    "robot": {
+      "asset": "/models/robot-expressive.glb",
+      "action": "Wave",
+      "actionTime": 0.13713333334525427,
+      "idleTime": 1.314633333345254,
+      "waveTime": 0.13713333334525427,
+      "mixerTime": 2.939433333357177,
+      "running": true,
+      "reducedMotion": false,
+      "documentVisible": true,
+      "playing": true,
+      "waveStarts": 2,
+      "waveCompletions": 0,
+      "samples": 89,
+      "headWorld": [
+        2.258051717449106,
+        4.064592969795072,
+        -0.7540955821155158
+      ],
+      "rightHandWorld": [
+        1.9322101976231638,
+        3.452257172384951,
+        -0.2475668843560917
+      ],
+      "leftHandWorld": [
+        2.768118266130566,
+        3.4145499402031443,
+        -0.6925193834478223
+      ],
+      "headNode": "Head",
+      "rightHandNode": "Palm2R",
+      "leftHandNode": "Palm2L"
+    },
+    "world": "desk",
+    "calls": "238",
+    "triangles": "61606",
+    "screen": [
+      1042.3577077824848,
+      464.8810189935101
+    ]
+  },
+  "sameCanvas": true,
+  "focusRestored": true,
+  "errors": [],
+  "requests": [],
+  "warnings": [
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+  ]
+}

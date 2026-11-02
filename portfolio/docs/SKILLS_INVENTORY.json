@@ -1,0 +1,461 @@
+{
+  "checked": "2026-11-01",
+  "scope": "On-disk skill inventory; plugin cache entries are not proof a plugin is enabled or selected in this turn. Symlink discovery aliases are not duplicate installations.",
+  "skills": [
+    {
+      "name": "imagegen",
+      "path": "/Users/bigz/.codex/skills/.system/imagegen/SKILL.md",
+      "sha256": "681ddb4ad6d06a2acc78a3535b583f8d0c1ea800ecda3d56370d3310fd2cd4ba",
+      "scope": "system"
+    },
+    {
+      "name": "openai-docs",
+      "path": "/Users/bigz/.codex/skills/.system/openai-docs/SKILL.md",
+      "sha256": "aa6829e21df2223167c85d2e49b6337a7345c84c1033f1ec10182c7882b36d45",
+      "scope": "system"
+    },
+    {
+      "name": "review-agent",
+      "path": "/Users/bigz/.codex/skills/.system/review-agent/SKILL.md",
+      "sha256": "07079efd0dc76f05fade424e5dfb048dce1de2df7626e1a4f56292a4f3f92228",
+      "scope": "system"
+    },
+    {
+      "name": "skill-creator",
+      "path": "/Users/bigz/.codex/skills/.system/skill-creator/SKILL.md",
+      "sha256": "6656e54755638e8efcf275a472b9672eaa8a9a1b9e59dc210e275b03b59e1e66",
+      "scope": "system"
+    },
+    {
+      "name": "skill-installer",
+      "path": "/Users/bigz/.codex/skills/.system/skill-installer/SKILL.md",
+      "sha256": "d68b77e5bbb34dedab89d134da52855f140fc4b4299b80104f534e3b9e98f8ee",
+      "scope": "system"
+    },
+    {
+      "name": "frontend-design",
+      "path": "/Users/bigz/.codex/skills/frontend-design/SKILL.md",
+      "sha256": "d91970639e9f5c37682ac7ab60094d35f1c7c1f38d731bd56396563aee10c1d3",
+      "scope": "user"
+    },
+    {
+      "name": "playwright",
+      "path": "/Users/bigz/.codex/skills/playwright/SKILL.md",
+      "sha256": "0ffaabcc8e0990627c4725f18bf1c7955534a796c1c199e872909de2013ce6a8",
+      "scope": "user"
+    },
+    {
+      "name": "vercel-react-best-practices",
+      "path": "/Users/bigz/.codex/skills/vercel-react-best-practices/SKILL.md",
+      "sha256": "71ed7794962fa6e803ee83030517b5b93a9f70fbfeb431ec4535c5480a8d8355",
+      "scope": "user"
+    },
+    {
+      "name": "best-practices",
+      "path": "/Users/bigz/.agents/skills/best-practices/SKILL.md",
+      "sha256": "7ec4e8865a55eb10a4a56de7b231b0fc5dc7610ec25ff07bf8a95f1588212592",
+      "scope": "user"
+    },
+    {
+      "name": "plain-writing",
+      "path": "/Users/bigz/.agents/skills/plain-writing/SKILL.md",
+      "sha256": "c11511f8c7013f289c8a523e50540937ddcd9730c2b9bbdc3726c0b1c05dc124",
+      "scope": "user"
+    },
+    {
+      "name": "redesign-screen",
+      "path": "/Users/bigz/.agents/skills/redesign-screen/SKILL.md",
+      "sha256": "459de98975d49a7b0a98d1bd4c1b4d6afe206f297e371221c3b6ed4b64bd8dd8",
+      "scope": "user"
+    },
+    {
+      "name": "search",
+      "path": "/Users/bigz/.agents/skills/search/SKILL.md",
+      "sha256": "67b5ccd6291cbbfcd2e299bee4d665ba546efeb492314bd232aafd47f907ac9e",
+      "scope": "user"
+    },
+    {
+      "name": "best-practices",
+      "path": "/Users/bigz/.codex/plugins/cache/mobbin/mobbin/1.5.0/skills/best-practices/SKILL.md",
+      "sha256": "7ec4e8865a55eb10a4a56de7b231b0fc5dc7610ec25ff07bf8a95f1588212592",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "plain-writing",
+      "path": "/Users/bigz/.codex/plugins/cache/mobbin/mobbin/1.5.0/skills/plain-writing/SKILL.md",
+      "sha256": "c11511f8c7013f289c8a523e50540937ddcd9730c2b9bbdc3726c0b1c05dc124",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "redesign-screen",
+      "path": "/Users/bigz/.codex/plugins/cache/mobbin/mobbin/1.5.0/skills/redesign-screen/SKILL.md",
+      "sha256": "459de98975d49a7b0a98d1bd4c1b4d6afe206f297e371221c3b6ed4b64bd8dd8",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "search",
+      "path": "/Users/bigz/.codex/plugins/cache/mobbin/mobbin/1.5.0/skills/search/SKILL.md",
+      "sha256": "67b5ccd6291cbbfcd2e299bee4d665ba546efeb492314bd232aafd47f907ac9e",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "visualize",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-bundled/visualize/1.0.46/skills/visualize/SKILL.md",
+      "sha256": "37a648f231b3716956e5b534bff1eef36195b5f7261ccd78e913a9ad5c961f0f",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "best-practices",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-curated-remote/app-69fdb9081018819193707354f21b366e/1.5.0/skills/best-practices/SKILL.md",
+      "sha256": "7ec4e8865a55eb10a4a56de7b231b0fc5dc7610ec25ff07bf8a95f1588212592",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "plain-writing",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-curated-remote/app-69fdb9081018819193707354f21b366e/1.5.0/skills/plain-writing/SKILL.md",
+      "sha256": "c11511f8c7013f289c8a523e50540937ddcd9730c2b9bbdc3726c0b1c05dc124",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "redesign-screen",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-curated-remote/app-69fdb9081018819193707354f21b366e/1.5.0/skills/redesign-screen/SKILL.md",
+      "sha256": "459de98975d49a7b0a98d1bd4c1b4d6afe206f297e371221c3b6ed4b64bd8dd8",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "search",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-curated-remote/app-69fdb9081018819193707354f21b366e/1.5.0/skills/search/SKILL.md",
+      "sha256": "67b5ccd6291cbbfcd2e299bee4d665ba546efeb492314bd232aafd47f907ac9e",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "notion-database-designer",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-curated-remote/notion/3.0.3/skills/notion-database-designer/SKILL.md",
+      "sha256": "33a9fc74a08a214fdf229aa5fb12e0fff119219f30e9c1b2a4910a1d417396af",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "notion-meeting-intelligence",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-curated-remote/notion/3.0.3/skills/notion-meeting-intelligence/SKILL.md",
+      "sha256": "73331739b54407000b86cfd546232c7736f33fc1052d4337b3647e4077c87acc",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "notion-research-documentation",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-curated-remote/notion/3.0.3/skills/notion-research-documentation/SKILL.md",
+      "sha256": "6281956c3bcf5934aeb29bfed0e306b98d2f9ef728a5e1f071f647ddc9461b9d",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "notion-spec-to-implementation",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-curated-remote/notion/3.0.3/skills/notion-spec-to-implementation/SKILL.md",
+      "sha256": "0fe3e0e040193836de1898216388e8edf1e02df81ff47d31968190116c051096",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "notion-weekly-project-digest",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-curated-remote/notion/3.0.3/skills/notion-weekly-project-digest/SKILL.md",
+      "sha256": "ed54b98bc6a1294e621446a67ce448e88eccadd22dad00260991d036d619d69a",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "notion-setup",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-curated-remote/notion/3.0.3/skills/setup/SKILL.md",
+      "sha256": "360a00617c0bb9114d7213e276cabda5203493538793be5c3789f540f456ec5e",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "artifact-template-analytics-dashboard",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-analytics-dashboard/SKILL.md",
+      "sha256": "cf5360fd8b197673bb237c52c603c97fa319c875c3dfa2cd8efff52d4422f513",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "artifact-template-business-review",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-business-review/SKILL.md",
+      "sha256": "27721fc1d67d1b41949caa75ac8f94f81952ff124406878af6524047929e60d2",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "artifact-template-design-report",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-design-report/SKILL.md",
+      "sha256": "563722f53854e606f8a9f87e37e72d7ef70a22d46d5836b8e4d6abfb1b79e9e0",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "artifact-template-experiment-analysis",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-experiment-analysis/SKILL.md",
+      "sha256": "0b05effc47df0a14f8e0c3e3597e6722224747435546385d38a2cae279bd20b9",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "artifact-template-financial-budget",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-financial-budget/SKILL.md",
+      "sha256": "c0b6b7a62a15597aaf2b1ec679e21da48f533b756127f0aef957cdfe9f3da738",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "artifact-template-investment-committee-memo",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-investment-committee-memo/SKILL.md",
+      "sha256": "68abd08cfe5e073e3c446a3f675f44c5bf98f57434dba679e8acd8a763379a8b",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "artifact-template-legal-memorandum",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-legal-memorandum/SKILL.md",
+      "sha256": "51fb9d21baf6119c4ccb1903638a6bac0e859210de63460fffa7025d52e997e0",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "artifact-template-market-trends-report",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-market-trends-report/SKILL.md",
+      "sha256": "d58d019b89cb6f292ac3ab991d561489eef477ff53ce05fb024a0c936f5af26a",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "artifact-template-minimal-letterhead",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-minimal-letterhead/SKILL.md",
+      "sha256": "880ef094d4d0c89a7bde5ce9bbe4086625c186651e9e6efc8ba8bdd7cc77f9d5",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "artifact-template-operating-calendar",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-operating-calendar/SKILL.md",
+      "sha256": "33bb660791a0b9a21628a42c34934932220203b6aabd84e98cb1b45327d0384c",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "artifact-template-operating-review",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-operating-review/SKILL.md",
+      "sha256": "6d63c5cd025ffe936e7bab5db3023672bbaec26af55c2bb8b057d38c202c9c32",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "artifact-template-project-kickoff",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-project-kickoff/SKILL.md",
+      "sha256": "aa893ebd89e7c8d1db4261d01cc2b1add35d78d00785871ccaaa5fc8db783ec9",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "artifact-template-project-tracker",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-project-tracker/SKILL.md",
+      "sha256": "d97d5be20189b7f53dd269b6e1c5f694eaf53e5a72f6559fcb1578911b7cda82",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "artifact-template-sales-pipeline",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-sales-pipeline/SKILL.md",
+      "sha256": "15cfeeedf440021f16ed3f3ad8c7c1ef6d48898b9447741e223d2fb41cfc9800",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "artifact-template-simple-dark-mode",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-simple-dark-mode/SKILL.md",
+      "sha256": "b7c8d0c05f75878b9bc21e56a57c41ec1aa29700aca0a24822be0f9f1bd53207",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "artifact-template-simple-light-mode",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-simple-light-mode/SKILL.md",
+      "sha256": "7c68430c6cf57b55b457d4735dbd1a46b889bef135a32222902dd0848b6e1752",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "artifact-template-strategy-memorandum",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-strategy-memorandum/SKILL.md",
+      "sha256": "51d7882ac94e8e57b323394825728c33925af878806e37277217c2dc12a912e5",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "artifact-template-system-design",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-system-design/SKILL.md",
+      "sha256": "87f7b7ed1b0d8410f5e5971cd7f7db9a4165e2f37069e97e52dbfb469b75a57c",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "artifact-template-team-alignment",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-team-alignment/SKILL.md",
+      "sha256": "26d7cafdcd1899a937b325c5d02ac57c162d45002153be33a934d35f81eb6110",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "artifact-template-three-statement-forecast",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-curated-remote/openai-templates/0.1.1/skills/artifact-template-three-statement-forecast/SKILL.md",
+      "sha256": "74f4a5cccec0107b861548b157e04c51d9b58ec13a990c86394b4c529b8ecf41",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "plugin-management",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-curated-remote/plugin-management/0.1.1-capabilities.1/skills/plugin-management/SKILL.md",
+      "sha256": "c44fc8322c90a8407e86ec82ee684aa920f23d77384d9cf6c026d59fa7166abf",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "sites",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-curated-remote/sites/1.1.2/skills/sites/SKILL.md",
+      "sha256": "00750ea5ca37e2b49afd2a57fee2149d22ee4f48af40bc094e6d2cee3e7bd1ad",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "sites-remix",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-curated-remote/sites/1.1.2/skills/sites-remix/SKILL.md",
+      "sha256": "34a249750d98e38f676fa391819593ab5c14e5f46f9137832a8c49180d47022d",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "brainstorming",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-curated-remote/superpowers/7.0.1/skills/brainstorming/SKILL.md",
+      "sha256": "61a7ef918652108c76a3fd01e02dd92d39996c6b46d4cb2819cbd03f6c45e46a",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "diagnosing-superpowers",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-curated-remote/superpowers/7.0.1/skills/diagnosing-superpowers/SKILL.md",
+      "sha256": "3143de8695c5a2d63e8b1675f33837578076f464deb127c2ebdd0b46fceef886",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "dispatching-parallel-agents",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-curated-remote/superpowers/7.0.1/skills/dispatching-parallel-agents/SKILL.md",
+      "sha256": "1968923066f3b707eb01d1992cdf4c42284c3855f70253b9cd5000ff45fca13c",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "executing-plans",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-curated-remote/superpowers/7.0.1/skills/executing-plans/SKILL.md",
+      "sha256": "e4649e59880ef2643d1da128e3d607e87e3f969410d72095a5bf65811b6036dc",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "finishing-a-development-branch",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-curated-remote/superpowers/7.0.1/skills/finishing-a-development-branch/SKILL.md",
+      "sha256": "8db5a922b242dd4e1bf824cb91c13b3e8d8e8a86d6ceaf7f0774eb9cce909d65",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "receiving-code-review",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-curated-remote/superpowers/7.0.1/skills/receiving-code-review/SKILL.md",
+      "sha256": "091df1629510af1b92fc4abd6f96732ebedb4cb2c0f3457e8f2740b0504a2438",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "requesting-code-review",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-curated-remote/superpowers/7.0.1/skills/requesting-code-review/SKILL.md",
+      "sha256": "2180e14a448e9410bec88e6646a2d1f0ce7fdd58de27388c1e052e929679d2bc",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "subagent-driven-development",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-curated-remote/superpowers/7.0.1/skills/subagent-driven-development/SKILL.md",
+      "sha256": "ba41f697136cba88a7962d60c8e2f97488ba04a8688b1d0fbeb27f6953808e75",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "systematic-debugging",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-curated-remote/superpowers/7.0.1/skills/systematic-debugging/SKILL.md",
+      "sha256": "51c6435d98c83c42c96ba7c35725a0b2c376cd487fb1a4e6bd0ddbe7e33ef202",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "test-driven-development",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-curated-remote/superpowers/7.0.1/skills/test-driven-development/SKILL.md",
+      "sha256": "64b03fce4aee5a97a93160cea8111f3ba13a17b7c001db4bd5836d67fd10705d",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "using-git-worktrees",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-curated-remote/superpowers/7.0.1/skills/using-git-worktrees/SKILL.md",
+      "sha256": "8cfb86f121269e8f7f12361e6795c4f6738828340e28964c9229d365666c9edd",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "using-superpowers",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-curated-remote/superpowers/7.0.1/skills/using-superpowers/SKILL.md",
+      "sha256": "82c5c8866ad7f5dd4440ce66bd7806ba48a2f13771beae5cf112e53f08fe36ba",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "verification-before-completion",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-curated-remote/superpowers/7.0.1/skills/verification-before-completion/SKILL.md",
+      "sha256": "2befe7fc55bcadaa3d97dd9e8efeb633d2561c0ebe74c5a8b17c4d9e7e4520b3",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "writing-plans",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-curated-remote/superpowers/7.0.1/skills/writing-plans/SKILL.md",
+      "sha256": "a6c67c1900064347c2a329990dd3c555657c51c3ec53b259a08aa01a2c26139a",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "writing-skills",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-curated-remote/superpowers/7.0.1/skills/writing-skills/SKILL.md",
+      "sha256": "8cb3ac68c6d8c4bb46886b998b09af7989643cab8bd0e46ee86dd62e64546bbe",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "create-pet",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-curated-remote/work-pets/0.1.6/skills/create-pet/SKILL.md",
+      "sha256": "841354fb8116f8fdfd3b643b30828f5180196c594d3fed9b669b948b88892af1",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "pets",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-curated-remote/work-pets/0.1.6/skills/pets/SKILL.md",
+      "sha256": "1bf5d45fd6a6390aab777229293fb05cef7cf898aac882f8955e40c378e52fcd",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "update-pet",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-curated-remote/work-pets/0.1.6/skills/update-pet/SKILL.md",
+      "sha256": "c63c98d67b6ad781a72a8f9837ba1fb5e2d2a8054a2562e4025890a97d8a0e67",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "documents",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-primary-runtime/documents/26.1009.11318/skills/documents/SKILL.md",
+      "sha256": "c9b9ba61ac15f20a600220bc10a380c7753992bbd3c323bfe33fae864adefc21",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "pdf",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-primary-runtime/pdf/26.1009.11318/skills/pdf/SKILL.md",
+      "sha256": "a6e20f4ae66364a06d577dd51e0ce66ee2ef955be129cbe195e0a27f403daaf8",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "Presentations",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-primary-runtime/presentations/26.1009.11318/skills/presentations/SKILL.md",
+      "sha256": "bb3726eff35cb82241fd2c3b09fcdb18cc3bf3daefddf8df929d2e0bd4d2af2f",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "excel-live-control",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-primary-runtime/spreadsheets/26.1009.11318/skills/excel-live-control/SKILL.md",
+      "sha256": "1c27488fa2a59ce2cc8925a12527ee9c7aa40ccf0701f3f2719ab17858586e8b",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "Spreadsheets",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-primary-runtime/spreadsheets/26.1009.11318/skills/spreadsheets/SKILL.md",
+      "sha256": "dd22f4bae5bf3f76457c80eb1f079ba7a47b87db52b144edeb1e5f4585dc8f34",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "template-creator",
+      "path": "/Users/bigz/.codex/plugins/cache/openai-primary-runtime/template-creator/26.1009.11318/skills/template-creator/SKILL.md",
+      "sha256": "f1d14fd2847a2e879611a8b8f872f5dc4676a0607958d015274d2dc61e812deb",
+      "scope": "plugin cache"
+    },
+    {
+      "name": "portfolio-3d-hub",
+      "path": "/Users/bigz/personalwebsite/.agents/skills/portfolio-3d-hub/SKILL.md",
+      "sha256": "b8c6f0b297d332909bcbfef50f53c0809f78f1e2d3d02d4aea7abf5adb4c3e50",
+      "scope": "project"
+    }
+  ],
+  "discovery_aliases": {
+    "frontend-design": "/Users/bigz/.agents/skills/frontend-design",
+    "vercel-react-best-practices": "/Users/bigz/.agents/skills/vercel-react-best-practices",
+    "playwright": "/Users/bigz/.agents/skills/playwright"
+  }
+}

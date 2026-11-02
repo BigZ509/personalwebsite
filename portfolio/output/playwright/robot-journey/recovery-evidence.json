@@ -1,0 +1,169 @@
+{
+  "checks": {
+    "home": {
+      "status": "Pass",
+      "title": "The workroom \u2014 Robotics hub",
+      "canvases": 1
+    },
+    "contextLoss": "Pass; actual WebGL context lost in workshop, fallback notes link navigates successfully",
+    "archivedCompositions": "Pass; all three treatments still load/render in one Canvas after shared helper extraction"
+  },
+  "workshop": {
+    "drawCalls": 130,
+    "triangles": 34580
+  },
+  "resources": [
+    {
+      "url": "http://127.0.0.1:4182/_next/static/css/d5e646c40dc2838d.css",
+      "encodedBytes": 12430,
+      "transferBytes": 12730,
+      "durationMs": 3.2999999821186066
+    },
+    {
+      "url": "http://127.0.0.1:4182/_next/static/css/1790555807c1c78f.css",
+      "encodedBytes": 5266,
+      "transferBytes": 5566,
+      "durationMs": 3.199999988079071
+    },
+    {
+      "url": "http://127.0.0.1:4182/_next/static/chunks/webpack-04813e46cb1f72d3.js",
+      "encodedBytes": 3595,
+      "transferBytes": 3895,
+      "durationMs": 5.5
+    },
+    {
+      "url": "http://127.0.0.1:4182/_next/static/chunks/main-app-7953af376cf00bc8.js",
+      "encodedBytes": 513,
+      "transferBytes": 813,
+      "durationMs": 6.5
+    },
+    {
+      "url": "http://127.0.0.1:4182/_next/static/chunks/app/page-086fdee1500e5ce9.js",
+      "encodedBytes": 128,
+      "transferBytes": 428,
+      "durationMs": 6.9000000059604645
+    },
+    {
+      "url": "http://127.0.0.1:4182/_next/static/chunks/100-f204a118994e92b6.js",
+      "encodedBytes": 15535,
+      "transferBytes": 15835,
+      "durationMs": 6.5999999940395355
+    },
+    {
+      "url": "http://127.0.0.1:4182/_next/static/chunks/4bd1b696-c7408084347438ae.js",
+      "encodedBytes": 203721,
+      "transferBytes": 204021,
+      "durationMs": 5.5
+    },
+    {
+      "url": "http://127.0.0.1:4182/_next/static/chunks/794-f09dc234193e386a.js",
+      "encodedBytes": 243104,
+      "transferBytes": 243404,
+      "durationMs": 6.200000017881393
+    },
+    {
+      "url": "http://127.0.0.1:4182/_next/static/chunks/bd904a5c.56e65ed4abb36c15.js",
+      "encodedBytes": 385859,
+      "transferBytes": 386159,
+      "durationMs": 2.9000000059604645
+    },
+    {
+      "url": "http://127.0.0.1:4182/_next/static/chunks/e49654ac.0a974ffe886c8ba9.js",
+      "encodedBytes": 164428,
+      "transferBytes": 164728,
+      "durationMs": 4
+    },
+    {
+      "url": "http://127.0.0.1:4182/_next/static/chunks/b536a0f1.f06e169bf8dc9367.js",
+      "encodedBytes": 368083,
+      "transferBytes": 368383,
+      "durationMs": 3.5999999940395355
+    },
+    {
+      "url": "http://127.0.0.1:4182/_next/static/chunks/779.99374b9d9b768c90.js",
+      "encodedBytes": 157899,
+      "transferBytes": 158199,
+      "durationMs": 4.5
+    },
+    {
+      "url": "http://127.0.0.1:4182/_next/static/chunks/212.2ffa18de668eebf2.js",
+      "encodedBytes": 20639,
+      "transferBytes": 20939,
+      "durationMs": 2.5999999940395355
+    },
+    {
+      "url": "http://127.0.0.1:4182/models/desk-compositions/desk.glb",
+      "encodedBytes": 135916,
+      "transferBytes": 136216,
+      "durationMs": 2
+    },
+    {
+      "url": "http://127.0.0.1:4182/models/desk-compositions/monitor.glb",
+      "encodedBytes": 12856,
+      "transferBytes": 13156,
+      "durationMs": 1.5999999940395355
+    },
+    {
+      "url": "http://127.0.0.1:4182/models/desk-compositions/keyboard.glb",
+      "encodedBytes": 140100,
+      "transferBytes": 140400,
+      "durationMs": 1.5999999940395355
+    },
+    {
+      "url": "http://127.0.0.1:4182/models/desk-compositions/chair.glb",
+      "encodedBytes": 115760,
+      "transferBytes": 116060,
+      "durationMs": 1.699999988079071
+    },
+    {
+      "url": "http://127.0.0.1:4182/models/desk-compositions/lamp.glb",
+      "encodedBytes": 12832,
+      "transferBytes": 13132,
+      "durationMs": 1.199999988079071
+    },
+    {
+      "url": "http://127.0.0.1:4182/models/desk-compositions/books.glb",
+      "encodedBytes": 15156,
+      "transferBytes": 15456,
+      "durationMs": 1.0999999940395355
+    },
+    {
+      "url": "http://127.0.0.1:4182/models/desk-compositions/mug.glb",
+      "encodedBytes": 4904,
+      "transferBytes": 5204,
+      "durationMs": 1.0999999940395355
+    },
+    {
+      "url": "http://127.0.0.1:4182/models/desk-compositions/plant.glb",
+      "encodedBytes": 16636,
+      "transferBytes": 16936,
+      "durationMs": 1.899999976158142
+    },
+    {
+      "url": "http://127.0.0.1:4182/models/robot-expressive.glb",
+      "encodedBytes": 463988,
+      "transferBytes": 464288,
+      "durationMs": 1.699999988079071
+    },
+    {
+      "url": "http://127.0.0.1:4182/models/desk-compositions/basketball.glb",
+      "encodedBytes": 38288,
+      "transferBytes": 38588,
+      "durationMs": 1.399999976158142
+    },
+    {
+      "url": "http://127.0.0.1:4182/models/desk-compositions/camera.glb",
+      "encodedBytes": 78276,
+      "transferBytes": 78576,
+      "durationMs": 1.399999976158142
+    },
+    {
+      "url": "http://127.0.0.1:4182/models/desk-compositions/chip.glb",
+      "encodedBytes": 106144,
+      "transferBytes": 106444,
+      "durationMs": 1.2000000178813934
+    }
+  ],
+  "errors": [],
+  "note": "Local static server and warm browser cache; durations are not deploy/mobile performance benchmarks"
+}

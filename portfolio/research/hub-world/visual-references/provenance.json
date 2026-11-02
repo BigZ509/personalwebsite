@@ -1,0 +1,45 @@
+{
+  "checked": "2026-11-01",
+  "images": [
+    {
+      "id": "room",
+      "file": "old-sins-dollhouse.jpg",
+      "url": "https://minireview.io/common/uploads/review/screenshot-20251001-154109-old-sins-9328509.jpg",
+      "source": "https://minireview.io/pt/puzzle/the-room-old-sins",
+      "primary": "https://www.fireproofgames.com/games/theroomoldsins",
+      "rights": "Proprietary game screenshot; Fireproof Studios. Research reference only; no production asset grant verified.",
+      "bytes": 72764,
+      "sha256": "b2f255202525804be3398e0cc6c2f9eb5958cbd0ddb3d07accf8c75ed39bdea7"
+    },
+    {
+      "id": "stray",
+      "file": "stray-clementine.jpg",
+      "url": "https://www.gamepressure.com/stray-1/gfx/word/446160468.jpg",
+      "source": "https://www.gamepressure.com/stray-1/the-clementines-clue-puzzle-midtown/zb10064",
+      "primary": "https://cookime.artstation.com/projects/X1vdmw",
+      "rights": "Proprietary Stray screenshot via Gamepressure; BlueTwelve/Annapurna. Research reference only; no production asset grant verified.",
+      "bytes": 68110,
+      "sha256": "17f1d3ef9855fd8f154a18d9e8558423008ca15d5204dc3b85e4c971275653a1"
+    },
+    {
+      "id": "life-is-strange",
+      "file": "max-dorm-desk.jpg",
+      "url": "https://s2-techtudo.glbimg.com/DAYusAOKoN_5yW02n5zVUCWBrQA%3D/0x0%3A695x382/984x0/smart/filters%3Astrip_icc%28%29/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2021/C/m/yMiC3LREuB8M7kqwPRaA/2015-02-02-life-is-strange-6.jpg",
+      "source": "https://www.techtudo.com.br/review/life-strange.ghtml",
+      "primary": "https://www.feralinteractive.com/en/manuals/lifeisstrange/latest/steam/",
+      "rights": "Proprietary Life is Strange screenshot via TechTudo; Square Enix/DONTNOD. Research reference only; no production asset grant verified.",
+      "bytes": 74382,
+      "sha256": "958b75ed2cf3a4c040c1823d8286401c89825de20f3ba68f1f1d34c96136aa27"
+    },
+    {
+      "id": "life-is-strange-context",
+      "file": "max-dorm-context.jpg",
+      "url": "https://www.feralinteractive.com/en/manuals/lifeisstrange/latest/steam/interaction_EN.jpg",
+      "source": "https://www.feralinteractive.com/en/manuals/lifeisstrange/latest/steam/",
+      "primary": "https://www.feralinteractive.com/en/manuals/lifeisstrange/latest/steam/",
+      "rights": "Proprietary official manual image; Square Enix/DONTNOD/Feral. Research reference only; no production asset grant verified.",
+      "bytes": 409871,
+      "sha256": "c0feb1fab7e216b7e4411ee29508ec17be005a91aadc5fe9021ad53a5b5a0541"
+    }
+  ]
+}

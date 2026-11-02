@@ -1,0 +1,44 @@
+{
+  "dateUTC": "2026-11-02",
+  "buildId": "5YY4vq69O-B25g-jGbiZu",
+  "browser": "HeadlessChrome156 / macOS host / ANGLE SwiftShader software WebGL",
+  "build": "npm run build: exit0; static export verified",
+  "unit": "npm test: 8 passing",
+  "typecheck": "npm run typecheck: exit0",
+  "screenshots": {
+    "01-desk.png": "105f221a8faae7be1fef699287df13976fd31b110969167132d30cd6916e939e",
+    "02-hover-wave.png": "8eeae06c256ed675c7e538d18eeb5e9904f3f8d9aece5744dd251b4e0e243682",
+    "03-camera-approach.png": "493e8991851a8ef5f0a0d70a34dded667e754c0e9e494617d9c600b87710a087",
+    "04-workshop.png": "c5cdcf0f117920052856218b9d6fb8be56634f94eef98c7ca537adfec18a639d",
+    "05-returned-desk.png": "8234ce266f08e6e0fdbb046b3ed00694b9ad3e35d3d0d66b57cde8aea72e100c",
+    "06-keyboard-focus.png": "104b56cdc89d2e31be3290333ff8e6720b9c78c9118da1a009697672d56b28ee",
+    "07-mobile-desk.png": "825034d7f46793795137d754ac59440668399e5b575e43f0670e7ad73e95855b",
+    "08-mobile-workshop.png": "87067fe69b6503d83e99324f83ba0ac2f532c1a7e5aa239b2f516df1e7695ee0",
+    "09-reduced-motion-workshop.png": "20b0e10d2061e4427c6d096946d36ed580021189d174d7c75547fefab63a9360",
+    "10-webgl-fallback.png": "4dcf11286fe5642281e72eaaf99de859914083d25e38d8cccca2919b5b45360d",
+    "11-context-loss-fallback.png": "560803a68a6728992001da7745337cbca995f263e3557e4ee28081bd6257e9b5",
+    "12-focus-and-pointer.png": "ff84815319037fc7659422909c7cd4be31c963030d28b18cc655fab12fc34f4c",
+    "13-live-reduced-motion.png": "cf2dd141e0638f10250c401cdbb58ab83754a690f460fc5558307ef19a70f9ed",
+    "14-stalled-load-fallback.png": "4dcf11286fe5642281e72eaaf99de859914083d25e38d8cccca2919b5b45360d"
+  },
+  "modelCount": 12,
+  "modelBytes": 1140856,
+  "sourceHashes": {
+    "src/features/hub/HubExperience.tsx": "da7ee156644b9b053b0c4599254650e555ae060eff22cd8953261d8deeaca07d",
+    "src/features/hub/RobotCharacter.tsx": "03a50e1286317438f043ee74f612d4c64b24a84369ba2549ae260999827f74e6",
+    "src/features/hub/Workshop.tsx": "46be163bccd8523fdead952a8ac8ce82b4215a04d53df6f12684237118756e8f",
+    "src/features/hub/hub.module.css": "e9c26e3661d4f51cd61ba848f7b213b0d3a59c741c12f3b8c66d2ffe67ce33d9",
+    "src/features/hub/journey.ts": "4810e626868c4850c2dcb302350309648fad19034af9b7798b504ae4d529fcd3",
+    "src/features/hub/visibleDeadline.ts": "594d3b5c3b783ca322a0aaed191935cb316a348d0e219a750f8fed464d89befa"
+  },
+  "limits": [
+    "physical iOS/Android",
+    "hardware GPU performance",
+    "Safari/Firefox",
+    "screen readers/formal conformance",
+    "real OS background suspension",
+    "orientation during travel",
+    "GPU memory/battery/production network budgets"
+  ],
+  "stop": "User requests visual review; no features/repository/commit/deploy authorized"
+}

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 620" fill="none">
+  <title>Original still illustration of a friendly robot specimen</title>
+  <defs>
+    <linearGradient id="ceramic" x1="170" y1="100" x2="450" y2="520" gradientUnits="userSpaceOnUse"><stop stop-color="#F6F3E9"/><stop offset="1" stop-color="#B9C6B3"/></linearGradient>
+    <linearGradient id="edge" x1="150" y1="180" x2="460" y2="400" gradientUnits="userSpaceOnUse"><stop stop-color="#748A73"/><stop offset="1" stop-color="#344E42"/></linearGradient>
+    <radialGradient id="shadow"><stop stop-color="#344E42" stop-opacity=".2"/><stop offset="1" stop-color="#344E42" stop-opacity="0"/></radialGradient>
+  </defs>
+  <ellipse cx="309" cy="548" rx="165" ry="29" fill="url(#shadow)"/>
+  <path d="M287 143v-31" stroke="#48644D" stroke-width="9" stroke-linecap="round"/><circle cx="287" cy="108" r="11" fill="#789477"/>
+  <path d="m227 393-12 114 53 9 21-119m39-2 14 117 55-8-11-116" fill="url(#edge)"/>
+  <rect x="208" y="461" width="62" height="62" rx="16" transform="rotate(5 208 461)" fill="url(#ceramic)" stroke="#73866E"/>
+  <rect x="337" y="463" width="61" height="61" rx="16" transform="rotate(-5 337 463)" fill="url(#ceramic)" stroke="#73866E"/>
+  <path d="M200 503c-8 0-16 10-16 20v12h91v-17c0-9-7-15-15-15h-60Zm141-1c-8 0-15 7-15 16v17h90v-12c0-11-8-20-19-20l-56-1Z" fill="#49634C"/>
+  <path d="m215 294-39 10-29 79 25 15 39-61 19-5m154-42 34 9 31 81-27 15-37-63-17-4" stroke="#6E856B" stroke-width="22" stroke-linecap="round"/>
+  <path d="m163 370-23 42 23 23 28-43m238-21 25 41-21 23-28-42" fill="url(#ceramic)" stroke="#7B8B73" stroke-width="2"/>
+  <rect x="210" y="273" width="176" height="147" rx="42" fill="url(#ceramic)" stroke="#829279" stroke-width="2"/>
+  <path d="M244 306h104v65H244z" fill="#4A6350"/><path d="M257 318h78v39h-78z" fill="#A2B29C"/><path d="M262 337h26l7-11 9 20 8-9h18" stroke="#E6ECD8" stroke-width="3"/>
+  <circle cx="300" cy="391" r="8" fill="#4B6850"/><path d="M280 254v31h39v-31" fill="#4C6550"/>
+  <path d="M183 177c0-21 17-38 38-38h137c24 0 44 20 44 44v64c0 23-19 42-42 42H225c-24 0-42-19-42-42v-70Z" fill="url(#edge)"/>
+  <rect x="171" y="145" width="219" height="140" rx="39" fill="url(#ceramic)" stroke="#829279" stroke-width="2"/>
+  <rect x="190" y="170" width="179" height="85" rx="26" fill="#273E34"/>
+  <rect x="219" y="193" width="34" height="17" rx="8.5" fill="#D9E8BB"/><rect x="306" y="193" width="34" height="17" rx="8.5" fill="#D9E8BB"/>
+  <path d="M265 226c10 10 20 10 30 0" stroke="#A3BA8E" stroke-width="4" stroke-linecap="round"/>
+  <path d="M188 187v42m202-44v41" stroke="#587052" stroke-width="13" stroke-linecap="round"/>
+</svg>

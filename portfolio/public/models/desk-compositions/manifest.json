@@ -1,0 +1,843 @@
+{
+  "scope": "Existing individual GLBs acquired for three desk composition studies; original GLB bytes, no renderer/browser validation.",
+  "assets": [
+    {
+      "id": "desk",
+      "title": "Desk",
+      "author": "Quaternius",
+      "localName": "desk.glb",
+      "localPath": "/models/desk-compositions/desk.glb",
+      "sourceURL": "https://poly.pizza/m/V86Go2rlnq",
+      "downloadURL": "https://static.poly.pizza/91c2bf8d-0876-4801-abd3-8dd5d017ecbd.glb",
+      "publisherModelViewerURL": "https://static.poly.pizza/91c2bf8d-0876-4801-abd3-8dd5d017ecbd.glb.br",
+      "license": "CC0-1.0",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attribution": "\"Desk\" by Quaternius (https://poly.pizza/m/V86Go2rlnq), licensed under CC0-1.0 (https://creativecommons.org/publicdomain/zero/1.0/).",
+      "modifications": "Original downloaded GLB bytes unchanged; local filename standardized. Composition display adaptations include in-scene resizing and rotation; materials may be recolored by the renderer. These are visual modifications, not changes to the stored GLB.",
+      "visualPreviewURL": "https://static.poly.pizza/91c2bf8d-0876-4801-abd3-8dd5d017ecbd.jpg",
+      "sha256": "3878f6d93d946d77f3e1be55919627a81435696252137ae33c22391c0411f3ce",
+      "bytes": 135916,
+      "sourceEvidencePath": "/licenses/desk-compositions/desk-source.json",
+      "verifiedAtUTC": "2026-11-01T06:33:15.363484+00:00",
+      "originalBounds": {
+        "min": [
+          -0.9111514315009117,
+          -0.0007023281656297182,
+          -0.45240881513558234
+        ],
+        "max": [
+          0.9111514315009117,
+          0.921796644849753,
+          0.3942181863973854
+        ],
+        "sizeXYZ": [
+          1.8223028630018234,
+          0.9224989730153828,
+          0.8466270015329678
+        ],
+        "center": [
+          0,
+          0.4605471583420616,
+          -0.029095314369098485
+        ],
+        "bottomCenter": [
+          0,
+          -0.0007023281656297182,
+          -0.029095314369098485
+        ],
+        "method": "Three.js r187 GLTFLoader.parseAsync + scene.updateMatrixWorld(true) + Box3.setFromObject(scene,true); original node transforms retained. CPU geometry only; image decoding bypassed in-memory for image-bearing models."
+      },
+      "geometry": {
+        "nodes": 6,
+        "meshes": 5,
+        "loadedMeshNames": [
+          "Desk_Drawer3_1",
+          "Desk_Drawer3_2",
+          "Desk_Drawer4_1",
+          "Desk_Drawer4_2",
+          "Desk_Drawer2_1",
+          "Desk_Drawer2_2",
+          "Desk_Drawer1_1",
+          "Desk_Drawer1_2",
+          "Desk_1",
+          "Desk_2"
+        ],
+        "trianglesAcrossSceneInstances": 2640,
+        "positionEntriesAcrossSceneInstances": 4595,
+        "images": [],
+        "animations": 0,
+        "requiredExtensions": [],
+        "externalBufferURIs": []
+      },
+      "orientationHint": {
+        "up": "+Y",
+        "front": "+Z",
+        "yawToPositiveZ": 0,
+        "note": "Drawer handles protrude toward +Z. Top surface is maxY; bottom-center and scale height to 3.1 to place top at scene y=3.1."
+      },
+      "localLicenseTextPath": "/licenses/desk-compositions/CC0-1.0.txt",
+      "creditsURL": "/licenses/desk-compositions/README.md"
+    },
+    {
+      "id": "basketball",
+      "title": "Basketball",
+      "author": "Poly by Google",
+      "localName": "basketball.glb",
+      "localPath": "/models/desk-compositions/basketball.glb",
+      "sourceURL": "https://poly.pizza/m/eopD_12UuB8",
+      "downloadURL": "https://static.poly.pizza/e2534fbc-cb90-4b28-bb8e-4f6706957b21.glb",
+      "publisherModelViewerURL": "https://static.poly.pizza/e2534fbc-cb90-4b28-bb8e-4f6706957b21.glb.br",
+      "license": "CC-BY-3.0",
+      "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+      "attribution": "\"Basketball\" by Poly by Google (https://poly.pizza/m/eopD_12UuB8), licensed under CC-BY-3.0 (https://creativecommons.org/licenses/by/3.0/).",
+      "modifications": "Original downloaded GLB bytes unchanged; local filename standardized. Composition display adaptations include in-scene resizing and rotation; materials may be recolored by the renderer. These are visual modifications, not changes to the stored GLB.",
+      "visualPreviewURL": "https://static.poly.pizza/e2534fbc-cb90-4b28-bb8e-4f6706957b21.jpg",
+      "sha256": "35197dc8ee43e3c65a7108d1c33e56dd20825f4bacb45b56ed33b3950547e755",
+      "bytes": 38288,
+      "sourceEvidencePath": "/licenses/desk-compositions/basketball-source.json",
+      "verifiedAtUTC": "2026-11-01T06:34:01.576702+00:00",
+      "originalBounds": {
+        "min": [
+          -0.5525370240211487,
+          -0.5455999970436096,
+          -0.5453879833221436
+        ],
+        "max": [
+          0.5525370240211487,
+          0.5451750159263611,
+          0.5453609824180603
+        ],
+        "sizeXYZ": [
+          1.1050740480422974,
+          1.0907750129699707,
+          1.0907489657402039
+        ],
+        "center": [
+          0,
+          -0.00021249055862426758,
+          -1.3500452041625977e-05
+        ],
+        "bottomCenter": [
+          0,
+          -0.5455999970436096,
+          -1.3500452041625977e-05
+        ],
+        "method": "Three.js r187 GLTFLoader.parseAsync + scene.updateMatrixWorld(true) + Box3.setFromObject(scene,true); original node transforms retained. CPU geometry only; image decoding bypassed in-memory for image-bearing models."
+      },
+      "geometry": {
+        "nodes": 1,
+        "meshes": 1,
+        "loadedMeshNames": [
+          "Sphere"
+        ],
+        "trianglesAcrossSceneInstances": 508,
+        "positionEntriesAcrossSceneInstances": 1024,
+        "images": [
+          {
+            "mimeType": "image/jpeg",
+            "embeddedBufferView": 4,
+            "embeddedBytes": 373,
+            "uri": null
+          }
+        ],
+        "animations": 0,
+        "requiredExtensions": [],
+        "externalBufferURIs": []
+      },
+      "orientationHint": {
+        "up": "+Y",
+        "front": "spherical; no required front",
+        "yawToPositiveZ": 0,
+        "note": "Embedded image supplies ball appearance. Centered around origin; bottom-center normalization needed."
+      },
+      "localLicenseTextPath": "/licenses/desk-compositions/CC-BY-3.0.txt",
+      "creditsURL": "/licenses/desk-compositions/README.md"
+    },
+    {
+      "id": "camera",
+      "title": "Camera",
+      "author": "Nick Ladd",
+      "localName": "camera.glb",
+      "localPath": "/models/desk-compositions/camera.glb",
+      "sourceURL": "https://poly.pizza/m/4A3SYVh_smq",
+      "downloadURL": "https://static.poly.pizza/ba342070-aeda-4d0f-bab1-c3a156025b71.glb",
+      "publisherModelViewerURL": "https://static.poly.pizza/ba342070-aeda-4d0f-bab1-c3a156025b71.glb.br",
+      "license": "CC-BY-3.0",
+      "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+      "attribution": "\"Camera\" by Nick Ladd (https://poly.pizza/m/4A3SYVh_smq), licensed under CC-BY-3.0 (https://creativecommons.org/licenses/by/3.0/).",
+      "modifications": "Original downloaded GLB bytes unchanged; local filename standardized. Composition display adaptations include in-scene resizing and rotation; materials may be recolored by the renderer. These are visual modifications, not changes to the stored GLB.",
+      "visualPreviewURL": "https://static.poly.pizza/ba342070-aeda-4d0f-bab1-c3a156025b71.jpg",
+      "sha256": "a2d9d9779564ec621eab298edb43849a9b59dedd91ba900cef693fe84fec6388",
+      "bytes": 78276,
+      "sourceEvidencePath": "/licenses/desk-compositions/camera-source.json",
+      "verifiedAtUTC": "2026-11-01T06:33:15.459575+00:00",
+      "originalBounds": {
+        "min": [
+          -0.2606947124004364,
+          -0.18176710605621338,
+          -0.2144107073545456
+        ],
+        "max": [
+          0.2216150015592575,
+          0.19786830246448517,
+          0.26837360858917236
+        ],
+        "sizeXYZ": [
+          0.4823097139596939,
+          0.37963540852069855,
+          0.48278431594371796
+        ],
+        "center": [
+          -0.019539855420589447,
+          0.008050598204135895,
+          0.026981450617313385
+        ],
+        "bottomCenter": [
+          -0.019539855420589447,
+          -0.18176710605621338,
+          0.026981450617313385
+        ],
+        "method": "Three.js r187 GLTFLoader.parseAsync + scene.updateMatrixWorld(true) + Box3.setFromObject(scene,true); original node transforms retained. CPU geometry only; image decoding bypassed in-memory for image-bearing models."
+      },
+      "geometry": {
+        "nodes": 19,
+        "meshes": 19,
+        "loadedMeshNames": [
+          "group187960395",
+          "mesh2084903847",
+          "mesh2084903847_1",
+          "group421370910",
+          "group417813621",
+          "mesh1660282777",
+          "mesh1660282777_1",
+          "group1841487932",
+          "group1049064424",
+          "group1103111000",
+          "group1050759265",
+          "group1481700145",
+          "group1770708456",
+          "group563972974",
+          "group52072815",
+          "group1442659403",
+          "group326494754",
+          "group1451941922",
+          "group45962458",
+          "group869650960",
+          "group1230812601"
+        ],
+        "trianglesAcrossSceneInstances": 808,
+        "positionEntriesAcrossSceneInstances": 1562,
+        "images": [],
+        "animations": 0,
+        "requiredExtensions": [],
+        "externalBufferURIs": []
+      },
+      "orientationHint": {
+        "up": "+Y",
+        "front": "approximately (-0.7,-0.1,-0.7)",
+        "yawToPositiveZ": 2.35619449,
+        "note": "Inferred from lens-glass mat16 triangle normals; geometry is baked at diagonal yaw with slight downward lens tilt. Confirm lens visibility in browser."
+      },
+      "localLicenseTextPath": "/licenses/desk-compositions/CC-BY-3.0.txt",
+      "creditsURL": "/licenses/desk-compositions/README.md"
+    },
+    {
+      "id": "chip",
+      "title": "Microchip",
+      "author": "iPoly3D",
+      "localName": "chip.glb",
+      "localPath": "/models/desk-compositions/chip.glb",
+      "sourceURL": "https://poly.pizza/m/tIp60lIg43",
+      "downloadURL": "https://static.poly.pizza/26e45c7a-16a6-49da-b934-68bce1974c60.glb",
+      "publisherModelViewerURL": "https://static.poly.pizza/26e45c7a-16a6-49da-b934-68bce1974c60.glb.br",
+      "license": "CC0-1.0",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attribution": "\"Microchip\" by iPoly3D (https://poly.pizza/m/tIp60lIg43), licensed under CC0-1.0 (https://creativecommons.org/publicdomain/zero/1.0/).",
+      "modifications": "Original downloaded GLB bytes unchanged; local filename standardized. Composition display adaptations include in-scene resizing and rotation; materials may be recolored by the renderer. These are visual modifications, not changes to the stored GLB.",
+      "visualPreviewURL": "https://static.poly.pizza/26e45c7a-16a6-49da-b934-68bce1974c60.jpg",
+      "sha256": "663abf7664fbf108dc8995d3c34994a1805c0aeaf97e26e7d6261456eb75c8a3",
+      "bytes": 106144,
+      "sourceEvidencePath": "/licenses/desk-compositions/chip-source.json",
+      "verifiedAtUTC": "2026-11-01T06:33:15.459731+00:00",
+      "originalBounds": {
+        "min": [
+          -2.4337805807590485,
+          -1.6281512728609287e-15,
+          -0.8005869287162798
+        ],
+        "max": [
+          2.4436475709080696,
+          1.0935845070261985,
+          0.8005854030043134
+        ],
+        "sizeXYZ": [
+          4.877428151667118,
+          1.0935845070262,
+          1.6011723317205933
+        ],
+        "center": [
+          0.004933495074510574,
+          0.5467922535130985,
+          -7.628559832162374e-07
+        ],
+        "bottomCenter": [
+          0.004933495074510574,
+          -1.6281512728609287e-15,
+          -7.628559832162374e-07
+        ],
+        "method": "Three.js r187 GLTFLoader.parseAsync + scene.updateMatrixWorld(true) + Box3.setFromObject(scene,true); original node transforms retained. CPU geometry only; image decoding bypassed in-memory for image-bearing models."
+      },
+      "geometry": {
+        "nodes": 2,
+        "meshes": 1,
+        "loadedMeshNames": [
+          "microchip_1001_1",
+          "microchip_1001_2",
+          "microchip_1001_3"
+        ],
+        "trianglesAcrossSceneInstances": 2288,
+        "positionEntriesAcrossSceneInstances": 2754,
+        "images": [],
+        "animations": 0,
+        "requiredExtensions": [],
+        "externalBufferURIs": []
+      },
+      "orientationHint": {
+        "up": "+Y",
+        "front": "not directional; long body along X, pin rows along +/-Z",
+        "yawToPositiveZ": 0,
+        "note": "Flat DIP package, feet already near minY=0. Top marking at -X."
+      },
+      "localLicenseTextPath": "/licenses/desk-compositions/CC0-1.0.txt",
+      "creditsURL": "/licenses/desk-compositions/README.md"
+    },
+    {
+      "id": "monitor",
+      "title": "Computer Screen",
+      "author": "Kenney",
+      "localName": "monitor.glb",
+      "localPath": "/models/desk-compositions/monitor.glb",
+      "sourceURL": "https://poly.pizza/m/V5Qo141OcB",
+      "downloadURL": "https://static.poly.pizza/2af0158d-c560-4b1a-92e3-b50a51149b16.glb",
+      "publisherModelViewerURL": "https://static.poly.pizza/2af0158d-c560-4b1a-92e3-b50a51149b16.glb.br",
+      "license": "CC0-1.0",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attribution": "\"Computer Screen\" by Kenney (https://poly.pizza/m/V5Qo141OcB), licensed under CC0-1.0 (https://creativecommons.org/publicdomain/zero/1.0/).",
+      "modifications": "Original downloaded GLB bytes unchanged; local filename standardized. Composition display adaptations include in-scene resizing and rotation; materials may be recolored by the renderer. These are visual modifications, not changes to the stored GLB.",
+      "visualPreviewURL": "https://static.poly.pizza/2af0158d-c560-4b1a-92e3-b50a51149b16.jpg",
+      "sha256": "be4d698aa13793ed97f425028d633ef899d04c2ad8c89fe36932e5e7810e154e",
+      "bytes": 12856,
+      "sourceEvidencePath": "/licenses/desk-compositions/monitor-source.json",
+      "verifiedAtUTC": "2026-11-01T06:34:01.327751+00:00",
+      "originalBounds": {
+        "min": [
+          -0.39268800616264343,
+          -8.014827287931921e-32,
+          5.414336242803158e-16
+        ],
+        "max": [
+          1.4438230333738817e-15,
+          0.29428520798683167,
+          0.10400400310754776
+        ],
+        "sizeXYZ": [
+          0.3926880061626449,
+          0.29428520798683167,
+          0.10400400310754722
+        ],
+        "center": [
+          -0.196344003081321,
+          0.14714260399341583,
+          0.05200200155377415
+        ],
+        "bottomCenter": [
+          -0.196344003081321,
+          -8.014827287931921e-32,
+          0.05200200155377415
+        ],
+        "method": "Three.js r187 GLTFLoader.parseAsync + scene.updateMatrixWorld(true) + Box3.setFromObject(scene,true); original node transforms retained. CPU geometry only; image decoding bypassed in-memory for image-bearing models."
+      },
+      "geometry": {
+        "nodes": 2,
+        "meshes": 2,
+        "loadedMeshNames": [
+          "computerScreen_2",
+          "computerScreen_2_1",
+          "computerScreen_3",
+          "computerScreen_3_1"
+        ],
+        "trianglesAcrossSceneInstances": 144,
+        "positionEntriesAcrossSceneInstances": 228,
+        "images": [],
+        "animations": 0,
+        "requiredExtensions": [],
+        "externalBufferURIs": []
+      },
+      "orientationHint": {
+        "up": "+Y",
+        "front": "approximately -Z",
+        "yawToPositiveZ": 3.141592654,
+        "note": "Screen-colored metal surface normals predominantly -Z with slight +Y tilt; rotate PI around Y for +Z-facing screen. Source contains duplicated overlapping mesh groups; retained unchanged."
+      },
+      "localLicenseTextPath": "/licenses/desk-compositions/CC0-1.0.txt",
+      "creditsURL": "/licenses/desk-compositions/README.md"
+    },
+    {
+      "id": "lamp",
+      "title": "Light Desk",
+      "author": "Quaternius",
+      "localName": "lamp.glb",
+      "localPath": "/models/desk-compositions/lamp.glb",
+      "sourceURL": "https://poly.pizza/m/uJDWrSJGVH",
+      "downloadURL": "https://static.poly.pizza/2e1ab34a-eab6-4751-930f-6e3b4f5319a8.glb",
+      "publisherModelViewerURL": "https://static.poly.pizza/2e1ab34a-eab6-4751-930f-6e3b4f5319a8.glb.br",
+      "license": "CC0-1.0",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attribution": "\"Light Desk\" by Quaternius (https://poly.pizza/m/uJDWrSJGVH), licensed under CC0-1.0 (https://creativecommons.org/publicdomain/zero/1.0/).",
+      "modifications": "Original downloaded GLB bytes unchanged; local filename standardized. Composition display adaptations include in-scene resizing and rotation; materials may be recolored by the renderer. These are visual modifications, not changes to the stored GLB.",
+      "visualPreviewURL": "https://static.poly.pizza/2e1ab34a-eab6-4751-930f-6e3b4f5319a8.jpg",
+      "sha256": "5ea86e46a2fc36f86500fa6a97dc529dc3464189dc34e586375bae3ee5f68075",
+      "bytes": 12832,
+      "sourceEvidencePath": "/licenses/desk-compositions/lamp-source.json",
+      "verifiedAtUTC": "2026-11-01T06:34:01.162018+00:00",
+      "originalBounds": {
+        "min": [
+          -0.12576465960592031,
+          0.00015467382133941605,
+          -0.12576465739770137
+        ],
+        "max": [
+          0.12576465960592031,
+          0.573358161079365,
+          0.327409473647823
+        ],
+        "sizeXYZ": [
+          0.25152931921184063,
+          0.5732034872580256,
+          0.4531741310455244
+        ],
+        "center": [
+          0,
+          0.2867564174503522,
+          0.10082240812506083
+        ],
+        "bottomCenter": [
+          0,
+          0.00015467382133941605,
+          0.10082240812506083
+        ],
+        "method": "Three.js r187 GLTFLoader.parseAsync + scene.updateMatrixWorld(true) + Box3.setFromObject(scene,true); original node transforms retained. CPU geometry only; image decoding bypassed in-memory for image-bearing models."
+      },
+      "geometry": {
+        "nodes": 2,
+        "meshes": 1,
+        "loadedMeshNames": [
+          "Light_Desk_1",
+          "Light_Desk_2",
+          "Light_Desk_3"
+        ],
+        "trianglesAcrossSceneInstances": 356,
+        "positionEntriesAcrossSceneInstances": 288,
+        "images": [],
+        "animations": 0,
+        "requiredExtensions": [],
+        "externalBufferURIs": []
+      },
+      "orientationHint": {
+        "up": "+Y",
+        "front": "+Z",
+        "yawToPositiveZ": 0,
+        "note": "Shade reaches toward +Z. White interior mesh supplied, no light source or emissive behavior assumed."
+      },
+      "localLicenseTextPath": "/licenses/desk-compositions/CC0-1.0.txt",
+      "creditsURL": "/licenses/desk-compositions/README.md"
+    },
+    {
+      "id": "plant",
+      "title": "Houseplant",
+      "author": "Quaternius",
+      "localName": "plant.glb",
+      "localPath": "/models/desk-compositions/plant.glb",
+      "sourceURL": "https://poly.pizza/m/bfLOqIV5uP",
+      "downloadURL": "https://static.poly.pizza/1683c0b1-4dd9-4d45-910e-cf3e46f163f5.glb",
+      "publisherModelViewerURL": "https://static.poly.pizza/1683c0b1-4dd9-4d45-910e-cf3e46f163f5.glb.br",
+      "license": "CC0-1.0",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attribution": "\"Houseplant\" by Quaternius (https://poly.pizza/m/bfLOqIV5uP), licensed under CC0-1.0 (https://creativecommons.org/publicdomain/zero/1.0/).",
+      "modifications": "Original downloaded GLB bytes unchanged; local filename standardized. Composition display adaptations include in-scene resizing and rotation; materials may be recolored by the renderer. These are visual modifications, not changes to the stored GLB.",
+      "visualPreviewURL": "https://static.poly.pizza/1683c0b1-4dd9-4d45-910e-cf3e46f163f5.jpg",
+      "sha256": "0de1daa8be12b908fb8d1bf6bd9261e2a50061783e2ebe204bfb434768ca7c53",
+      "bytes": 16636,
+      "sourceEvidencePath": "/licenses/desk-compositions/plant-source.json",
+      "verifiedAtUTC": "2026-11-01T06:33:15.380853+00:00",
+      "originalBounds": {
+        "min": [
+          -0.5379853304475546,
+          0.0015023363930130227,
+          -0.5860483085203905
+        ],
+        "max": [
+          0.6282608490437269,
+          0.883358836305817,
+          0.6340107591335692
+        ],
+        "sizeXYZ": [
+          1.1662461794912815,
+          0.881856499912804,
+          1.2200590676539598
+        ],
+        "center": [
+          0.045137759298086166,
+          0.442430586349415,
+          0.02398122530658936
+        ],
+        "bottomCenter": [
+          0.045137759298086166,
+          0.0015023363930130227,
+          0.02398122530658936
+        ],
+        "method": "Three.js r187 GLTFLoader.parseAsync + scene.updateMatrixWorld(true) + Box3.setFromObject(scene,true); original node transforms retained. CPU geometry only; image decoding bypassed in-memory for image-bearing models."
+      },
+      "geometry": {
+        "nodes": 2,
+        "meshes": 1,
+        "loadedMeshNames": [
+          "Houseplant_7_1",
+          "Houseplant_7_2",
+          "Houseplant_7_3"
+        ],
+        "trianglesAcrossSceneInstances": 449,
+        "positionEntriesAcrossSceneInstances": 423,
+        "images": [],
+        "animations": 0,
+        "requiredExtensions": [],
+        "externalBufferURIs": []
+      },
+      "orientationHint": {
+        "up": "+Y",
+        "front": "radial; no required front",
+        "yawToPositiveZ": 0,
+        "note": "Broad leaves; source plant width exceeds height."
+      },
+      "localLicenseTextPath": "/licenses/desk-compositions/CC0-1.0.txt",
+      "creditsURL": "/licenses/desk-compositions/README.md"
+    },
+    {
+      "id": "books",
+      "title": "Books",
+      "author": "Kenney",
+      "localName": "books.glb",
+      "localPath": "/models/desk-compositions/books.glb",
+      "sourceURL": "https://poly.pizza/m/M2cJ5sVUgJ",
+      "downloadURL": "https://static.poly.pizza/a3d65818-0da5-4ac0-ab39-87846fa3458f.glb",
+      "publisherModelViewerURL": "https://static.poly.pizza/a3d65818-0da5-4ac0-ab39-87846fa3458f.glb.br",
+      "license": "CC0-1.0",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attribution": "\"Books\" by Kenney (https://poly.pizza/m/M2cJ5sVUgJ), licensed under CC0-1.0 (https://creativecommons.org/publicdomain/zero/1.0/).",
+      "modifications": "Original downloaded GLB bytes unchanged; local filename standardized. Composition display adaptations include in-scene resizing and rotation; materials may be recolored by the renderer. These are visual modifications, not changes to the stored GLB.",
+      "visualPreviewURL": "https://static.poly.pizza/a3d65818-0da5-4ac0-ab39-87846fa3458f.jpg",
+      "sha256": "8f634cc101d94538e36f57fb6c29aabbe6d35e70b157eb51db806cbca16d2326",
+      "bytes": 15156,
+      "sourceEvidencePath": "/licenses/desk-compositions/books-source.json",
+      "verifiedAtUTC": "2026-11-01T06:34:01.268250+00:00",
+      "originalBounds": {
+        "min": [
+          -0.15044760704040527,
+          0,
+          0
+        ],
+        "max": [
+          0,
+          0.10390230268239975,
+          0.09449999779462814
+        ],
+        "sizeXYZ": [
+          0.15044760704040527,
+          0.10390230268239975,
+          0.09449999779462814
+        ],
+        "center": [
+          -0.07522380352020264,
+          0.051951151341199875,
+          0.04724999889731407
+        ],
+        "bottomCenter": [
+          -0.07522380352020264,
+          0,
+          0.04724999889731407
+        ],
+        "method": "Three.js r187 GLTFLoader.parseAsync + scene.updateMatrixWorld(true) + Box3.setFromObject(scene,true); original node transforms retained. CPU geometry only; image decoding bypassed in-memory for image-bearing models."
+      },
+      "geometry": {
+        "nodes": 2,
+        "meshes": 2,
+        "loadedMeshNames": [
+          "books_2",
+          "books_2_1",
+          "books_2_2",
+          "books_2_3",
+          "books_3",
+          "books_3_1",
+          "books_3_2",
+          "books_3_3"
+        ],
+        "trianglesAcrossSceneInstances": 124,
+        "positionEntriesAcrossSceneInstances": 212,
+        "images": [],
+        "animations": 0,
+        "requiredExtensions": [],
+        "externalBufferURIs": []
+      },
+      "orientationHint": {
+        "up": "+Y",
+        "front": "not verified",
+        "yawToPositiveZ": null,
+        "note": "Several upright books, not a flat stack. Source contains duplicated overlapping mesh groups; retained unchanged."
+      },
+      "localLicenseTextPath": "/licenses/desk-compositions/CC0-1.0.txt",
+      "creditsURL": "/licenses/desk-compositions/README.md"
+    },
+    {
+      "id": "mug",
+      "title": "Cup",
+      "author": "Kenney",
+      "localName": "mug.glb",
+      "localPath": "/models/desk-compositions/mug.glb",
+      "sourceURL": "https://poly.pizza/m/aSF8ANEIsX",
+      "downloadURL": "https://static.poly.pizza/2b259313-45e2-405f-9b86-18d4ca25a785.glb",
+      "publisherModelViewerURL": "https://static.poly.pizza/2b259313-45e2-405f-9b86-18d4ca25a785.glb.br",
+      "license": "CC0-1.0",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attribution": "\"Cup\" by Kenney (https://poly.pizza/m/aSF8ANEIsX), licensed under CC0-1.0 (https://creativecommons.org/publicdomain/zero/1.0/).",
+      "modifications": "Original downloaded GLB bytes unchanged; local filename standardized. Composition display adaptations include in-scene resizing and rotation; materials may be recolored by the renderer. These are visual modifications, not changes to the stored GLB.",
+      "visualPreviewURL": "https://static.poly.pizza/2b259313-45e2-405f-9b86-18d4ca25a785.jpg",
+      "sha256": "28594dce6e5ff4b5ae34dd201645c2fea6d63b4b8f9c42984c45d21b89e948c2",
+      "bytes": 4904,
+      "sourceEvidencePath": "/licenses/desk-compositions/mug-source.json",
+      "verifiedAtUTC": "2026-11-01T06:33:35.951248+00:00",
+      "originalBounds": {
+        "min": [
+          -0.10000000149011612,
+          -9.02687468324458e-20,
+          -0.08660253882408142
+        ],
+        "max": [
+          0.10000000149011612,
+          0.20000000298023224,
+          0.14588460326194763
+        ],
+        "sizeXYZ": [
+          0.20000000298023224,
+          0.20000000298023224,
+          0.23248714208602905
+        ],
+        "center": [
+          0,
+          0.10000000149011612,
+          0.029641032218933105
+        ],
+        "bottomCenter": [
+          0,
+          -9.02687468324458e-20,
+          0.029641032218933105
+        ],
+        "method": "Three.js r187 GLTFLoader.parseAsync + scene.updateMatrixWorld(true) + Box3.setFromObject(scene,true); original node transforms retained. CPU geometry only; image decoding bypassed in-memory for image-bearing models."
+      },
+      "geometry": {
+        "nodes": 1,
+        "meshes": 1,
+        "loadedMeshNames": [
+          "cup"
+        ],
+        "trianglesAcrossSceneInstances": 80,
+        "positionEntriesAcrossSceneInstances": 88,
+        "images": [],
+        "animations": 0,
+        "requiredExtensions": [],
+        "externalBufferURIs": []
+      },
+      "orientationHint": {
+        "up": "+Y",
+        "front": "handle toward +Z",
+        "yawToPositiveZ": 0,
+        "note": "Cup variant with handle; plain white untextured mesh."
+      },
+      "localLicenseTextPath": "/licenses/desk-compositions/CC0-1.0.txt",
+      "creditsURL": "/licenses/desk-compositions/README.md"
+    },
+    {
+      "id": "keyboard",
+      "title": "Keyboard",
+      "author": "Poly by Google",
+      "localName": "keyboard.glb",
+      "localPath": "/models/desk-compositions/keyboard.glb",
+      "sourceURL": "https://poly.pizza/m/3oFfQCSsUmQ",
+      "downloadURL": "https://static.poly.pizza/8dc7a33e-9ed8-4e01-a7a1-b3717ac35c51.glb",
+      "publisherModelViewerURL": "https://static.poly.pizza/8dc7a33e-9ed8-4e01-a7a1-b3717ac35c51.glb.br",
+      "license": "CC-BY-3.0",
+      "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+      "attribution": "\"Keyboard\" by Poly by Google (https://poly.pizza/m/3oFfQCSsUmQ), licensed under CC-BY-3.0 (https://creativecommons.org/licenses/by/3.0/).",
+      "modifications": "Original downloaded GLB bytes unchanged; local filename standardized. Composition display adaptations include in-scene resizing and rotation; materials may be recolored by the renderer. These are visual modifications, not changes to the stored GLB.",
+      "visualPreviewURL": "https://static.poly.pizza/8dc7a33e-9ed8-4e01-a7a1-b3717ac35c51.jpg",
+      "sha256": "ea47924f14af012329aeb68a3c3648bf5e59669a0528ad375cf301b459abc66c",
+      "bytes": 140100,
+      "sourceEvidencePath": "/licenses/desk-compositions/keyboard-source.json",
+      "verifiedAtUTC": "2026-11-01T06:34:45.045326+00:00",
+      "originalBounds": {
+        "min": [
+          -207.60986328125,
+          1.230118989944458,
+          -79.00679779052734
+        ],
+        "max": [
+          207.14016723632812,
+          16.875,
+          76.24325561523438
+        ],
+        "sizeXYZ": [
+          414.7500305175781,
+          15.644881010055542,
+          155.25005340576172
+        ],
+        "center": [
+          -0.2348480224609375,
+          9.052559494972229,
+          -1.3817710876464844
+        ],
+        "bottomCenter": [
+          -0.2348480224609375,
+          1.230118989944458,
+          -1.3817710876464844
+        ],
+        "method": "Three.js r187 GLTFLoader.parseAsync + scene.updateMatrixWorld(true) + Box3.setFromObject(scene,true); original node transforms retained. CPU geometry only; image decoding bypassed in-memory for image-bearing models."
+      },
+      "geometry": {
+        "nodes": 1,
+        "meshes": 1,
+        "loadedMeshNames": [
+          "Keyboard1"
+        ],
+        "trianglesAcrossSceneInstances": 1972,
+        "positionEntriesAcrossSceneInstances": 2942,
+        "images": [
+          {
+            "mimeType": "image/png",
+            "embeddedBufferView": 4,
+            "embeddedBytes": 32144,
+            "uri": null
+          }
+        ],
+        "animations": 0,
+        "requiredExtensions": [],
+        "externalBufferURIs": []
+      },
+      "orientationHint": {
+        "up": "+Y",
+        "front": "not verified",
+        "yawToPositiveZ": null,
+        "note": "Very large source units: normalize from actual bbox, not assumed meters. Embedded texture included; browser must confirm key layout/front edge."
+      },
+      "localLicenseTextPath": "/licenses/desk-compositions/CC-BY-3.0.txt",
+      "creditsURL": "/licenses/desk-compositions/README.md"
+    },
+    {
+      "id": "chair",
+      "title": "Office Chair",
+      "author": "Quaternius",
+      "localName": "chair.glb",
+      "localPath": "/models/desk-compositions/chair.glb",
+      "sourceURL": "https://poly.pizza/m/UfKvrZBK6C",
+      "downloadURL": "https://static.poly.pizza/ac2301f3-af86-435a-885a-d8f1a32f9f76.glb",
+      "publisherModelViewerURL": "https://static.poly.pizza/ac2301f3-af86-435a-885a-d8f1a32f9f76.glb.br",
+      "license": "CC0-1.0",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "attribution": "\"Office Chair\" by Quaternius (https://poly.pizza/m/UfKvrZBK6C), licensed under CC0-1.0 (https://creativecommons.org/publicdomain/zero/1.0/).",
+      "modifications": "Original downloaded GLB bytes unchanged; local filename standardized. Composition display adaptations include in-scene resizing and rotation; materials may be recolored by the renderer. These are visual modifications, not changes to the stored GLB.",
+      "visualPreviewURL": "https://static.poly.pizza/ac2301f3-af86-435a-885a-d8f1a32f9f76.jpg",
+      "sha256": "0f1a9180dbe0dc4116fa17b9b03e6002f75110e2a0f4ed0ff20a40b384240a76",
+      "bytes": 115760,
+      "sourceEvidencePath": "/licenses/desk-compositions/chair-source.json",
+      "verifiedAtUTC": "2026-11-01T06:34:44.898451+00:00",
+      "originalBounds": {
+        "min": [
+          -0.3612053580582142,
+          9.061860628695387e-05,
+          -0.4418773046384856
+        ],
+        "max": [
+          0.3604649566113949,
+          1.1276526498709163,
+          0.36532837633525367
+        ],
+        "sizeXYZ": [
+          0.7216703146696091,
+          1.1275620312646293,
+          0.8072056809737393
+        ],
+        "center": [
+          -0.0003702007234096527,
+          0.5638716342386016,
+          -0.03827446415161598
+        ],
+        "bottomCenter": [
+          -0.0003702007234096527,
+          9.061860628695387e-05,
+          -0.03827446415161598
+        ],
+        "method": "Three.js r187 GLTFLoader.parseAsync + scene.updateMatrixWorld(true) + Box3.setFromObject(scene,true); original node transforms retained. CPU geometry only; image decoding bypassed in-memory for image-bearing models."
+      },
+      "geometry": {
+        "nodes": 2,
+        "meshes": 1,
+        "loadedMeshNames": [
+          "OfficeChair_1",
+          "OfficeChair_2",
+          "OfficeChair_3"
+        ],
+        "trianglesAcrossSceneInstances": 2116,
+        "positionEntriesAcrossSceneInstances": 4135,
+        "images": [],
+        "animations": 0,
+        "requiredExtensions": [],
+        "externalBufferURIs": []
+      },
+      "orientationHint": {
+        "up": "+Y",
+        "front": "+Z inferred from backrest cushion normals",
+        "yawToPositiveZ": 0,
+        "note": "Office chair cushion normals face +Z. Rotate PI when placing in front of +Z-facing desk so sitter faces monitor."
+      },
+      "localLicenseTextPath": "/licenses/desk-compositions/CC0-1.0.txt",
+      "creditsURL": "/licenses/desk-compositions/README.md"
+    }
+  ],
+  "absentAssets": [],
+  "totalGLBBytes": 676868,
+  "verification": {
+    "atUTC": "2026-11-01T06:36:02.453Z",
+    "node": "v24.13.1",
+    "threeRevision": "187",
+    "allGLBHeadersAndSHA256Match": true,
+    "allElevenGLTFLoaderCPUParsesPassed": true,
+    "allScenePositionsFinite": true,
+    "allPrimitiveIndicesInRange": true,
+    "allBufferViewsInDeclaredBufferRange": true,
+    "allBoundsPositiveFinite": true,
+    "textureDecoding": "Not performed; original embedded images retained. Texture placeholders used only for CPU inspection of basketball and keyboard.",
+    "rendering": "Not performed by assets worker. Main agent owns actual scene/browser QA.",
+    "notPerformed": [
+      "Full Khronos Validator",
+      "Browser rendering",
+      "Visual orientation confirmation",
+      "GPU/performance measurement"
+    ]
+  },
+  "normalization": {
+    "assumption": "All assets are Y-up after original glTF node transforms; do not strip source root transforms.",
+    "bottomCenterFormula": "For scale s and local original bounds b: inner position = [-centerX*s, -minY*s, -centerZ*s]; outer position = desired bottom center. Recompute after any pitch/roll.",
+    "deskSurfaceY": 3.1,
+    "deskUniformScaleForFloorZeroAndSurface3_1": 3.360437345384782,
+    "orientation": "Bounds describe unrotated original assets. Apply yaw to a centered normalization group; camera and monitor face corrections listed per asset."
+  },
+  "creditsURL": "/licenses/desk-compositions/README.md"
+}

@@ -1,0 +1,116 @@
+{
+  "checks": {
+    "mixedAttention": "Pass; focus highlight/label persists after pointer leaves robot",
+    "cancelContinuity": {
+      "status": "Pass",
+      "maxVisibleDelta": 1.2560739669470201e-15,
+      "visibleSamples": 5,
+      "samples": [
+        {
+          "position": [
+            4.41126229074644,
+            4.971413439046567,
+            3.495596955906504
+          ],
+          "opacity": 0
+        },
+        {
+          "position": [
+            4.411262290746439,
+            4.971413439046567,
+            3.495596955906503
+          ],
+          "opacity": 0
+        },
+        {
+          "position": [
+            4.411262290746439,
+            4.971413439046567,
+            3.495596955906503
+          ],
+          "opacity": 0
+        },
+        {
+          "position": [
+            4.411262290746439,
+            4.971413439046567,
+            3.495596955906503
+          ],
+          "opacity": 0.00946859
+        },
+        {
+          "position": [
+            4.411262290746439,
+            4.971413439046567,
+            3.495596955906503
+          ],
+          "opacity": 0.0386053
+        },
+        {
+          "position": [
+            4.411262290746439,
+            4.971413439046567,
+            3.495596955906503
+          ],
+          "opacity": 1
+        },
+        {
+          "position": [
+            4.411262290746439,
+            4.971413439046567,
+            3.495596955906503
+          ],
+          "opacity": 1
+        }
+      ],
+      "note": "Sampled before the first opaque cover; no pending-endpoint jump"
+    },
+    "liveReducedMotion": {
+      "status": "Pass",
+      "still": {
+        "camera": [
+          6.6,
+          5.5,
+          8.1
+        ],
+        "robot": {
+          "asset": "/models/robot-expressive.glb",
+          "action": "Idle",
+          "actionTime": 0.5,
+          "idleTime": 0.5,
+          "waveTime": 0,
+          "mixerTime": 0,
+          "running": true,
+          "reducedMotion": true,
+          "documentVisible": true,
+          "playing": false,
+          "waveStarts": 0,
+          "waveCompletions": 0,
+          "samples": 6,
+          "headWorld": [
+            0.01204671878727601,
+            3.9161973678407143,
+            0.09729914739945908
+          ],
+          "rightHandWorld": [
+            -0.443033970656283,
+            2.966137778465334,
+            0.6043303824169352
+          ],
+          "leftHandWorld": [
+            0.6666467322000376,
+            3.0278052273984137,
+            0.3513001981766354
+          ],
+          "headNode": "Head",
+          "rightHandNode": "Palm2R",
+          "leftHandNode": "Palm2L"
+        }
+      },
+      "note": "Preference changed during approach; active move settled, later stages immediate, frozen workshop reachable and return works"
+    },
+    "initialDeadline": "Pass; held desk.glb indefinitely, explicit fallback appeared after bounded foreground wait and notes remained usable"
+  },
+  "errors": [],
+  "hiddenTab": "Source-hardened visibility policy; actual OS tab suspension remains unverified"
+}

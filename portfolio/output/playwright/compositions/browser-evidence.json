@@ -1,0 +1,83 @@
+{
+  "environment": "Isolated Chrome, software WebGL/SwiftShader",
+  "viewport": {
+    "width": 1600,
+    "height": 1100
+  },
+  "views": [
+    {
+      "view": "cozy",
+      "canvases": 1,
+      "assets": "desk.glb,monitor.glb,keyboard.glb,chair.glb,lamp.glb,books.glb,mug.glb,plant.glb,/models/robot-expressive.glb,basketball.glb,camera.glb,chip.glb",
+      "drawCalls": "237",
+      "triangles": "61478",
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)",
+      "width": 1600,
+      "height": 1100,
+      "screenshot": "output/playwright/compositions/cozy.png",
+      "bytes": 783209,
+      "sha256": "99665213fc1be72a64fc34a941441716eff5218bb4113e86f5aecf515aa03aa5"
+    },
+    {
+      "view": "cinematic",
+      "canvases": 1,
+      "assets": "desk.glb,monitor.glb,keyboard.glb,chair.glb,lamp.glb,books.glb,mug.glb,plant.glb,/models/robot-expressive.glb,basketball.glb,camera.glb,chip.glb",
+      "drawCalls": "237",
+      "triangles": "61478",
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)",
+      "width": 1600,
+      "height": 1100,
+      "screenshot": "output/playwright/compositions/cinematic.png",
+      "bytes": 845031,
+      "sha256": "33b1efc05e2f8e3d488d4012bd59f6fe127312b6fd3068f20b4693b2a25913ab"
+    },
+    {
+      "view": "stylized-game",
+      "canvases": 1,
+      "assets": "desk.glb,monitor.glb,keyboard.glb,chair.glb,lamp.glb,books.glb,mug.glb,plant.glb,/models/robot-expressive.glb,basketball.glb,camera.glb,chip.glb",
+      "drawCalls": "237",
+      "triangles": "61478",
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)",
+      "width": 1600,
+      "height": 1100,
+      "screenshot": "output/playwright/compositions/stylized-game.png",
+      "bytes": 609705,
+      "sha256": "e4680740e78bc75a1b3c4224b10429d6141a57b98dc19284c1bd213b3444bf57"
+    }
+  ],
+  "checks": {
+    "modeButtonClick": "Pass; selected actual cinematic scene, one canvas",
+    "modeKeyboardEnter": "Pass; selected actual orthographic scene",
+    "modeKeyboardSpace": "Pass; returned to cozy",
+    "objectKeyboardFocus": "Pass; Software label and rendered selection ring captured",
+    "resetView": "Pass; reset control exercised",
+    "miniWorlds": "Not implemented; outside authorized scope",
+    "physicalDevices": "Not tested"
+  },
+  "errors": [],
+  "failedRequests": [
+    {
+      "url": "http://127.0.0.1:4182/models/desk-compositions/books.glb",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      }
+    },
+    {
+      "url": "http://127.0.0.1:4182/models/robot-expressive.glb",
+      "failure": {
+        "errorText": "net::ERR_ABORTED"
+      }
+    }
+  ],
+  "buildID": "ofYjqPUPHWT7doJc-U1Hf",
+  "typecheck": "npm run typecheck passed; final production build also typechecked",
+  "build": "npm run build passed; /compositions exported as static HTML",
+  "additionalObservedChecks": {
+    "robotCanvasHover": "Pass; actual mouse hit at visible robot head; saved mouse-hover-robot.png",
+    "basketballCanvasClick": "Pass; actual mouse hit at visible ball; saved mouse-select-basketball.png",
+    "noWebGLFallback": "Pass; observed usable failure state in connected Chrome with WebGL context disabled",
+    "touch": "Not tested",
+    "physicalDevices": "Not tested",
+    "miniWorlds": "Not implemented in composition scope"
+  }
+}

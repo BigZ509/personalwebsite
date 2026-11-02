@@ -1,0 +1,32 @@
+# Dependencies and generated app output
+node_modules/
+.next/
+out/
+coverage/
+*.tsbuildinfo
+
+# Local browser sessions and test-run caches; final review artifacts stay tracked
+.playwright-cli/
+test-results/
+playwright-report/
+portfolio/output/playwright/compositions/initial-*.png
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+!.env.sample
+*.pem
+*.p12
+*.pfx
+.npmrc
+
+# Machine files and duplicate workspace archives
+.DS_Store
+*.log
+!portfolio/output/playwright/robot-journey/build.log
+!portfolio/output/playwright/robot-journey/unit-tests.log
+!portfolio/output/playwright/robot-journey/typecheck.log
+!portfolio/output/playwright/robot-journey/initial-timeout-red.log
+/*.zip
+.sites-runtime/

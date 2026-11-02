@@ -1,0 +1,20 @@
+
+> field-notes-robot-prototype@0.1.0 test
+> node --experimental-strip-types --test tests/*.test.ts
+
+✔ activation reveals robotics once, while reset returns to the specimen (0.653958ms)
+✔ pointer and focus attention survive until both leave (0.099458ms)
+✔ motion stops for pause, reduced motion, background and offscreen independently (0.092625ms)
+✔ return restores the actual invoking camera pose, including an orbited view (2.761084ms)
+✔ Back during approach prevents a stale camera completion from reopening the workshop (0.419375ms)
+✔ reduced motion reaches both destinations without animated camera moves or fades (1.647125ms)
+✔ a failed workshop load recovers the desk pose and releases controls (0.216709ms)
+✔ turning on reduced motion during approach makes all later stages immediate (0.200792ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 132.322208

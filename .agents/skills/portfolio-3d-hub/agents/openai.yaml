@@ -1,0 +1,4 @@
+interface:
+  display_name: "Portfolio 3D Hub"
+  short_description: "Research, compose and verify the 3D desk hub"
+  default_prompt: "Use $portfolio-3d-hub to continue the portfolio desk hub within the current authorized phase."

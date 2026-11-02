@@ -1,0 +1,6 @@
+### Result
+{"initialLoading":"FAIL before hardening: scene remained loading beyond 17 seconds while desk.glb was stalled"}
+### Ran Playwright code
+```js
+await (async (page) => {const context=await page.context().browser().newContext(); try {const p=await context.newPage();await p.route("**/models/desk-compositions/desk.glb",()=>{});await p.goto("http://127.0.0.1:4182/hub/");try {await p.getByRole("alert").filter({hasText:"The workshop is still open."}).waitFor({timeout:17000});return {initialLoading:"bounded"};}catch{return {initialLoading:"FAIL before hardening: scene remained loading beyond 17 seconds while desk.glb was stalled"};}} finally {await context.close();}})(page);
+```

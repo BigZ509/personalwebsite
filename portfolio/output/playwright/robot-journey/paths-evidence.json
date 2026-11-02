@@ -1,0 +1,47 @@
+{
+  "checks": {
+    "keyboardEnterEscape": "Pass; Tab, authored focus reaction, Enter entry, Escape return and restored focus",
+    "keyboardSpace": "Pass; second complete round trip",
+    "orbitedPose": {
+      "status": "Pass",
+      "saved": [
+        -3.7888696749297637,
+        11.410230080065757,
+        12.14838563120633
+      ],
+      "restored": [
+        -3.7888696749297637,
+        11.410230080065757,
+        12.14838563120633
+      ],
+      "maxError": 0
+    },
+    "cancelDuringApproach": "Pass; Back/Escape cancelled flight and no stale workshop appeared",
+    "pause": {
+      "status": "Pass",
+      "frameStart": 235,
+      "frameEnd": 235,
+      "idle": 0.5
+    },
+    "touch": {
+      "status": "Pass",
+      "viewport": [
+        390,
+        844
+      ],
+      "input": "emulated touchscreen tap on the actual robot mesh and Back",
+      "canvases": 1
+    },
+    "reducedMotion": {
+      "status": "Pass",
+      "frozenIdle": 0.5,
+      "waveStarts": 0,
+      "roundTrip": "native Enter / Escape",
+      "note": "No animated camera/fade verified separately by coordinator test; browser observed immediate destination and frozen robot"
+    },
+    "webglUnavailable": "Pass; controlled context-creation failure shows usable notes/retry links; regular content route works",
+    "noJavaScript": "Pass; noscript link reaches static notes"
+  },
+  "errors": [],
+  "physicalDevices": "Not tested: physical iOS/Android, hardware GPU, Safari/Firefox, screen readers"
+}
