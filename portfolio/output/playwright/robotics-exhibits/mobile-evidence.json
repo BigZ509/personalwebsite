@@ -1,0 +1,27 @@
+{
+  "checks": {
+    "meshTouchBoth": "Pass",
+    "labelsInBounds": "Pass",
+    "touchReturn": "Pass",
+    "exactCameraPositionReturn": "Pass"
+  },
+  "reducedMotion": "false",
+  "labels": [
+    {
+      "text": "Gesture Rover\nPlaceholder model",
+      "left": 16.21044158935547,
+      "right": 129.21044921875
+    },
+    {
+      "text": "Guiding Hands\nPlaceholder model",
+      "left": 155.4904022216797,
+      "right": 268.49041748046875
+    }
+  ],
+  "errors": [],
+  "messages": [],
+  "viewport": [
+    390,
+    844
+  ]
+}

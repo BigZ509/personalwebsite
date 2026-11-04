@@ -1,0 +1,106 @@
+{
+  "modelsUnchangedFromHEAD": [
+    {
+      "path": "public/models/robot-expressive.glb",
+      "bytes": 463988,
+      "sha256": "047f5e5fb3bb6d378bd1df16ca6137f2a596c99b3a1b5690b4020c05aaf6f319"
+    },
+    {
+      "path": "public/models/desk-compositions/monitor.glb",
+      "bytes": 12856,
+      "sha256": "be4d698aa13793ed97f425028d633ef899d04c2ad8c89fe36932e5e7810e154e"
+    },
+    {
+      "path": "public/models/desk-compositions/chair.glb",
+      "bytes": 115760,
+      "sha256": "0f1a9180dbe0dc4116fa17b9b03e6002f75110e2a0f4ed0ff20a40b384240a76"
+    },
+    {
+      "path": "public/models/desk-compositions/basketball.glb",
+      "bytes": 38288,
+      "sha256": "35197dc8ee43e3c65a7108d1c33e56dd20825f4bacb45b56ed33b3950547e755"
+    },
+    {
+      "path": "public/models/desk-compositions/camera.glb",
+      "bytes": 78276,
+      "sha256": "a2d9d9779564ec621eab298edb43849a9b59dedd91ba900cef693fe84fec6388"
+    },
+    {
+      "path": "public/models/desk-compositions/lamp.glb",
+      "bytes": 12832,
+      "sha256": "5ea86e46a2fc36f86500fa6a97dc529dc3464189dc34e586375bae3ee5f68075"
+    },
+    {
+      "path": "public/models/desk-compositions/plant.glb",
+      "bytes": 16636,
+      "sha256": "0de1daa8be12b908fb8d1bf6bd9261e2a50061783e2ebe204bfb434768ca7c53"
+    },
+    {
+      "path": "public/models/desk-compositions/desk.glb",
+      "bytes": 135916,
+      "sha256": "3878f6d93d946d77f3e1be55919627a81435696252137ae33c22391c0411f3ce"
+    },
+    {
+      "path": "public/models/desk-compositions/keyboard.glb",
+      "bytes": 140100,
+      "sha256": "ea47924f14af012329aeb68a3c3648bf5e59669a0528ad375cf301b459abc66c"
+    },
+    {
+      "path": "public/models/desk-compositions/books.glb",
+      "bytes": 15156,
+      "sha256": "8f634cc101d94538e36f57fb6c29aabbe6d35e70b157eb51db806cbca16d2326"
+    },
+    {
+      "path": "public/models/desk-compositions/chip.glb",
+      "bytes": 106144,
+      "sha256": "663abf7664fbf108dc8995d3c34994a1805c0aeaf97e26e7d6261456eb75c8a3"
+    },
+    {
+      "path": "public/models/desk-compositions/mug.glb",
+      "bytes": 4904,
+      "sha256": "28594dce6e5ff4b5ae34dd201645c2fea6d63b4b8f9c42984c45d21b89e948c2"
+    }
+  ],
+  "modelCount": 12,
+  "totalModelBytes": 1140856,
+  "routes": [
+    "index.html",
+    "compositions/index.html",
+    "robotics/index.html",
+    "_not-found/index.html",
+    "404/index.html",
+    "hub/index.html",
+    "hub/robotics/index.html"
+  ],
+  "sourceSHA256": {
+    "src/features/hub/Workshop.tsx": "746b5117c971c0f5f9e11936f0fcbf0ae69f8e8bde052bce717b75059d825ba5",
+    "src/features/hub/HubExperience.tsx": "16e60fc13452964a9042bd2ac94de23e6e93a11c33015a0ec522e8347b54d5db",
+    "src/features/hub/exhibits.ts": "ea7c64c61ae631202d44fa60c665d1eb84647d3d6fc1470b394c33fda13fd7b3",
+    "src/features/hub/hub.module.css": "9a89e3af50ed1f46929d5a0e5a43b4e982cfa59debee168ce5093fc6abcd1f87",
+    "src/features/compositions/DeskScene.tsx": "ebc9c4b9d31f50c3ecf54455a755a876b61aa93bf75cf2847447bd24133e56f9"
+  },
+  "browserTestedBuildId": "KKAoKFzBH9jz_Sc8LcT3N",
+  "finalExportBuildId": "5lJD4vraT4h2_DT7wC6fR",
+  "applicationSourceUnchangedSinceBrowserTests": true,
+  "screenshotSHA256": {
+    "01-desk.png": "5e4d9f80f334a70c81cca22c4562c48cbe45aaa57c8caa818d15dce7d008a116",
+    "02-workshop.png": "1b4c426c110ae505b93790d638beaf640492c7e2621f9fdd470555f9e25f37b7",
+    "03-rover-hover.png": "2b2df9e1299711d99a041635e4c98650f688241c12e1dda5150302069bde3401",
+    "04-rover-selected.png": "53d6a0b7d046fc937bbd18093a670933c23ba7e38870914d71cf53ea21cca53a",
+    "05-hands-selected.png": "e101f142c3068b4303bde456220849f10e78a4c253e8b61c37455f429395f7c5",
+    "06-keyboard.png": "80adb1cd432ab978cd6c6f00bd4cba07c83faf39b6d65c57b172272375ff441c",
+    "07-return.png": "e0111ccc76cb44ee31510804ff8d6bf157b3e658b41a3417bb8b06ef0e678861",
+    "08-mobile-workshop.png": "45043cab3bddf52ce3c3d76177f550a7e8201c6d3eef49beb96df64972565b2a",
+    "09-mobile-rover-selected.png": "4a980c8386efdf23d92db42c2aea8edcf5db6f92376567a972e468dd6cba5a34",
+    "10-mobile-hands-selected.png": "e0fcaa3252d47ffc40fa17dde217f2b58c246e02300634e577ca700f706c8051",
+    "11-reduced-motion.png": "4eb243ef10cc0d4e43baa697f6b45434122331669fed2bde407f7d4f891ba31b",
+    "12-reduced-overview.png": "94a936e088cdeaf0cd54660722d104414ad05fbb56961a1cceca3e081d5fda71",
+    "13-reduced-rover.png": "5fbc1b617ea2eb769ebc0bc4c585c74ecab42a5540c5b03bc94c6ab4bdca0b93",
+    "mobile-reduced-first.png": "0f7a874a384a768dfd47e562f577f2e6a75871ce6e3112d2e062789d720eea8b"
+  },
+  "browserEvidence": [
+    "desktop-evidence.json",
+    "mobile-evidence.json",
+    "reduced-evidence.json"
+  ]
+}

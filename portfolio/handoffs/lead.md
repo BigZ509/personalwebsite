@@ -1,5 +1,66 @@
 # Handoff — Lead agent
 
+## Latest checkpoint — D-026 · 2026-11-04
+
+Objective1 identity Ready for review (T33). Read current UPDATE and `docs/PORTFOLIO_IDENTITY_REVIEW.md`. New PortfolioIdentity.tsx/identity.module.css; HubExperience HTML insertion/desk copy/utility wrapper; appended hub responsive styles/desktop inspector offset; root/hub metadata. No scene/geometry/light/robot/camera/journey/data/ProjectDetails runtime change. All16 GLBs/packages and all baseline source except four intended files match `output/playwright/portfolio-identity/baseline.json`.
+
+Header/name/nav persistent; native About/resume-unavailable dialogs contain/restore focus and stop Escape before workshop shortcut. GitHub BigZ509 confirmed by origin/user account and actual popup. Resume PDF/URL missing, no invented anchor. Existing demos still unavailable. No new worlds, object labels/onboarding, dependencies, commits/push/deploy.
+
+Final build `oZiZfW_rd_HYc9lIG0Hll`;8 tests/type/build/export/diff pass. Actual desktop1600×1100/1280×880, touch-emulated390×844 normal and initial reduced motion all pass: nav/dialog/keyboard/focus, pointer-through header/orbit, actual robot hover/Wave progression/click/travel, both exhibit panels, modal Escape over inspector, exact orbited camera/focus return and same Canvas, manual Pause. Short740×360/800×360/320×568 bounds pass; short inspector scroll/About close pass. Source review's landscape overlap corrected; visual QA then caught workshop text across plaque, compact short caption corrected and screenshot retained. No further source change since final tested build.
+
+Evidence `output/playwright/portfolio-identity/`: desktop/responsive/short-panel action functions, CLI logs/JSON, full screenshots, source/asset manifest and build/type/unit logs. Archived D022 before capture matches framing, explicitly labeled historical. Initial desktop navigation canceled robot request and first mobile tap missed Rover arm gap; logs retained, final scoped runs clean. Clock warning/favicon404 existing. HeadlessChrome156/macOS reports ANGLE Metal Apple M5; no physical phones/other-browser/performance/conformance/screen-reader claim. At very short landscape, existing room projection is small and exhibit micro-labels dense; identity/nav/controls tested, no 3D mobile redesign.
+
+CUA APIs failed timeoutMs despite documented recovery; native app warned user changed Chrome. User explicitly chose terminal Playwright, which completed QA. CUA could not confirm cleanup of failed blank tab455291986; do not interfere with user Chrome to chase it. Task isolated Playwright session identity and own preview4184 cleaned up; user4183 preview preserved. To inspect export restart `PORT=4184 npm run preview` in portfolio, or refresh existing user preview. Next: visual review/confirmed resume; stop before Objective2/other worlds/Git/deploy.
+
+## Latest checkpoint — D-025 · 2026-11-03
+
+Guiding Hands refinement Ready for review (T32). Read UPDATE and `docs/GUIDING_REFINEMENT_REVIEW.md` first. User authorized this bounded refinement only. Preserve desk/workshop/Rover/panels/journey/one Canvas; no other worlds, Git publication or deployment.
+
+Only setup geometry arrangement/orientation/local fill, Guiding label anchor, caption and representation note changed. Upright board uses unchanged `public/images/guiding-hands/forest-motion-prototype.png`, original repository `benchmark-results/smol-live-smoke.png`, blob `db6b70a793833c3a1acf28e76a7e618d5c302585`, 1120×760/56832bytes. It is an archived experimental FOREST MOTION screenshot, not a new demo or current diagnostic benchmark. User repo verified through connector. Image provenance/credits on disk; final hardware and both videos remain unconfirmed. Jetson stylized/unofficial; viewing arrangement not wiring/optical accuracy. Plant retained, paper stack no longer displayed.
+
+Final build `hsoZYZ1tyte_JMdQWewVf`: build/typecheck/8 unit tests/diff check pass. Native Chrome/macOS visible WebGL at1280×880 and390×844: four hardware mesh picks, Rover/project switching, close/Escape/Space/focus, fixed inspection camera, manual Pause immediate trip, portrait drag rejection and exact desk return pass. All16 model hashes preserved; DeskScene D022, shared panel/HubExperience D024, journey/robot/presets/SceneAssets HEAD preserved. Reviewer found no actionable issue. Evidence `output/playwright/guiding-refinement/`: full captures, native JSON, verification manifest, browser action record/build log. Partial detail crop retained but excluded from acceptance.
+
+Limits: browser version/GPU unavailable through native DOM inspector; failed getContext/navigator queries are tool limits. Portrait pointer clicks, not touch emulation/physical touch. Actual OS reduced-motion preference not retested; manual Pause shares immediate behavior and is tested. Other browsers/devices/performance/accessibility conformance/video playback untested. Existing Clock warnings only. Scope-limited source work; initial broad filename search was stopped and no unrelated content used.
+
+Temporary viewport reset, only own QA tab455291955 and server4184 closed. User tab/server4183 left unchanged. To inspect final export, start `PORT=4184 npm run preview` in portfolio. Next step is user visual review; do not infer further features/worlds or Git/deploy authority.
+
+## Latest checkpoint — D-024 · 2026-11-02
+
+Guiding Hands hardware illustration Ready for review. Read current UPDATE, `docs/GUIDING_HARDWARE_REVIEW.md`, `docs/GUIDING_HARDWARE_ASSETS.md` before historical placeholder stops. User requested selected projector/webcam/office props and original stylized Jetson from NVIDIA refs; no other worlds/Git/deploy.
+
+New `GuidingHandsSetup.tsx`, four selected GLBs/license notices/manifest; Workshop child replacement and Guiding-only portrait label offset, representation/badge/note data, shared panel note and small caption/styles. Jetson original geometric study, not official/exact; projection diagram static schematic, not demo. Optional monitor/whiteboard omitted. Source ZIP/NVIDIA image outside production. Office LICENSE allows integrated apps/modification but no standalone assets/packs/libraries; only plant/paper_stack included. CC BY3 projector/webcam credited; projector presentation base root omitted.
+
+Final build `f3JtLGGttBH0FIGdwlPdC`:8 tests/type/build pass; native rendered webcam/Jetson/projector clicks/taps, Rover/panels/keyboard/close/focus/switch/scroll-reset/same Canvas/poses/exact return, touch390×844 and reduced motion pass. Original12 GLBs and camera/journey/robot/presets/asset helper unchanged. Four new GLBs169,180bytes. Source review no actionable finding. Portrait label visual correction captured; initial navigation-abort and premature Html sample logs kept without claiming application fixes. Chrome software WebGL only; physical/hardware/other-browser/conformance/orientation/video playback untested; existing warnings disclosed.
+
+Artifacts `output/playwright/guiding-hardware/` final desktop/mobile/reduced functions/logs/JSON/screenshots and manifest. Current memory/credits/reference comparison updated. QA browser/server sessions close at finish; run `PORT=4182 npm run preview` in portfolio for export. Stop for visual review/real hardware photos and confirmed videos. Do not infer official Jetson asset, actual device configuration or new worlds.
+
+
+## Latest checkpoint — D-023 · 2026-11-02
+
+Shared robotics project inspector Ready for review. Read current UPDATE, `docs/ROBOTICS_DETAILS_REVIEW.md` and `docs/ROBOTICS_PROJECT_DATA.md` before historical no-panel stops. User authorized panel/label refinement only, preserving workshop/desk/transitions. No other worlds/Git/deployment.
+
+New `ProjectDetails.tsx`, expanded `exhibits.ts`, integrated `HubExperience.tsx`, plaque copy in `Workshop.tsx`, appended `hub.module.css`. Nonmodal desktop side panel/mobile52svh sheet; actual mesh/DOM open; panel navigation switches same shell, keyed body resets scroll; Close restores exhibit equivalent focus after visibility commits. Escape closes first then returns Desk; explicit Back closes and returns. Both demos null/unavailable by explicit user clarification. Guiding repo/inspiration confirmed; Rover inspiration provisional and summary/repo unverified. KnightHacks current main did not verify Rover association; do not link it by inference.
+
+Checks passed:8 unit tests, typecheck, static build ID `wfegZMpmIInQSF2tPWjKQ`, actual desktop/touch/reduced-motion panels both, content/link/media absence, same Canvas/poses, keyboard/close/Escape/back/repeat, scroll-switch reset and keyboard scrolling. Independent scroll finding and browser accessible-name drift reproduced/fixed. Preserved12 GLB bytes and exact D-022 DeskScene adapter hash. No page errors in final functions; existing Clock/favicon/readback warnings. Physical/hardware/Safari/Firefox/screen readers/orientation/recovery and future video component playback not tested.
+
+Artifacts: `output/playwright/robotics-details/` desktop/mobile/reduced CLI+JSON+screenshots, source/model/image manifest, provenance; failing attempts retained. Preview/browser sessions close after QA; restart `PORT=4182 npm run preview` in portfolio for exported site. No final source changes since tested build.
+
+Next user action: review inspector; provide confirmed project videos, Rover summary/repo/final inspiration and photos. Do not infer new worlds or relabel discovered hand-test input footage as a demo.
+
+
+## Latest checkpoint — D-022 · 2026-11-02
+
+Robotics showcase Ready for review. Exactly two selectable licensed placeholder exhibits: Gesture Rover and Guiding Hands. No details, other worlds, commit/push/deployment. Preserve desk and working transitions on continuation. Read `docs/ROBOTICS_SHOWCASE_REVIEW.md`, current UPDATE and D-022 before historical stops.
+
+Runtime: `Workshop.tsx`, `exhibits.ts`, `HubExperience.tsx`, `hub.module.css`, small `DeskScene.tsx` interaction/FOV adapter. Portrait workshop FOV76 fixes reproduced clipping; desk projection and camera journey/presets unchanged. Models all12 unchanged. Source digest and build metadata in verification.json.
+
+Browser: Chrome156/macOS/SwiftShader, desktop1600×1100 and touch390×844, initial reduced motion. Both actual exhibit picks, keyboard focus/select, drag rejection, repeated entry, travel lock, robot Wave, exact orbited return0 and same Canvas pass.8 unit tests/type/build pass. Independent review clipping/coverage findings addressed. Additional-context mobile load/reload timeout/fallback cause remains unknown; fresh standalone final processes pass. Full physical/hardware/other-browser/orientation/recovery coverage not claimed.
+
+Evidence under `output/playwright/robotics-exhibits/`: final-desktop.js, isolated-mobile.js, isolated-reduced.js; matching CLI logs and JSON, screenshots, final-build/type/unit logs. Old failed attempts kept. Actual screenshot/reference comparison documented. Preview process/browser sessions will be closed after QA; run `PORT=4182 npm run preview` from portfolio to reopen existing export.
+
+Next action belongs to user: review arrangement and supply actual project photos. No inferred expansion.
+
+
 **D-021 Git publication complete:** User created public [BigZ509/personalwebsite](https://github.com/BigZ509/personalwebsite) and explicitly approved leaving Keploy installed, resolving the earlier approval-review blocker. Source milestone `Working robot concept` (`0f67294`) pushed to main; remote SHA matched local HEAD. Origin configured, main tracks origin/main, T27 Done. Code/tests/licenses/screenshots and four selected verification logs included; dependencies/build caches/env/archives ignored. No new app code or deployment; wait for robot visual review. This supersedes historical pending-Git statements below.
 
 **Dev setup follow-up — 2026-11-02:** `next.config.ts` now allows the user's exact LAN origin `192.168.1.28` for Next development resources. Typecheck passed after dev-type regeneration; LAN hot reload is not browser-verified. Restart dev server for testing. Existing production screenshot/build evidence predates this dev-only configuration change; no new production build/scene changes. D-020 stop remains.

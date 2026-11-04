@@ -1,0 +1,273 @@
+{
+  "layouts": [
+    {
+      "viewport": [
+        1600,
+        1100
+      ],
+      "bounds": {
+        "nav": {
+          "left": 1381.3125,
+          "right": 1566
+        },
+        "intro": {
+          "left": 35,
+          "right": 225,
+          "top": 176,
+          "bottom": 391.671875
+        },
+        "canvas": {
+          "left": 0,
+          "top": 0,
+          "width": 1600,
+          "height": 1100
+        }
+      },
+      "result": "Pass"
+    },
+    {
+      "viewport": [
+        1280,
+        880
+      ],
+      "bounds": {
+        "nav": {
+          "left": 1061.3125,
+          "right": 1246
+        },
+        "intro": {
+          "left": 35,
+          "right": 225,
+          "top": 152,
+          "bottom": 367.671875
+        },
+        "canvas": {
+          "left": 0,
+          "top": 0,
+          "width": 1280,
+          "height": 880
+        }
+      },
+      "result": "Pass"
+    },
+    {
+      "viewport": [
+        1280,
+        720
+      ],
+      "bounds": {
+        "nav": {
+          "left": 1061.3125,
+          "right": 1246
+        },
+        "intro": {
+          "left": 35,
+          "right": 225,
+          "top": 152,
+          "bottom": 367.671875
+        },
+        "canvas": {
+          "left": 0,
+          "top": 0,
+          "width": 1280,
+          "height": 720
+        }
+      },
+      "result": "Pass"
+    },
+    {
+      "viewport": [
+        1024,
+        768
+      ],
+      "bounds": {
+        "nav": {
+          "left": 805.3125,
+          "right": 990
+        },
+        "intro": {
+          "left": 35,
+          "right": 225,
+          "top": 152,
+          "bottom": 367.671875
+        },
+        "canvas": {
+          "left": 235,
+          "top": 0,
+          "width": 789,
+          "height": 768
+        }
+      },
+      "result": "Pass"
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "bounds": {
+        "nav": {
+          "left": 210,
+          "right": 372
+        },
+        "intro": {
+          "left": 20,
+          "right": 370,
+          "top": 136,
+          "bottom": 295.890625
+        },
+        "canvas": {
+          "left": 0,
+          "top": 310,
+          "width": 390,
+          "height": 344
+        }
+      },
+      "result": "Pass"
+    },
+    {
+      "viewport": [
+        740,
+        360
+      ],
+      "bounds": {
+        "nav": {
+          "left": 560,
+          "right": 722
+        },
+        "intro": {
+          "left": 20,
+          "right": 198,
+          "top": 124,
+          "bottom": 204.5
+        },
+        "canvas": {
+          "left": 215,
+          "top": 0,
+          "width": 525,
+          "height": 360
+        }
+      },
+      "result": "Pass"
+    }
+  ],
+  "narrow": [
+    {
+      "viewport": [
+        375,
+        500
+      ],
+      "labels": [
+        {
+          "id": "Software",
+          "box": {
+            "x": 103.55850219726562,
+            "y": 126.49949645996094,
+            "width": 170,
+            "height": 51.59375
+          },
+          "opacity": 1
+        },
+        {
+          "id": "Photography",
+          "box": {
+            "x": 57.66755676269531,
+            "y": 111.65491485595703,
+            "width": 170,
+            "height": 51.59374237060547
+          },
+          "opacity": 1
+        },
+        {
+          "id": "Personal",
+          "box": {
+            "x": 136.9049835205078,
+            "y": 121.62036895751953,
+            "width": 169.99998474121094,
+            "height": 51.59374237060547
+          },
+          "opacity": 1
+        }
+      ],
+      "result": "Pass"
+    },
+    {
+      "viewport": [
+        320,
+        480
+      ],
+      "labels": [
+        {
+          "id": "Software",
+          "box": {
+            "x": 76.05850219726562,
+            "y": 106.49949645996094,
+            "width": 170,
+            "height": 51.59375
+          },
+          "opacity": 1
+        },
+        {
+          "id": "Photography",
+          "box": {
+            "x": 30.167564392089844,
+            "y": 91.65491485595703,
+            "width": 170.00000762939453,
+            "height": 51.59374237060547
+          },
+          "opacity": 1
+        },
+        {
+          "id": "Personal",
+          "box": {
+            "x": 109.40498352050781,
+            "y": 101.62036895751953,
+            "width": 169.99998474121094,
+            "height": 51.59374237060547
+          },
+          "opacity": 1
+        }
+      ],
+      "result": "Pass"
+    },
+    {
+      "viewport": [
+        320,
+        568
+      ],
+      "labels": [
+        {
+          "id": "Software",
+          "box": {
+            "x": 76.05850219726562,
+            "y": 194.49949645996094,
+            "width": 170,
+            "height": 51.59375
+          },
+          "opacity": 1
+        },
+        {
+          "id": "Photography",
+          "box": {
+            "x": 30.167564392089844,
+            "y": 179.6549072265625,
+            "width": 170.00000762939453,
+            "height": 51.59375
+          },
+          "opacity": 1
+        },
+        {
+          "id": "Personal",
+          "box": {
+            "x": 109.40498352050781,
+            "y": 189.620361328125,
+            "width": 169.99998474121094,
+            "height": 51.59375
+          },
+          "opacity": 1
+        }
+      ],
+      "result": "Pass"
+    }
+  ]
+}

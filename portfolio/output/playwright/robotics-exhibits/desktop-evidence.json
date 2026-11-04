@@ -1,0 +1,59 @@
+{
+  "desktop": {
+    "checks": {
+      "meshHoverBoth": "Pass",
+      "meshSelectBoth": "Pass",
+      "singleSelection": "Pass",
+      "keyboardTabEnterSpace": "Pass",
+      "focusSurvivesPointerLeave": "Pass",
+      "dragWithoutSelection": "Pass",
+      "escapeAndRestoredFocus": "Pass",
+      "repeatVisitResetsSelection": "Pass"
+    },
+    "environment": {
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+      "viewport": [
+        1600,
+        1100
+      ],
+      "canvases": 1,
+      "drawCalls": "126",
+      "triangles": "35572"
+    },
+    "errors": [],
+    "failedRequests": [],
+    "warnings": []
+  },
+  "saved": {
+    "position": [
+      1.4840642633644445,
+      9.977029410788857,
+      13.48365591367192
+    ],
+    "target": [
+      0,
+      2.9,
+      -0.1
+    ]
+  },
+  "returned": {
+    "position": [
+      1.4840642633644445,
+      9.977029410788857,
+      13.48365591367192
+    ],
+    "target": [
+      0,
+      2.9,
+      -0.1
+    ]
+  },
+  "poseError": 0,
+  "sameCanvas": true,
+  "checks": {
+    "authoredRobotWave": "Pass",
+    "selectionDisabledDuringEntry": "Pass",
+    "orbitedReturn": "Pass"
+  }
+}

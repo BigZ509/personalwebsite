@@ -1,0 +1,11 @@
+# Guiding Hands default-view refinement — D-025
+
+User requests only Guiding Hands exhibit: clearly recognizable projector/webcam/Jetson/projection board from default camera, authentic forest-game repository screenshot if available, better lighting/framing without workshop clutter, interactions preserved, browser visual tests and memory. No other worlds/Git/deployment.
+
+Keep all camera/room/Rover/panel controls and one Canvas. Frame by arranging existing equipment within same plinth: angled upright thin projection board at rear, projector left with visible lens facing board/default viewer, webcam front-right facing viewer, Jetson front-center oriented toward view. A small local fill brightens dark hardware. Drop the paper stack; keep one tiny pack plant at edge. No beam/animation/effects. Existing cool teal, warm wood/cream and amber palette/Arial HUD retained. Original stylized Jetson still explicitly unofficial/illustrative.
+
+Use original unmodified `BigZ509/guiding-hands/benchmark-results/smol-live-smoke.png`: visually inspected authentic FOREST MOTION experimental-control prototype screenshot,1120×760,56832bytes, blob db6b70a793833c3a1acf28e76a7e618d5c302585. It contains archived diagnostic metrics, not newly verified measurements/current full browser-game demo. Preserve full image/aspect and label Repository prototype still; static texture with owned sampler clone. No video supplied; both video records remain null. Do not substitute detailed forest map artwork for gameplay. User explicitly authorizes displaying an authentic screenshot from their confirmed repository.
+
+Board is tilted for exhibition viewing; not a literal assembled-project replica. Reuse existing imported meshes and notices. Shared texture cache remains owned by Drei; dispose only clone. Selection group and DOM equivalents unchanged.
+
+Acceptance: actual screenshot visible on board and all four functional silhouettes readable at default camera; mesh hover/click on projector/webcam/Jetson/board opens same Guiding panel; Rover, keyboard, Close/Escape, return/pause remain; native Chrome desktop plus portrait responsiveness; source/model/camera hash preservation; unit/type/build, screenshots/reference comparison, independent source review and memory. No physical-device/conformance/performance claims.

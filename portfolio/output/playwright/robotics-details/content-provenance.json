@@ -1,0 +1,38 @@
+{
+  "checked": "2026-11-02",
+  "records": [
+    {
+      "id": "guiding-readme",
+      "url": "https://github.com/BigZ509/guiding-hands/blob/main/README.md",
+      "blob": "f814ad60c5395081c850a59556a1033a00243749"
+    },
+    {
+      "id": "guiding-context",
+      "url": "https://github.com/BigZ509/guiding-hands/blob/main/CONTEXT.md",
+      "blob": "5571e707034a72cf4befcdcbbd2b4599d05819d4"
+    },
+    {
+      "id": "knight-context",
+      "url": "https://github.com/leonelh06-lgtm/Knight-Hacks-IX/blob/main/CONTEXT.md",
+      "blob": "5571e707034a72cf4befcdcbbd2b4599d05819d4"
+    },
+    {
+      "id": "knight-controls",
+      "url": "https://github.com/leonelh06-lgtm/Knight-Hacks-IX/blob/main/gesture_control/controls.py",
+      "blob": "393977630b7ccbad4e60b7724761b25ac4fe05fa"
+    },
+    {
+      "id": "knight-relay",
+      "url": "https://github.com/leonelh06-lgtm/Knight-Hacks-IX/blob/main/game/fight/relay.mjs",
+      "blob": "6af3b454ca3445aecf4d8e1409fc67146180e303"
+    }
+  ],
+  "userClarifications": {
+    "guidingRepoConfirmed": true,
+    "guidingInspirationConfirmed": true,
+    "roverInspiration": "provisional",
+    "demoVideos": "neither confirmed; both unavailable",
+    "knightRepo": "candidate inspected; no verified Gesture Rover code in current main; not linked"
+  },
+  "limitations": "No historical/private branch search, therapeutic efficacy, hardware performance or video playback claim."
+}

@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Field Notes — a robotics specimen",
-  description: "An interactive field note on robotics. A small prototype about curiosity, engineering, and things that move.",
+  title: "Marc Alexis — Software, robotics & creative technology",
+  description: "Marc Alexis is a computer science student and aspiring software engineer. Explore his interactive portfolio of software, robotics and creative technology.",
   robots: { index: false, follow: false },
 };
 

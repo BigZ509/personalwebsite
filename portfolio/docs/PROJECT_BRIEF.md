@@ -1,7 +1,27 @@
 # Project brief — Interactive Personal Portfolio
 
+## Latest authority — D-026, 2026-11-03
+
+Implement only the supplied Objective1 identity/navigation layer for Marc Alexis: persistent lightweight HTML header, About/Resume/GitHub, desk introduction. Student/aspiring software engineer, software/robotics/creative interests, photography and basketball are user-confirmed. Minimal accessible About dialog; missing resume surfaced honestly. Preserve current 3D room, objects, robot, transitions and workshop; no other worlds or Objective2 labels/onboarding. No Git/deploy. [Checkpoint](PORTFOLIO_IDENTITY_REVIEW.md).
+
+## Latest authority — D-025, 2026-11-03
+
+Only Guiding Hands refinement: clearly recognizable hardware from the default camera, authentic repository forest-game screenshot if available, restrained lighting/framing. Delivered upright board with original archived FOREST MOTION prototype capture, separated hardware and local fill. Existing room/desk/Rover/panel/Canvas/journey preserved; no other worlds/Git/deploy. Hardware illustrative, Jetson stylized/unofficial; archived still is not a video/performance claim. Both demos stay unavailable. [Review](GUIDING_REFINEMENT_REVIEW.md).
+
 ## Purpose
 Create a personal developer portfolio that stands out visually **and** clearly communicates software engineering, full-stack, AI, and robotics work to internship recruiters and technical collaborators.
+
+## Latest authority — D-024, 2026-11-02
+
+Replace only the Guiding Hands generic visual with a small illustrative hardware/CV setup: selected linked projector/webcam, reodesuxz environment props, original stylized Jetson Orin Nano using NVIDIA official references. Keep honest/simple; preserve desk/Rover/panels/transitions/one Canvas. Optional monitor/whiteboard omitted to reduce clutter. No other worlds/Git/deploy. Both demos stay unavailable. [Asset/rights record](GUIDING_HARDWARE_ASSETS.md).
+
+## Latest authority — D-023, 2026-11-02
+
+Refine existing robotics labels/selection and add one reusable project detail panel over the visible room; summary/inspiration/demo/GitHub sections, confirmed data only. No other worlds. Both demos remain unavailable; Guiding Hands repository/inspiration confirmed, Rover inspiration provisional and repo unverified. Preserve desk/showcase/transitions and licensed placeholders. No Git/deployment requested. [Content provenance](ROBOTICS_PROJECT_DATA.md).
+
+## Latest authority — D-022, 2026-11-02
+
+User authorizes the Robotics-world showcase only: two–three selectable 3D exhibits starting Gesture Rover and Guiding Hands, clearly labeled licensed placeholders until actual photos arrive. Preserve cinematic desk and working transitions, keep it uncluttered/game-like, test in browser, screenshot and update memory. Two stations delivered; stop for review. No details, other worlds, commit/push or deployment in this pass. See [showcase review](ROBOTICS_SHOWCASE_REVIEW.md).
 
 ## Current authority — 2026-11-01
 

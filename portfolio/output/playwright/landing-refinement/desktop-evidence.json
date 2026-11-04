@@ -1,0 +1,81 @@
+{
+  "checks": {
+    "fourActualMeshHovers": "Pass",
+    "unfinishedActualClicksDoNotTravel": "Pass",
+    "fourKeyboardFocusLabels": "Pass",
+    "firstVisitDismissReloadAndReplay": "Pass",
+    "aboutAndMissingResume": "Pass",
+    "github": "Pass",
+    "pointerOrbitAndRobotWaveTravel": "Pass",
+    "bothProjectMeshPanels": "Pass",
+    "modalEscape": "Pass",
+    "sameCanvasExactOrbitedReturnAndFocus": "Pass",
+    "manualPause": "Pass"
+  },
+  "hoverResults": [
+    {
+      "id": "Robotics",
+      "text": "Robotics\nOpen the robotics workshop",
+      "box": {
+        "x": 960.4996337890625,
+        "y": 318.6981506347656,
+        "width": 174,
+        "height": 52.890625
+      },
+      "result": "Pass"
+    },
+    {
+      "id": "Software",
+      "text": "Software Engineering\nWorld in progress \u00b7 Preview only",
+      "box": {
+        "x": 719.0213012695312,
+        "y": 468.35540771484375,
+        "width": 174,
+        "height": 52.890625
+      },
+      "result": "Pass"
+    },
+    {
+      "id": "Photography",
+      "text": "Photography\nWorld in progress \u00b7 Preview only",
+      "box": {
+        "x": 457.96990966796875,
+        "y": 383.9117736816406,
+        "width": 174,
+        "height": 52.890625
+      },
+      "result": "Pass"
+    },
+    {
+      "id": "Personal",
+      "text": "Basketball\nWorld in progress \u00b7 Preview only",
+      "box": {
+        "x": 908.71337890625,
+        "y": 440.6004333496094,
+        "width": 174,
+        "height": 52.890625
+      },
+      "result": "Pass"
+    }
+  ],
+  "invoking": {
+    "position": "[5.8270046274787735,9.343785287381632,12.601423079382288]",
+    "target": "[0,2.9,-0.1]"
+  },
+  "environment": {
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+    "viewport": [
+      1280,
+      880
+    ],
+    "canvasCount": 1
+  },
+  "errors": [],
+  "failed": [],
+  "warnings": [
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+    "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+  ]
+}

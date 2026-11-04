@@ -1,0 +1,17 @@
+{
+  "repository": "BigZ509/guiding-hands",
+  "path": "benchmark-results/smol-live-smoke.png",
+  "sourceURL": "https://github.com/BigZ509/guiding-hands/blob/main/benchmark-results/smol-live-smoke.png",
+  "downloadURL": "https://raw.githubusercontent.com/BigZ509/guiding-hands/main/benchmark-results/smol-live-smoke.png",
+  "blobSHA": "db6b70a793833c3a1acf28e76a7e618d5c302585",
+  "sha256": "1d96c37f25b91bc538885e6d87cf58be7d47d6c8b9cd0b5988e1f576bb9e5627",
+  "bytes": 56832,
+  "dimensions": [
+    1120,
+    760
+  ],
+  "modifications": "Original bytes unchanged; displayed as static texture at native aspect ratio.",
+  "description": "Repository FOREST MOTION experimental-control prototype screenshot. Archived diagnostic metrics visible are not current measurements or efficacy/performance claims.",
+  "authorization": "User explicitly requests authentic repository screenshot on projection surface; confirmed owner repository.",
+  "verifiedDate": "2026-11-03"
+}

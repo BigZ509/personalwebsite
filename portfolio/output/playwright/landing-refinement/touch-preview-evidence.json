@@ -1,0 +1,14 @@
+[
+  {
+    "id": "Software",
+    "visibleAfterTap": true
+  },
+  {
+    "id": "Photography",
+    "visibleAfterTap": true
+  },
+  {
+    "id": "Personal",
+    "visibleAfterTap": true
+  }
+]

@@ -1,0 +1,1 @@
+{"browser": {"browserName": "chromium", "launchOptions": {"channel": "chrome", "headless": true, "args": ["--use-angle=swiftshader", "--enable-unsafe-swiftshader"]}, "contextOptions": {"viewport": {"width": 390, "height": 844}, "deviceScaleFactor": 1, "isMobile": true, "hasTouch": true, "reducedMotion": "reduce"}}}

@@ -3,7 +3,7 @@
 Status values: `Not started`, `In progress`, `Blocked`, `Ready for review`, `Done`.  
 Priorities: `P0` = blocking / essential, `P1` = important, `P2` = optional.
 
-**Current authority: D-018.** User approved Cinematic with Cozy warmth and one robot/workshop/return interaction, preserving the room/assets. T26 governs execution. Other worlds remain blocked. Earlier phase gates below are historical where conflicting.
+**Current authority: D-026.** Objective1 Marc Alexis HTML identity/header/About/resume/GitHub only; preserve room/robot/journey, no new worlds/labels/onboarding. Historical D-025: Refine Guiding Hands hardware/default-view lighting and authentic archived repository still only; preserve all interactions and room. No other worlds/Git/deploy. Historical D-024: Guiding Hands illustrative hardware setup only; selected licensed assets/original stylized Jetson; preserve room/Rover/panels/transitions, no other worlds. Historical D-023: Robotics label/selection refinement and one shared detail panel over visible room; confirmed data only, both demos unavailable, no other worlds. Historical D-022: Robotics-world showcase only: Gesture Rover and Guiding Hands as licensed selectable placeholders; desk/transitions preserved; no panels/other worlds. Historical D-018: User approved Cinematic with Cozy warmth and one robot/workshop/return interaction, preserving the room/assets. T26 governs execution. Other worlds remain blocked. Earlier phase gates below are historical where conflicting.
 
 | ID | Priority | Owner | Task | Status | Dependencies | Deliverable |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -34,6 +34,11 @@ Priorities: `P0` = blocking / essential, `P1` = important, `P2` = optional.
 | T25 | P0 | user | Review actual compositions and choose direction/revisions | Done | T24; D-018 | 02 Cinematic with warmth of 01 Cozy; preserve room/assets |
 | T26 | P0 | lead + assets | Robot reaction, camera approach, workshop and exact return | Done | D-018 | `/hub/`, browser screenshots/test evidence, component/limitations memory |
 | T27 | P1 | lead | Create GitHub personalwebsite repository and push | Done | D-021; user created repo and explicitly approved Keploy | Public BigZ509/personalwebsite, Working robot concept 0f67294 pushed; remote SHA verified; no deployment |
+| T33 | P0 | lead | Marc Alexis identity/header and functional About/Resume/GitHub, browser regression | Ready for review | D-026 | Persistent identity/native About and resume-unavailable dialogs, verified GitHub; desktop/touch/reduced/short-layout browser checks and screenshots, preserved scene/journey hashes; resume missing |
+| T32 | P0 | lead | Refine Guiding Hands hardware framing/lighting and authentic repository projection still | Ready for review | D-025 | Native desktop/portrait four-part mesh selection, preserved interactions/core hashes, screenshot provenance, visual review and memory |
+| T31 | P0 | lead | Guiding Hands hardware/CV illustration, selected assets/stylized Jetson, actual browser proof | Ready for review | D-024 | Illustrative hardware, licenses/credits, desktop/touch/reduced-motion screenshots/mesh interactions, preserved desk/panel and memory |
+| T30 | P0 | lead | Refine labels/selection and add one reusable robotics project detail panel | Ready for review | D-023, confirmed data/source check | One shared inspector, both mesh/keyboard/touch/reduced-motion paths; honest missing/provisional data, screenshots and review |
+| T29 | P0 | lead | Two selectable licensed placeholder robotics exhibits; browser proof and memory | Ready for review | D-022 | Two licensed selectable placeholders; desktop/touch/reduced-motion screenshots/tests; exact return; review and limits documented |
 | T28 | P0 | user | Review robot reaction, travel, workshop and return | Ready for review | T26 | Approve or revise bounded flow before any other worlds |
 
 ## Task change protocol

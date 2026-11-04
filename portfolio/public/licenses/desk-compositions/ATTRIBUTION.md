@@ -21,3 +21,11 @@ Models are resized and rotated for the desk compositions; materials may be recol
 Model rights above are separate from implementation libraries: Three.js, React Three Fiber, Drei and CameraControls use their respective MIT code licenses retained in installed packages. This is not a new license grant for the application as a whole. No proprietary game models, textures or screenshots are included in production assets.
 
 Preserved license texts: [CC BY 3.0](CC-BY-3.0.txt), [CC0 1.0](CC0-1.0.txt). Exact downloads, visual previews, hashes, byte counts and original XYZ bounds: [manifest](../../models/desk-compositions/manifest.json). Per-model `*-source.json` files preserve publisher license anchors and evidence hashes.
+
+## Robotics showcase placeholders — D-022
+
+Gesture Rover's generic placeholder is the same CC0 RobotExpressive mesh, resized/recolored and posed from Idle (not a project replica or a new animation). Guiding Hands' generic controller placeholder combines the existing Kenney Computer Screen (CC0), Poly by Google Keyboard (CC BY 3.0, credited above) and iPoly3D Microchip (CC0). The workshop repositions these models on original simple display plinths; stored model/texture/clip bytes are unchanged. Project names do not claim these models depict the user's actual hardware.
+
+## Guiding Hands hardware illustration — D-024
+
+The generic monitor/keyboard/chip stand-in in the workshop is superseded by an illustrative webcam/Jetson/projector setup, with two small reodesuxz environment props. [New asset credits, separate licenses and modifications](../guiding-hardware/ATTRIBUTION.md). Original desk models and historical credits above remain preserved. Gesture Rover remains a generic robot placeholder.

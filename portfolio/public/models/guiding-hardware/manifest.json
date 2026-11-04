@@ -1,0 +1,129 @@
+{
+  "purpose": "Selected assets integrated in Guiding Hands portfolio exhibit, not a standalone library or asset pack.",
+  "verifiedDate": "2026-11-02",
+  "assets": [
+    {
+      "id": "paper_stack",
+      "source": "https://reodesuxz.itch.io/low-poly-office-tech-pack",
+      "archivePath": "LowPolyOfficeTechPack_v1.0/GLB/paper_stack.glb",
+      "author": "reodesuxz",
+      "license": "Custom: app/project use; not standalone redistribution",
+      "licenseFile": "/licenses/guiding-hardware/OFFICE-LICENSE.txt",
+      "bytes": 7268,
+      "sha256": "31108c676ece3226f0526e5114427ce958f2e839dbf0a8518ffe6f82ac743cb5",
+      "modifications": "Stored bytes unchanged; resized/positioned in app.",
+      "bounds": {
+        "min": [
+          -0.11601252108812332,
+          0,
+          -0.16252350807189941
+        ],
+        "max": [
+          0.13601252436637878,
+          0.05549999698996544,
+          0.16252350807189941
+        ],
+        "size": [
+          0.2520250454545021,
+          0.05549999698996544,
+          0.32504701614379883
+        ]
+      },
+      "triangles": 60,
+      "animations": []
+    },
+    {
+      "id": "office_plant",
+      "source": "https://reodesuxz.itch.io/low-poly-office-tech-pack",
+      "archivePath": "LowPolyOfficeTechPack_v1.0/GLB/office_plant.glb",
+      "author": "reodesuxz",
+      "license": "Custom: app/project use; not standalone redistribution",
+      "licenseFile": "/licenses/guiding-hardware/OFFICE-LICENSE.txt",
+      "bytes": 12308,
+      "sha256": "6183722ad416d203771b248d0a506f1ac82bf584ba76c901c5982650432d9f3b",
+      "modifications": "Stored bytes unchanged; resized/positioned in app.",
+      "bounds": {
+        "min": [
+          -0.12372533977031708,
+          0,
+          -0.1498381644487381
+        ],
+        "max": [
+          0.16438785195350647,
+          0.6310873031616211,
+          0.13947750627994537
+        ],
+        "size": [
+          0.28811319172382355,
+          0.6310873031616211,
+          0.28931567072868347
+        ]
+      },
+      "triangles": 116,
+      "animations": []
+    },
+    {
+      "id": "projector",
+      "source": "https://poly.pizza/m/cKhipxWkfSH",
+      "author": "Andy Shaw",
+      "license": "CC-BY-3.0",
+      "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+      "originalSHA256": "06c4db89edcdbe7df22994942a42046c3d3354890194a60631cf28025024973b",
+      "publisherHTMLSHA256": "32320ea984506d467ac5925e1457abe7ea13bae708635d25742a5794516fe0ad",
+      "bytes": 81372,
+      "sha256": "cd3a907ac84d65bf6f45ab18156a0f66f8068c2d7254b808b79a65089c9d9b5d",
+      "modifications": "Removed only built-in brown presentation base node group489012986 from scene roots. Original geometry/buffer/material data retained; resized/rotated in app.",
+      "bounds": {
+        "min": [
+          -0.1700437068939209,
+          -0.1955765038728714,
+          -0.11608090251684189
+        ],
+        "max": [
+          0.126329705119133,
+          0.0784754827618599,
+          0.1388934999704361
+        ],
+        "size": [
+          0.2963734120130539,
+          0.2740519866347313,
+          0.254974402487278
+        ]
+      },
+      "triangles": 982,
+      "animations": []
+    },
+    {
+      "id": "webcam",
+      "source": "https://poly.pizza/m/afOuPVCoKj",
+      "author": "dook",
+      "license": "CC-BY-3.0",
+      "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+      "originalSHA256": "82207f575a4a37c9461ef77b2e3c39105c6e7b6a17e2684f08555f6f16a28749",
+      "publisherHTMLSHA256": "543cc7df4ffc438509b37a5528cfcde9d45bffe539b65ac903d9f5d98d68f12e",
+      "bytes": 68232,
+      "sha256": "82207f575a4a37c9461ef77b2e3c39105c6e7b6a17e2684f08555f6f16a28749",
+      "modifications": "Stored bytes unchanged; resized/rotated in scene.",
+      "bounds": {
+        "min": [
+          -0.999999977648258,
+          -1.2047416034881777,
+          -0.6486239709628916
+        ],
+        "max": [
+          0.999999977648258,
+          0.2519802759134653,
+          0.13475751755670667
+        ],
+        "size": [
+          1.999999955296516,
+          1.456721879401643,
+          0.7833814885195982
+        ]
+      },
+      "triangles": 967,
+      "animations": []
+    }
+  ],
+  "jetson": "Original code-native stylization using NVIDIA official references; not an official model or exact replica."
+}

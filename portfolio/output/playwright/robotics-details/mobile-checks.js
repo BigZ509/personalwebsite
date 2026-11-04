@@ -1,0 +1,40 @@
+async(page)=>{
+ const errors=[],urls=[];page.on('pageerror',e=>errors.push(e.message));page.on('request',r=>urls.push(r.url()));
+ const assert=(v,m)=>{if(!v)throw new Error(m);};
+ await page.locator('main[data-ready=true]').waitFor({timeout:30000});
+ const reduced=await page.locator('main').getAttribute('data-reduced-motion');
+ const canvas=await page.locator('canvas').elementHandle();
+ const robot=await page.locator('canvas').evaluate(c=>JSON.parse(c.dataset.robotScreen));await page.touchscreen.tap(...robot);
+ await page.locator('main[data-phase=workshop]').waitFor({timeout:30000});
+ const labels=await page.locator('[data-selected]').evaluateAll(es=>es.map(e=>({name:e.innerText,left:e.getBoundingClientRect().left,right:e.getBoundingClientRect().right})));
+ assert(labels.length===2&&labels.every(l=>l.left>=4&&l.right<=386),'Refined mobile nameplates clipped');
+ const prefix=reduced==='true'?'reduced':'mobile';
+ await page.screenshot({path:`output/playwright/robotics-details/${prefix}-01-labels.png`});
+ await page.touchscreen.tap(112,370);let panel=page.getByRole('dialog',{name:'Gesture Rover'});await panel.waitFor();
+ const bounds=await panel.boundingBox();assert(bounds.height<=844*.55&&bounds.y>844*.4,'Panel covers mobile room');
+ assert(await panel.getByText('No demo video provided yet.',{exact:true}).count()===1,'Rover demo unavailable state missing');
+ assert(await panel.getByText('Provisional description',{exact:true}).count()===1,'Rover provisional inspiration missing');
+ await page.screenshot({path:`output/playwright/robotics-details/${prefix}-02-rover.png`});
+ // The second model stays visibly pickable above the lower sheet.
+ await page.touchscreen.tap(270,380);panel=page.getByRole('dialog',{name:'Guiding Hands'});await panel.waitFor();
+ assert(await panel.getByRole('link',{name:'View repository'}).getAttribute('href')==='https://github.com/BigZ509/guiding-hands','Wrong mobile repo');
+ assert(await panel.getByText('No demo video provided yet.',{exact:true}).count()===1,'Guiding demo unavailable state missing');
+ assert(await page.locator('video,iframe').count()===0,'Unconfirmed video rendered');
+ const body=panel.getByRole('region',{name:'Guiding Hands details'});
+ const overflow=await body.evaluate(e=>({client:e.clientHeight,scroll:e.scrollHeight}));assert(overflow.scroll>overflow.client,'Mobile panel should scroll');
+ await page.screenshot({path:`output/playwright/robotics-details/${prefix}-03-guiding.png`});
+ await body.evaluate(e=>{e.scrollTop=e.scrollHeight;});
+ await page.screenshot({path:`output/playwright/robotics-details/${prefix}-04-inspiration.png`});
+ await panel.getByRole('button',{name:'Gesture Rover',exact:true}).tap();
+ assert(await page.getByRole('region',{name:'Gesture Rover details'}).evaluate(e=>e.scrollTop)===0,'Mobile switch kept old scroll');
+ await page.getByRole('button',{name:'Close project details'}).tap();
+ assert(await page.getByRole('dialog').count()===0,'Mobile Close failed');
+ const rover=page.getByRole('group',{name:'Select a project exhibit'}).getByRole('button',{name:'Gesture Rover',exact:true});
+ assert(await rover.evaluate(e=>e===document.activeElement),'Mobile close failed to restore visible control focus');
+ await rover.tap();await page.getByRole('dialog',{name:'Gesture Rover'}).waitFor();
+ await page.getByRole('button',{name:'Back to Desk'}).tap();await page.locator('main[data-phase=desk][data-world=desk]').waitFor({timeout:30000});
+ assert(await page.getByRole('dialog').count()===0,'Details persisted on mobile desk');
+ assert(await canvas.evaluate(c=>c===document.querySelector('canvas')),'Mobile Canvas replaced');
+ assert(!urls.some(u=>/handtest|Knight-Hacks|youtube|vimeo/i.test(u)),'Unconfirmed resource fetched');assert(!errors.length,JSON.stringify(errors));
+ return{checks:{mobileLabels:'Pass',touchMeshPanelsBoth:'Pass',roomVisibleBehindSheet:'Pass',projectDataAndMissingDemos:'Pass',scrollAndSwitchReset:'Pass',closeFocus:'Pass',reopen:'Pass',touchBackAndSameCanvas:'Pass'},reducedMotion:reduced,labels,bounds,overflow,errors,viewport:[390,844]};
+}

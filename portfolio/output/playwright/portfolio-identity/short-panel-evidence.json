@@ -1,0 +1,48 @@
+[
+  {
+    "viewport": {
+      "width": 740,
+      "height": 360
+    },
+    "project": {
+      "x": 10,
+      "y": 162.8125,
+      "width": 720,
+      "height": 187.1875
+    },
+    "back": {
+      "x": 626.296875,
+      "y": 78,
+      "width": 95.703125,
+      "height": 44
+    },
+    "content": {
+      "height": 63,
+      "scroll": 712
+    },
+    "result": "Pass"
+  },
+  {
+    "viewport": {
+      "width": 800,
+      "height": 360
+    },
+    "project": {
+      "x": 452,
+      "y": 126,
+      "width": 320,
+      "height": 222
+    },
+    "back": {
+      "x": 655.140625,
+      "y": 70,
+      "width": 110.859375,
+      "height": 44
+    },
+    "content": {
+      "height": 71,
+      "scroll": 775
+    },
+    "result": "Pass"
+  }
+]

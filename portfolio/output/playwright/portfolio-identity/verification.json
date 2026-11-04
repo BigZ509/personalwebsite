@@ -1,0 +1,347 @@
+{
+  "baselineBuild": "hsoZYZ1tyte_JMdQWewVf",
+  "sourceChangedFromBaseline": [
+    "src/app/layout.tsx",
+    "src/features/hub/hub.module.css",
+    "src/features/hub/HubExperience.tsx",
+    "src/app/hub/page.tsx"
+  ],
+  "newSource": [
+    "src/features/hub/PortfolioIdentity.tsx",
+    "src/features/hub/identity.module.css"
+  ],
+  "preserved": [
+    "src/app/page.tsx",
+    "src/app/globals.css",
+    "src/features/compositions/SceneAssets.tsx",
+    "src/features/compositions/CompositionStudy.tsx",
+    "src/features/compositions/DeskScene.tsx",
+    "src/features/compositions/compositions.module.css",
+    "src/features/compositions/presets.ts",
+    "src/features/robot/RobotScene.tsx",
+    "src/features/robot/interaction.ts",
+    "src/features/robot/RobotSpecimen.tsx",
+    "src/features/hub/visibleDeadline.ts",
+    "src/features/hub/ProjectDetails.tsx",
+    "src/features/hub/RobotCharacter.tsx",
+    "src/features/hub/exhibits.ts",
+    "src/features/hub/Workshop.tsx",
+    "src/features/hub/journey.ts",
+    "src/features/hub/GuidingHandsSetup.tsx",
+    "src/app/compositions/page.tsx",
+    "src/app/robotics/page.tsx",
+    "src/app/hub/robotics/page.tsx",
+    "public/models/robot-expressive.glb",
+    "public/models/guiding-hardware/office_plant.glb",
+    "public/models/guiding-hardware/webcam.glb",
+    "public/models/guiding-hardware/projector.glb",
+    "public/models/guiding-hardware/paper_stack.glb",
+    "public/models/desk-compositions/monitor.glb",
+    "public/models/desk-compositions/chair.glb",
+    "public/models/desk-compositions/basketball.glb",
+    "public/models/desk-compositions/camera.glb",
+    "public/models/desk-compositions/lamp.glb",
+    "public/models/desk-compositions/plant.glb",
+    "public/models/desk-compositions/desk.glb",
+    "public/models/desk-compositions/keyboard.glb",
+    "public/models/desk-compositions/books.glb",
+    "public/models/desk-compositions/chip.glb",
+    "public/models/desk-compositions/mug.glb",
+    "package.json",
+    "package-lock.json"
+  ],
+  "preservedGLBs": 16,
+  "github": "https://github.com/BigZ509",
+  "githubEvidence": "origin=https://github.com/BigZ509/personalwebsite.git plus user-confirmed account",
+  "resume": "No local asset/configured URL found; explanatory dialog, no resume href",
+  "beforeScreenshot": {
+    "source": "output/playwright/robotics-exhibits/01-desk.png",
+    "archived": true,
+    "description": "Prior actual D-022 desk capture; not a new same-session before screenshot",
+    "sha256": "5e4d9f80f334a70c81cca22c4562c48cbe45aaa57c8caa818d15dce7d008a116"
+  },
+  "browser": "Pass: user explicitly authorized Playwright after CUA failures; actual final build rendered/tested",
+  "buildId": "oZiZfW_rd_HYc9lIG0Hll",
+  "checks": {
+    "unit": "Pass8/8",
+    "typecheck": "Pass",
+    "staticBuild": "Pass",
+    "diffCheck": "Pass after final memory update",
+    "exportedHomeAndHubIdentityAndDestinations": "Pass: semantic IDs, profile link, no fabricated resume href",
+    "localMemoryLinks": "Pass:117 local memory/evidence links"
+  },
+  "sourceSHA256": {
+    "src/app/layout.tsx": "a5935ea19b0332705f0ce5793b006b447d6ad99952f1b318a3c585b4c77535f4",
+    "src/features/hub/hub.module.css": "4aee27fbeda17bf71804aa1c877dfb6e9c8b91d59cb61f9963056c5c09306441",
+    "src/features/hub/HubExperience.tsx": "40450c4e894ead67bda80d182c83748095aac5be174891448d92f65096476042",
+    "src/app/hub/page.tsx": "125958ee6171b8f40895205b98fbcb303b9048e3190e711f198aeeee9f0d0779",
+    "src/features/hub/PortfolioIdentity.tsx": "98752755a15e0cd440739d50076d84bce245f9ee095b0ae69539e6249881a6a0",
+    "src/features/hub/identity.module.css": "1c644341a95e442fb22121aa85ca7582ba006a5972c06c9800c96c5f1a280063"
+  },
+  "dateCompletedLocal": "2026-11-04",
+  "browserResults": {
+    "desktop": {
+      "checks": {
+        "headerAndIntro": "Pass",
+        "aboutFocusEscape": "Pass",
+        "resumeMissingExplanationAndFocus": "Pass",
+        "githubPopup": "Pass",
+        "emptyHeaderPointerAndOrbit": "Pass",
+        "robotMeshHoverWaveClickAndTravel": "Pass",
+        "workshopHeaderModalEscape": "Pass",
+        "modalOverProjectInspector": "Pass",
+        "bothProjectMeshPanels": "Pass",
+        "sameCanvasAndExactOrbitedReturn": "Pass",
+        "keyboardAndManualPause": "Pass"
+      },
+      "githubURL": "https://github.com/BigZ509",
+      "initialPose": {
+        "position": "[9.300000000000002,7.15,11.4]",
+        "target": "[0,2.9,-0.1]"
+      },
+      "invokingPose": {
+        "position": "[5.320296719314914,9.616909642147146,12.682021267298754]",
+        "target": "[0,2.9,-0.1]"
+      },
+      "workshop": {
+        "position": "[6.6,5.5,8.1]",
+        "target": "[0,2.65,-0.3]"
+      },
+      "environment": {
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1280,
+          880
+        ],
+        "canvases": 1
+      },
+      "errors": [],
+      "failed": [],
+      "warnings": [
+        "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+      ]
+    },
+    "responsive": {
+      "touchAndInitialReduced": [
+        {
+          "mode": "mobile",
+          "checks": "Pass: name/nav bounds, About/Resume touch, robot and both project mesh taps, modal Escape, exact return/same Canvas",
+          "viewport": [
+            390,
+            844
+          ],
+          "desk": {
+            "position": "[9.300000000000002,7.15,11.4]",
+            "target": "[0,2.9,-0.1]"
+          },
+          "bounds": {
+            "left": 210,
+            "right": 372,
+            "bottom": 58,
+            "width": 390
+          },
+          "errors": [],
+          "failed": []
+        },
+        {
+          "mode": "reduced",
+          "checks": "Pass: name/nav bounds, About/Resume touch, robot and both project mesh taps, modal Escape, exact return/same Canvas",
+          "viewport": [
+            390,
+            844
+          ],
+          "desk": {
+            "position": "[9.300000000000002,7.15,11.4]",
+            "target": "[0,2.9,-0.1]"
+          },
+          "bounds": {
+            "left": 210,
+            "right": 372,
+            "bottom": 58,
+            "width": 390
+          },
+          "errors": [],
+          "failed": []
+        }
+      ],
+      "layout": [
+        {
+          "viewport": {
+            "width": 740,
+            "height": 360
+          },
+          "measurements": {
+            "nav": {
+              "top": 14,
+              "bottom": 58,
+              "left": 560,
+              "right": 722
+            },
+            "controls": {
+              "top": 78,
+              "bottom": 122
+            },
+            "caption": {
+              "top": 163.0625,
+              "bottom": 288
+            },
+            "width": 740,
+            "height": 360
+          },
+          "workshopCaption": {
+            "x": 20,
+            "y": 145.3125,
+            "width": 160,
+            "height": 142.6875
+          },
+          "result": "Pass"
+        },
+        {
+          "viewport": {
+            "width": 800,
+            "height": 360
+          },
+          "measurements": {
+            "nav": {
+              "top": 18,
+              "bottom": 62,
+              "left": 581.3125,
+              "right": 766
+            },
+            "controls": {
+              "top": 70,
+              "bottom": 114
+            },
+            "caption": {
+              "top": 163.0625,
+              "bottom": 288
+            },
+            "width": 800,
+            "height": 360
+          },
+          "workshopCaption": {
+            "x": 35,
+            "y": 145.3125,
+            "width": 145.71875,
+            "height": 142.6875
+          },
+          "result": "Pass"
+        },
+        {
+          "viewport": {
+            "width": 320,
+            "height": 568
+          },
+          "measurements": {
+            "nav": {
+              "top": 33.1875,
+              "bottom": 77.1875,
+              "left": 18,
+              "right": 302
+            },
+            "controls": {
+              "top": 112,
+              "bottom": 169
+            },
+            "caption": {
+              "top": 294.125,
+              "bottom": 475
+            },
+            "width": 320,
+            "height": 568
+          },
+          "workshopCaption": {
+            "x": 20,
+            "y": 297.625,
+            "width": 280,
+            "height": 167.375
+          },
+          "result": "Pass"
+        }
+      ]
+    },
+    "short-panel": [
+      {
+        "viewport": {
+          "width": 740,
+          "height": 360
+        },
+        "project": {
+          "x": 10,
+          "y": 162.8125,
+          "width": 720,
+          "height": 187.1875
+        },
+        "back": {
+          "x": 626.296875,
+          "y": 78,
+          "width": 95.703125,
+          "height": 44
+        },
+        "content": {
+          "height": 63,
+          "scroll": 712
+        },
+        "result": "Pass"
+      },
+      {
+        "viewport": {
+          "width": 800,
+          "height": 360
+        },
+        "project": {
+          "x": 452,
+          "y": 126,
+          "width": 320,
+          "height": 222
+        },
+        "back": {
+          "x": 655.140625,
+          "y": 70,
+          "width": 110.859375,
+          "height": 44
+        },
+        "content": {
+          "height": 71,
+          "scroll": 775
+        },
+        "result": "Pass"
+      }
+    ]
+  },
+  "screenshotsSHA256": {
+    "layout-740x360-panel.png": "5765edf22ac88cce8c390ca62db7f0739e0509893c98a80ad6d35bf80ecdf867",
+    "reduced-02-about.png": "97803f05b2e63a3fc97744db32191141a4d64a7ed2b6ff497d9f736e1154cff1",
+    "initial-landscape-caption-overlap.png": "59ab9219f812800443157ae43d0c0b6fc9c647eb85c3b80242dfc154706f1268",
+    "before-desk-archived.png": "5e4d9f80f334a70c81cca22c4562c48cbe45aaa57c8caa818d15dce7d008a116",
+    "layout-740x360-desk.png": "0f7f787db8f32b35307147477add6580d24d3ba066fb922305d3e9ba445fe978",
+    "mobile-03-workshop.png": "ae6d633a151276dc7026a216fcac53db5889323c8b67344b8fa64a60034494c1",
+    "mobile-01-desk.png": "32ab0933a72d3886a664a3da81d53134d6feee11ece2d22657a7441b15bd5cdc",
+    "layout-800x360-workshop.png": "a15ff9e1d371fed6262000df180e6d348be7d7227bf0dd41c1b867253e3b3e80",
+    "layout-800x360-desk.png": "697168db3a0acc21b7d10eb1a518c6ea79561bad12c8a6cba45046fb870c3ec9",
+    "layout-800x360-about.png": "874574f73aef8dd2a5b5bafbfcf1d97354b6b4d591a012a7810e8369b396e81b",
+    "layout-800x360-panel.png": "9e15e89ed447c06e44a9b467aae44cc70766a16d4178d0d526d756461c73383a",
+    "01-after-desk.png": "8e7c10a72ebad9b5bf51190f725b7402bcdb18761a76c02d3efceb5fd5a0dbf9",
+    "02-about.png": "547247d5ab21c44e653b951d8f7cf28bc5005b35202fee958dcf40bcba559641",
+    "reduced-03-workshop.png": "047598524426fa5034828cc8dce97a07df84072650a8178a29ce53033094d0f9",
+    "06-project-panel.png": "567b77f7bd509eca6571e86e8c6667993924e2c16db7f272a01f8b45a61a446b",
+    "layout-740x360-about.png": "13b2fad83b368cf6df178674724d5d771bf437a905b0e318ee45d89240c5d4dd",
+    "05-workshop.png": "0ba7037c6836aab0a5cd32dad002129031cf150929e1b626a09f1dccab97130c",
+    "reduced-01-desk.png": "bcbc4e02e192aab8f4347fbf72a604924c77fb1229a1e0b0f0229f2d7ca7e099",
+    "04-approach.png": "465ce61e09c38e5757571f3466f07afa0c7cbb71a019c6342ae81c656fba88c1",
+    "layout-320x568-workshop.png": "2cc827d0da8e3c63a3bef2ed4f6f527c7b24d5d506c801d084734951ba81cbd3",
+    "03-resume-unavailable.png": "1cdf8109a78369450970ffc0b7e7af8f0ba022c30482bb83e56d4f2d8113e66a",
+    "mobile-02-about.png": "f2d8071b8a9144660f7baec2e8499a2c27c86a5f2ba9b262f1225814e44c40e1",
+    "layout-740x360-workshop.png": "cecb24be639d027cdd36b978b0783d40624a2afbcaf1d5a032225f3acc09920c",
+    "layout-320x568-desk.png": "66fa72233de02bff69282b83415c8ee028eb75c9aca33881d9dea71eb5900d87"
+  },
+  "limits": [
+    "Touch emulation, not physical iOS/Android",
+    "HeadlessChrome156/macOS/ANGLE Metal Apple M5; no other-browser/performance/conformance validation",
+    "Archived before screenshot, not same-session before capture",
+    "Existing Clock/favicon warnings; initial model navigation cancellation and missed mobile Rover tap retained",
+    "CUA blank-tab cleanup could not be confirmed; native user input warning respected"
+  ],
+  "cleanup": "Own Playwright identity browser closed and own4184 server stopped; user4183 preserved. CUA could not confirm failed blank-tab cleanup."
+}

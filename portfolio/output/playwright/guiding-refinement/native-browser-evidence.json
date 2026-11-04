@@ -1,0 +1,85 @@
+{
+  "desktop": {
+    "checks": [
+      {
+        "target": "projector",
+        "result": "Pass"
+      },
+      {
+        "target": "Jetson",
+        "result": "Pass"
+      },
+      {
+        "target": "webcam",
+        "result": "Pass"
+      },
+      {
+        "target": "projection board",
+        "result": "Pass"
+      }
+    ],
+    "focusRestored": true,
+    "spaceReopen": true,
+    "roverAndPanelSwitch": true,
+    "manualPauseImmediateJourney": true,
+    "exactDeskReturn": true,
+    "cameraUnchangedOnInspection": true,
+    "viewport": [
+      1280,
+      880
+    ],
+    "renderer": "Not exposed by the native DOM inspector; visible WebGL rendering verified"
+  },
+  "portrait": {
+    "checks": [
+      {
+        "target": "projector",
+        "result": "Pass"
+      },
+      {
+        "target": "Jetson",
+        "result": "Pass"
+      },
+      {
+        "target": "webcam",
+        "result": "Pass"
+      },
+      {
+        "target": "projection board",
+        "result": "Pass"
+      }
+    ],
+    "viewport": [
+      390,
+      844
+    ],
+    "mode": "Native Chrome portrait resize; pointer clicks, not physical touch or device emulation",
+    "dragWithoutSelection": true,
+    "escapeReturn": true,
+    "restoredDesk": {
+      "position": "[9.300000000000002,7.15,11.4]",
+      "target": "[0,2.9,-0.1]"
+    },
+    "restoredFocus": true
+  },
+  "environment": {
+    "browser": "Native Chrome extension-controlled",
+    "os": "macOS",
+    "browserVersion": "Not exposed by DOM-only inspection",
+    "renderer": "Not exposed by DOM-only inspection",
+    "logs": [
+      {
+        "level": "warn",
+        "message": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+        "timestamp": "2026-11-04T00:49:27.750Z",
+        "url": "http://127.0.0.1:4184/_next/static/chunks/bd904a5c.56e65ed4abb36c15.js"
+      },
+      {
+        "level": "warn",
+        "message": "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+        "timestamp": "2026-11-04T00:52:23.597Z",
+        "url": "http://127.0.0.1:4184/_next/static/chunks/bd904a5c.56e65ed4abb36c15.js"
+      }
+    ]
+  }
+}

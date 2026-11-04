@@ -1,0 +1,40 @@
+{
+  "checks": {
+    "mobileLabels": "Pass",
+    "touchMeshPanelsBoth": "Pass",
+    "roomVisibleBehindSheet": "Pass",
+    "projectDataAndMissingDemos": "Pass",
+    "scrollAndSwitchReset": "Pass",
+    "closeFocus": "Pass",
+    "reopen": "Pass",
+    "touchBackAndSameCanvas": "Pass"
+  },
+  "reducedMotion": "false",
+  "labels": [
+    {
+      "name": "Gesture Rover\nOpen project\nPlaceholder model",
+      "left": 10.710441589355469,
+      "right": 134.71044921875
+    },
+    {
+      "name": "Guiding Hands\nOpen project\nPlaceholder model",
+      "left": 149.9904022216797,
+      "right": 273.99041748046875
+    }
+  ],
+  "bounds": {
+    "x": 10,
+    "y": 395.125,
+    "width": 370,
+    "height": 438.875
+  },
+  "overflow": {
+    "client": 315,
+    "scroll": 575
+  },
+  "errors": [],
+  "viewport": [
+    390,
+    844
+  ]
+}

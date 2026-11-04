@@ -1,0 +1,180 @@
+{
+  "buildId": "f3JtLGGttBH0FIGdwlPdC",
+  "sourceSHA256": {
+    "src/features/hub/GuidingHandsSetup.tsx": "e98cd938b898367057d39adb841af110cdc566a77a80be3039c1dd46be033789",
+    "src/features/hub/Workshop.tsx": "51be6de828b616f81c27ce4be668182daf2ed4aae13cb48dffbb74a85d820e87",
+    "src/features/hub/exhibits.ts": "8f2804b11db8c0ee63dc22fafd83254a75ad1f387cc94e601a392f281581fd9f",
+    "src/features/hub/ProjectDetails.tsx": "c1c39ba5b2ae64bf1720838110c07bffdac9bdf2b953546fcc8e1570ad87fdc9",
+    "src/features/hub/HubExperience.tsx": "6320cf4df6b126c40ec35fb3354798d55c28c1658925cfec3bce3c9662825235",
+    "src/features/hub/hub.module.css": "654cdb18184365d790c1a62ab3effe5013c0770d1492b438b5f6b668c1b42fed"
+  },
+  "original12ModelsUnchanged": [
+    "public/models/desk-compositions/monitor.glb",
+    "public/models/desk-compositions/chair.glb",
+    "public/models/desk-compositions/basketball.glb",
+    "public/models/desk-compositions/camera.glb",
+    "public/models/desk-compositions/lamp.glb",
+    "public/models/desk-compositions/plant.glb",
+    "public/models/desk-compositions/desk.glb",
+    "public/models/desk-compositions/keyboard.glb",
+    "public/models/desk-compositions/books.glb",
+    "public/models/desk-compositions/chip.glb",
+    "public/models/desk-compositions/mug.glb",
+    "public/models/robot-expressive.glb"
+  ],
+  "newAssets": [
+    {
+      "id": "paper_stack",
+      "source": "https://reodesuxz.itch.io/low-poly-office-tech-pack",
+      "archivePath": "LowPolyOfficeTechPack_v1.0/GLB/paper_stack.glb",
+      "author": "reodesuxz",
+      "license": "Custom: app/project use; not standalone redistribution",
+      "licenseFile": "/licenses/guiding-hardware/OFFICE-LICENSE.txt",
+      "bytes": 7268,
+      "sha256": "31108c676ece3226f0526e5114427ce958f2e839dbf0a8518ffe6f82ac743cb5",
+      "modifications": "Stored bytes unchanged; resized/positioned in app.",
+      "bounds": {
+        "min": [
+          -0.11601252108812332,
+          0,
+          -0.16252350807189941
+        ],
+        "max": [
+          0.13601252436637878,
+          0.05549999698996544,
+          0.16252350807189941
+        ],
+        "size": [
+          0.2520250454545021,
+          0.05549999698996544,
+          0.32504701614379883
+        ]
+      },
+      "triangles": 60,
+      "animations": []
+    },
+    {
+      "id": "office_plant",
+      "source": "https://reodesuxz.itch.io/low-poly-office-tech-pack",
+      "archivePath": "LowPolyOfficeTechPack_v1.0/GLB/office_plant.glb",
+      "author": "reodesuxz",
+      "license": "Custom: app/project use; not standalone redistribution",
+      "licenseFile": "/licenses/guiding-hardware/OFFICE-LICENSE.txt",
+      "bytes": 12308,
+      "sha256": "6183722ad416d203771b248d0a506f1ac82bf584ba76c901c5982650432d9f3b",
+      "modifications": "Stored bytes unchanged; resized/positioned in app.",
+      "bounds": {
+        "min": [
+          -0.12372533977031708,
+          0,
+          -0.1498381644487381
+        ],
+        "max": [
+          0.16438785195350647,
+          0.6310873031616211,
+          0.13947750627994537
+        ],
+        "size": [
+          0.28811319172382355,
+          0.6310873031616211,
+          0.28931567072868347
+        ]
+      },
+      "triangles": 116,
+      "animations": []
+    },
+    {
+      "id": "projector",
+      "source": "https://poly.pizza/m/cKhipxWkfSH",
+      "author": "Andy Shaw",
+      "license": "CC-BY-3.0",
+      "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+      "originalSHA256": "06c4db89edcdbe7df22994942a42046c3d3354890194a60631cf28025024973b",
+      "publisherHTMLSHA256": "32320ea984506d467ac5925e1457abe7ea13bae708635d25742a5794516fe0ad",
+      "bytes": 81372,
+      "sha256": "cd3a907ac84d65bf6f45ab18156a0f66f8068c2d7254b808b79a65089c9d9b5d",
+      "modifications": "Removed only built-in brown presentation base node group489012986 from scene roots. Original geometry/buffer/material data retained; resized/rotated in app.",
+      "bounds": {
+        "min": [
+          -0.1700437068939209,
+          -0.1955765038728714,
+          -0.11608090251684189
+        ],
+        "max": [
+          0.126329705119133,
+          0.0784754827618599,
+          0.1388934999704361
+        ],
+        "size": [
+          0.2963734120130539,
+          0.2740519866347313,
+          0.254974402487278
+        ]
+      },
+      "triangles": 982,
+      "animations": []
+    },
+    {
+      "id": "webcam",
+      "source": "https://poly.pizza/m/afOuPVCoKj",
+      "author": "dook",
+      "license": "CC-BY-3.0",
+      "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+      "originalSHA256": "82207f575a4a37c9461ef77b2e3c39105c6e7b6a17e2684f08555f6f16a28749",
+      "publisherHTMLSHA256": "543cc7df4ffc438509b37a5528cfcde9d45bffe539b65ac903d9f5d98d68f12e",
+      "bytes": 68232,
+      "sha256": "82207f575a4a37c9461ef77b2e3c39105c6e7b6a17e2684f08555f6f16a28749",
+      "modifications": "Stored bytes unchanged; resized/rotated in scene.",
+      "bounds": {
+        "min": [
+          -0.999999977648258,
+          -1.2047416034881777,
+          -0.6486239709628916
+        ],
+        "max": [
+          0.999999977648258,
+          0.2519802759134653,
+          0.13475751755670667
+        ],
+        "size": [
+          1.999999955296516,
+          1.456721879401643,
+          0.7833814885195982
+        ]
+      },
+      "triangles": 967,
+      "animations": []
+    }
+  ],
+  "newGLBBytes": 169180,
+  "preserved": [
+    "DeskScene matches D-022 hash",
+    "journey",
+    "RobotCharacter",
+    "presets",
+    "SceneAssets"
+  ],
+  "officeArchiveSHA256": "1a7d84e855d0f05af7ed15d4f2c944eeb793374b2fe8268118a333c276422bbf",
+  "officeLicenseSHA256": "a4f985dc72669695417bb2ed1c08e391d6e67cd569384388755c46626a736229",
+  "officialReferenceImageSHA256": "a961cccb670e025ee1eb35cd01f9331e72d3ea1b6d5d57f69a52f2faf5318a50",
+  "officialReferenceOutsideProduction": true,
+  "screenshotsSHA256": {
+    "reduced-02-guiding-panel.png": "ce6fe069b905950992820135dea2d12369a57552745d8f8f88b4b8b7df7e0910",
+    "03-hardware-crop.png": "7c2fdfc1889e2e0fd51b382f09ead7891aa40188c030ed2cdc82d415277a2e74",
+    "mobile-before-label-adjustment.png": "52445bcf44812724dcaf58249025b5df1002b70f33aecd7820bcaba8fc688bd0",
+    "mobile-03-details-scrolled.png": "463aa7d66342df65a3bd17fda2a9679f1987d5a2d75b3982b1d9a7170e5dff3d",
+    "01-desk.png": "3e65e91b6394564ec228b0095f7fd544418cc895718a786742abd2284575a28f",
+    "mobile-02-guiding-panel.png": "a657390f1e7dbac41945791d14c040dd89f5e7df22689298e411815e68209663",
+    "02-workshop.png": "2ebfe652a408e89f523efaf2908e46f263a8467405f2e0e8c680306856899835",
+    "04-guiding-panel.png": "e94abf0eac8fa2e5da3977e56dddbd95fe033d28c0c2c9211ccf152f691067b3",
+    "reduced-01-workshop.png": "9ff23b339b4bf2c942499c0a9dc5f3951cf37a9a8d76dd64d69bd78232114c68",
+    "mobile-01-workshop.png": "5f1e82ccec2a33b4c190564623e2735b752885a49f1a881d3580bdde335f3923",
+    "reduced-03-details-scrolled.png": "a159521bbfe9e923310145f81f9e2469b12a6ff3c8ec5e07853735415d22881c",
+    "05-returned-desk.png": "ec22ffa63e4db5e32a2d11fd35b1825046996fefbd405a5ada31c268132139ca"
+  },
+  "browserResults": [
+    "desktop-evidence.json",
+    "mobile-evidence.json",
+    "reduced-evidence.json"
+  ]
+}

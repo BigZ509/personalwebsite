@@ -1,0 +1,143 @@
+{
+  "dateLocal": "2026-11-03",
+  "buildId": "hsoZYZ1tyte_JMdQWewVf",
+  "checks": {
+    "npm test": "Pass: 8/8",
+    "npm run typecheck": "Pass",
+    "npm run build": "Pass: final static export",
+    "git diff --check": "Pass after memory finalization",
+    "memory local links": "Pass: 12 files, 107 links"
+  },
+  "sourceSHA256": {
+    "src/features/hub/GuidingHandsSetup.tsx": "5e6b501833897cf8ec5b0a895660d1122b0e6d82ba7fb0ea259afbbfc1cdaf69",
+    "src/features/hub/Workshop.tsx": "bde62710d3f6d6df24fb2e577bba01f83cbfd1c4c1acb18f5cadaa78fffe463b",
+    "src/features/hub/exhibits.ts": "e11ea21a0d2698a30a2873f954fbbf33524fe8f34b5bd46b6a3a6c5e82c2a84a",
+    "src/features/hub/ProjectDetails.tsx": "c1c39ba5b2ae64bf1720838110c07bffdac9bdf2b953546fcc8e1570ad87fdc9",
+    "src/features/hub/HubExperience.tsx": "6320cf4df6b126c40ec35fb3354798d55c28c1658925cfec3bce3c9662825235",
+    "src/features/hub/hub.module.css": "c721c07b2d4067ec9284db0b79baafeeee139def5f6979b5106d3685a2c5eb32",
+    "src/features/compositions/DeskScene.tsx": "ebc9c4b9d31f50c3ecf54455a755a876b61aa93bf75cf2847447bd24133e56f9"
+  },
+  "preserved": {
+    "src/features/hub/ProjectDetails.tsx": "Matches D-024 hash",
+    "src/features/hub/HubExperience.tsx": "Matches D-024 hash",
+    "src/features/compositions/DeskScene.tsx": "Matches D-022 hash",
+    "src/features/hub/journey.ts": "Byte-identical to HEAD",
+    "src/features/hub/RobotCharacter.tsx": "Byte-identical to HEAD",
+    "src/features/compositions/presets.ts": "Byte-identical to HEAD",
+    "src/features/compositions/SceneAssets.tsx": "Byte-identical to HEAD"
+  },
+  "models": [
+    {
+      "path": "public/models/robot-expressive.glb",
+      "sha256": "047f5e5fb3bb6d378bd1df16ca6137f2a596c99b3a1b5690b4020c05aaf6f319",
+      "bytes": 463988
+    },
+    {
+      "path": "public/models/desk-compositions/monitor.glb",
+      "sha256": "be4d698aa13793ed97f425028d633ef899d04c2ad8c89fe36932e5e7810e154e",
+      "bytes": 12856
+    },
+    {
+      "path": "public/models/desk-compositions/chair.glb",
+      "sha256": "0f1a9180dbe0dc4116fa17b9b03e6002f75110e2a0f4ed0ff20a40b384240a76",
+      "bytes": 115760
+    },
+    {
+      "path": "public/models/desk-compositions/basketball.glb",
+      "sha256": "35197dc8ee43e3c65a7108d1c33e56dd20825f4bacb45b56ed33b3950547e755",
+      "bytes": 38288
+    },
+    {
+      "path": "public/models/desk-compositions/camera.glb",
+      "sha256": "a2d9d9779564ec621eab298edb43849a9b59dedd91ba900cef693fe84fec6388",
+      "bytes": 78276
+    },
+    {
+      "path": "public/models/desk-compositions/lamp.glb",
+      "sha256": "5ea86e46a2fc36f86500fa6a97dc529dc3464189dc34e586375bae3ee5f68075",
+      "bytes": 12832
+    },
+    {
+      "path": "public/models/desk-compositions/plant.glb",
+      "sha256": "0de1daa8be12b908fb8d1bf6bd9261e2a50061783e2ebe204bfb434768ca7c53",
+      "bytes": 16636
+    },
+    {
+      "path": "public/models/desk-compositions/desk.glb",
+      "sha256": "3878f6d93d946d77f3e1be55919627a81435696252137ae33c22391c0411f3ce",
+      "bytes": 135916
+    },
+    {
+      "path": "public/models/desk-compositions/keyboard.glb",
+      "sha256": "ea47924f14af012329aeb68a3c3648bf5e59669a0528ad375cf301b459abc66c",
+      "bytes": 140100
+    },
+    {
+      "path": "public/models/desk-compositions/books.glb",
+      "sha256": "8f634cc101d94538e36f57fb6c29aabbe6d35e70b157eb51db806cbca16d2326",
+      "bytes": 15156
+    },
+    {
+      "path": "public/models/desk-compositions/chip.glb",
+      "sha256": "663abf7664fbf108dc8995d3c34994a1805c0aeaf97e26e7d6261456eb75c8a3",
+      "bytes": 106144
+    },
+    {
+      "path": "public/models/desk-compositions/mug.glb",
+      "sha256": "28594dce6e5ff4b5ae34dd201645c2fea6d63b4b8f9c42984c45d21b89e948c2",
+      "bytes": 4904
+    },
+    {
+      "path": "public/models/guiding-hardware/paper_stack.glb",
+      "sha256": "31108c676ece3226f0526e5114427ce958f2e839dbf0a8518ffe6f82ac743cb5",
+      "bytes": 7268
+    },
+    {
+      "path": "public/models/guiding-hardware/office_plant.glb",
+      "sha256": "6183722ad416d203771b248d0a506f1ac82bf584ba76c901c5982650432d9f3b",
+      "bytes": 12308
+    },
+    {
+      "path": "public/models/guiding-hardware/projector.glb",
+      "sha256": "cd3a907ac84d65bf6f45ab18156a0f66f8068c2d7254b808b79a65089c9d9b5d",
+      "bytes": 81372
+    },
+    {
+      "path": "public/models/guiding-hardware/webcam.glb",
+      "sha256": "82207f575a4a37c9461ef77b2e3c39105c6e7b6a17e2684f08555f6f16a28749",
+      "bytes": 68232
+    }
+  ],
+  "screenshot": {
+    "repository": "BigZ509/guiding-hands",
+    "path": "benchmark-results/smol-live-smoke.png",
+    "sourceURL": "https://github.com/BigZ509/guiding-hands/blob/main/benchmark-results/smol-live-smoke.png",
+    "downloadURL": "https://raw.githubusercontent.com/BigZ509/guiding-hands/main/benchmark-results/smol-live-smoke.png",
+    "blobSHA": "db6b70a793833c3a1acf28e76a7e618d5c302585",
+    "sha256": "1d96c37f25b91bc538885e6d87cf58be7d47d6c8b9cd0b5988e1f576bb9e5627",
+    "bytes": 56832,
+    "dimensions": [
+      1120,
+      760
+    ],
+    "modifications": "Original bytes unchanged; displayed as static texture at native aspect ratio.",
+    "description": "Repository FOREST MOTION experimental-control prototype screenshot. Archived diagnostic metrics visible are not current measurements or efficacy/performance claims.",
+    "authorization": "User explicitly requests authentic repository screenshot on projection surface; confirmed owner repository.",
+    "verifiedDate": "2026-11-03"
+  },
+  "browserEvidence": "native-browser-evidence.json",
+  "screenshotsSHA256": {
+    "03-project-panel.jpg": "f7a355d22a4c0a86cb2ad1c2494441c8cf1dd0c6a8871bcf13d81f1dd0ad0542",
+    "04-portrait-workshop.jpg": "52c1d800ff967e381a045dee551f2faf314b3b64dba0dfbf0168b87524a8d6c5",
+    "05-portrait-panel.jpg": "481e4d31ad1314a0ff9a8ef7cdf2c48e218b5010891d73366ea2f3351da19a11",
+    "01-default-workshop.jpg": "14f08e9bc634c9bfc93f8a1139d1fee5ba868da2ac1b5c3c4cd1c5704b09b038",
+    "02-hardware-detail.jpg": "9864c8d9e03b44facf784e622d65161c5e379854415a1114e7c570b05ffcd7bd"
+  },
+  "limits": [
+    "Native Chrome/macOS only; browser version and GPU not exposed",
+    "Portrait pointer clicks, not touch emulation or physical touch",
+    "Manual Pause immediate journey tested; actual OS reduced-motion preference not tested this pass",
+    "No performance, other-browser, screen-reader or conformance claim",
+    "02-hardware-detail.jpg is a partial crop, not used for visual acceptance"
+  ]
+}

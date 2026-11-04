@@ -1,0 +1,19 @@
+{
+  "changedBaselineSource": [
+    "src/features/compositions/DeskScene.tsx",
+    "src/features/hub/hub.module.css",
+    "src/features/hub/PortfolioIdentity.tsx",
+    "src/features/hub/HubExperience.tsx",
+    "src/features/hub/identity.module.css",
+    "src/app/hub/page.tsx"
+  ],
+  "allPublicFilesUnchanged": true,
+  "all16ModelsUnchanged": true,
+  "dependenciesUnchanged": true,
+  "DeskSceneOutsideExplicitLabelAndPreviewChanges": "Matches baseline hash after reversing only explicit adapter edits; camera, positions, lighting, asset calls and SceneEvidence untouched",
+  "newSource": [
+    "src/features/hub/deskPortals.ts",
+    "src/features/hub/DeskGuidance.tsx",
+    "src/features/hub/desk-guidance.module.css"
+  ]
+}

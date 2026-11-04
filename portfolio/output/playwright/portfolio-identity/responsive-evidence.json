@@ -1,0 +1,139 @@
+{
+  "touchAndInitialReduced": [
+    {
+      "mode": "mobile",
+      "checks": "Pass: name/nav bounds, About/Resume touch, robot and both project mesh taps, modal Escape, exact return/same Canvas",
+      "viewport": [
+        390,
+        844
+      ],
+      "desk": {
+        "position": "[9.300000000000002,7.15,11.4]",
+        "target": "[0,2.9,-0.1]"
+      },
+      "bounds": {
+        "left": 210,
+        "right": 372,
+        "bottom": 58,
+        "width": 390
+      },
+      "errors": [],
+      "failed": []
+    },
+    {
+      "mode": "reduced",
+      "checks": "Pass: name/nav bounds, About/Resume touch, robot and both project mesh taps, modal Escape, exact return/same Canvas",
+      "viewport": [
+        390,
+        844
+      ],
+      "desk": {
+        "position": "[9.300000000000002,7.15,11.4]",
+        "target": "[0,2.9,-0.1]"
+      },
+      "bounds": {
+        "left": 210,
+        "right": 372,
+        "bottom": 58,
+        "width": 390
+      },
+      "errors": [],
+      "failed": []
+    }
+  ],
+  "layout": [
+    {
+      "viewport": {
+        "width": 740,
+        "height": 360
+      },
+      "measurements": {
+        "nav": {
+          "top": 14,
+          "bottom": 58,
+          "left": 560,
+          "right": 722
+        },
+        "controls": {
+          "top": 78,
+          "bottom": 122
+        },
+        "caption": {
+          "top": 163.0625,
+          "bottom": 288
+        },
+        "width": 740,
+        "height": 360
+      },
+      "workshopCaption": {
+        "x": 20,
+        "y": 145.3125,
+        "width": 160,
+        "height": 142.6875
+      },
+      "result": "Pass"
+    },
+    {
+      "viewport": {
+        "width": 800,
+        "height": 360
+      },
+      "measurements": {
+        "nav": {
+          "top": 18,
+          "bottom": 62,
+          "left": 581.3125,
+          "right": 766
+        },
+        "controls": {
+          "top": 70,
+          "bottom": 114
+        },
+        "caption": {
+          "top": 163.0625,
+          "bottom": 288
+        },
+        "width": 800,
+        "height": 360
+      },
+      "workshopCaption": {
+        "x": 35,
+        "y": 145.3125,
+        "width": 145.71875,
+        "height": 142.6875
+      },
+      "result": "Pass"
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "measurements": {
+        "nav": {
+          "top": 33.1875,
+          "bottom": 77.1875,
+          "left": 18,
+          "right": 302
+        },
+        "controls": {
+          "top": 112,
+          "bottom": 169
+        },
+        "caption": {
+          "top": 294.125,
+          "bottom": 475
+        },
+        "width": 320,
+        "height": 568
+      },
+      "workshopCaption": {
+        "x": 20,
+        "y": 297.625,
+        "width": 280,
+        "height": 167.375
+      },
+      "result": "Pass"
+    }
+  ]
+}

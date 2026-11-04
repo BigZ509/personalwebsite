@@ -1,14 +1,17 @@
 "use client";
 
 import { Canvas, useFrame, useThree, type ThreeEvent } from "@react-three/fiber";
-import { CameraControls, CatmullRomLine, OrthographicCamera, RoundedBox } from "@react-three/drei";
+import { CameraControls, CatmullRomLine, Html, OrthographicCamera, RoundedBox } from "@react-three/drei";
 import { lazy, Suspense, useEffect, useRef } from "react";
 import { ACESFilmicToneMapping, PCFShadowMap, Vector3 } from "three";
 import { compositions, type Composition, type CompositionId, type Vec3 } from "./presets";
 import { Asset, Surface, FlatPrint, usePrintedTextures } from "./SceneAssets";
 import RobotCharacter from "../hub/RobotCharacter";
 import { abortable, type Pose, type World } from "../hub/journey";
+import type { ExhibitInteraction } from "../hub/exhibits";
 import { visibleDeadline } from "../hub/visibleDeadline";
+import { deskPortals } from "../hub/deskPortals";
+import portalStyles from "../hub/desk-guidance.module.css";
 const Workshop = lazy(() => import("../hub/Workshop"));
 export type CameraBridge = {
   capture: () => Pose;
@@ -17,6 +20,7 @@ export type CameraBridge = {
 export type HubSceneProps = {
   world: World; revision: number; reducedMotion: boolean; locked: boolean;
   onSelectRobot: () => void;
+  exhibits: ExhibitInteraction;
   onCameraReady: (camera: CameraBridge) => void;
   onWorldReady: (revision: number) => void;
 };
@@ -24,11 +28,19 @@ export type HubSceneProps = {
 type Props = { view: CompositionId; active: string | null; reset: number; onActive: (name: string | null) => void; onReady: () => void; onFailure: () => void; themeOverride?: Composition; experience?: HubSceneProps };
 const top = 3.12;
 
-function PortalObject({ name, position, radius, active, onActive, children, onSelect, disabled = false }: { name: string; position: Vec3; radius: number; active: string | null; onActive: Props["onActive"]; children: React.ReactNode; onSelect?: () => void; disabled?: boolean }) {
+function PortalObject({ name, position, radius, active, onActive, children, onSelect, disabled = false, label = false }: { name: string; position: Vec3; radius: number; active: string | null; onActive: Props["onActive"]; children: React.ReactNode; onSelect?: () => void; disabled?: boolean; label?: boolean }) {
   const point = (event: ThreeEvent<PointerEvent>) => { event.stopPropagation(); onActive(name); };
+  const portal = label && active === name && !disabled ? deskPortals.find(item => item.id === name) : undefined;
   return <group position={position} onPointerOver={disabled ? undefined : point} onPointerOut={disabled ? undefined : () => onActive(null)} onClick={disabled ? undefined : event => { event.stopPropagation(); if (event.delta < 4) { onActive(name); onSelect?.(); } }}>
     {children}
     {active === name && <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.018, 0]}><ringGeometry args={[radius, radius + 0.025, 64]} /><meshBasicMaterial color="#efe5ad" transparent opacity={0.9} depthWrite={false} /></mesh>}
+    {portal && <Html center position={[0, portal.labelHeight, 0]} style={{ pointerEvents: "none" }} zIndexRange={[2, 0]}
+      calculatePosition={(object, camera, size) => {
+        const projected = new Vector3().setFromMatrixPosition(object.matrixWorld).project(camera);
+        return [Math.max(96, Math.min(size.width - 96, (projected.x + 1) * size.width / 2)), Math.max(44, Math.min(size.height - 44, (1 - projected.y) * size.height / 2))];
+      }}>
+      <div className={portalStyles.portalLabel} data-desk-label={portal.id}><strong>{portal.title}</strong><span>{portal.description}</span></div>
+    </Html>}
   </group>;
 }
 
@@ -74,10 +86,10 @@ function Workroom({ theme, active, onActive, experience }: { theme: Composition;
     <FlatPrint position={[-1.7, top + 0.015, 0.25]} size={[1.24, 1.6]} texture={textures.notes} rotation={[-Math.PI / 2, 0, -0.23]} />
     <FlatPrint position={[-1.64, top + 0.01, 0.21]} size={[1.32, 1.66]} texture={textures.notes} rotation={[-Math.PI / 2, 0, -0.12]} />
 
-    <PortalObject name="Robotics" position={[2.25, top, -0.75]} radius={0.46} active={active} onActive={onActive} onSelect={experience?.onSelectRobot} disabled={experience ? experience.locked || experience.world !== "desk" : false}>{experience ? <group rotation={[0, 0.45, 0]}><RobotCharacter height={1.5} color={theme.robot} reacting={active === "Robotics"} reducedMotion={experience.reducedMotion} running={experience.world === "desk"} /></group> : <Asset file="/models/robot-expressive.glb" position={[0, 0, 0]} height={1.5} rotation={[0, -0.45, 0]} robot color={theme.robot} />}</PortalObject>
-    <PortalObject disabled={!!experience} name="Personal" position={[2.82, top, 0.95]} radius={0.48} active={active} onActive={onActive}><Asset file="basketball.glb" position={[0, 0.01, 0]} height={0.88} rotation={[0.15, 0.4, 0.2]} /></PortalObject>
-    <PortalObject disabled={!!experience} name="Photography" position={[-2.62, top, 0.73]} radius={0.62} active={active} onActive={onActive}><Asset file="camera.glb" position={[0, 0.015, 0]} height={0.62} rotation={[0, 2.7, 0]} /></PortalObject>
-    <PortalObject disabled={!!experience} name="Software" position={[0.9, top + 0.02, 0.93]} radius={0.48} active={active} onActive={onActive}><Asset file="chip.glb" position={[0, 0, 0]} width={0.9} rotation={[0, -0.25, 0]} /></PortalObject>
+    <PortalObject label={!!experience} name="Robotics" position={[2.25, top, -0.75]} radius={0.46} active={active} onActive={onActive} onSelect={experience?.onSelectRobot} disabled={experience ? experience.locked || experience.world !== "desk" : false}>{experience ? <group rotation={[0, 0.45, 0]}><RobotCharacter height={1.5} color={theme.robot} reacting={active === "Robotics"} reducedMotion={experience.reducedMotion} running={experience.world === "desk"} /></group> : <Asset file="/models/robot-expressive.glb" position={[0, 0, 0]} height={1.5} rotation={[0, -0.45, 0]} robot color={theme.robot} />}</PortalObject>
+    <PortalObject label={!!experience} disabled={experience ? experience.locked || experience.world !== "desk" : false} name="Personal" position={[2.82, top, 0.95]} radius={0.48} active={active} onActive={onActive}><Asset file="basketball.glb" position={[0, 0.01, 0]} height={0.88} rotation={[0.15, 0.4, 0.2]} /></PortalObject>
+    <PortalObject label={!!experience} disabled={experience ? experience.locked || experience.world !== "desk" : false} name="Photography" position={[-2.62, top, 0.73]} radius={0.62} active={active} onActive={onActive}><Asset file="camera.glb" position={[0, 0.015, 0]} height={0.62} rotation={[0, 2.7, 0]} /></PortalObject>
+    <PortalObject label={!!experience} disabled={experience ? experience.locked || experience.world !== "desk" : false} name="Software" position={[0.9, top + 0.02, 0.93]} radius={0.48} active={active} onActive={onActive}><Asset file="chip.glb" position={[0, 0, 0]} width={0.9} rotation={[0, -0.25, 0]} /></PortalObject>
 
     {/* Inexpensive room dressing: shelf, sketch pins and work-in-progress papers, no game media. */}
     <Surface position={[2.95, 5.65, -2.78]} size={[4.3, 0.13, 0.58]} color={theme.wood} />
@@ -99,10 +111,12 @@ function CameraRig({ theme, reset, experience }: { theme: Composition; reset: nu
   reduced.current = experience?.reducedMotion ?? false;
   const { camera, invalidate, size, gl } = useThree();
   useEffect(() => {
-    if ("fov" in camera) { camera.fov = theme.fov + (size.width < 760 ? 15 : 0); camera.updateProjectionMatrix(); }
+    // The wider portrait workshop projection keeps both exhibit silhouettes and
+    // nameplates in view. Desk projection and all saved/travel poses stay intact.
+    if ("fov" in camera) { camera.fov = size.width < 760 && experience?.world === "workshop" ? 76 : theme.fov + (size.width < 760 ? 15 : 0); camera.updateProjectionMatrix(); }
     else { camera.zoom = size.width / (size.width < 760 ? 16 : 20); camera.updateProjectionMatrix(); }
     invalidate();
-  }, [theme, reset, camera, invalidate, size.width]);
+  }, [theme, reset, camera, invalidate, size.width, experience?.world]);
   useEffect(() => {
     controls.current?.setLookAt(...theme.camera, ...theme.target, false);
     invalidate();
@@ -215,7 +229,7 @@ export default function DeskScene(props: Props) {
       <group visible={!props.experience || props.experience.world === "desk"}>
         <Workroom theme={theme} active={props.active} onActive={props.onActive} experience={props.experience} />
       </group>
-      {props.experience?.world === "workshop" && <Workshop theme={theme} reducedMotion={props.experience.reducedMotion} />}
+      {props.experience?.world === "workshop" && <Workshop theme={theme} interaction={props.experience.exhibits} />}
       <SceneEvidence view={props.view} onReady={props.onReady} onFailure={props.onFailure} experience={props.experience} />
     </Suspense>
   </Canvas>;

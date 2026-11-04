@@ -1,0 +1,627 @@
+{
+  "date": "2026-11-04",
+  "buildId": "L8h8l-XqboFQi-pvH9TPX",
+  "baselineBuildId": "oZiZfW_rd_HYc9lIG0Hll",
+  "checks": {
+    "unit": "Pass8/8",
+    "typecheck": "Pass",
+    "staticBuild": "Pass: same routes",
+    "exportedIdentityAndUnavailableResume": "Pass: no PDF href or invented URL",
+    "publicModelsDependencies": "All baseline public files,16 GLBs and both package files unchanged",
+    "sourceOutsideExplicitSceneAdapter": "Reverse-adapter hash matches baseline DeskScene"
+  },
+  "sourceSHA256": {
+    "src/features/compositions/DeskScene.tsx": "9b879a87a4f108050f21de0374da5900c1aed05550bf2525ee90bc6159c3dd41",
+    "src/features/hub/hub.module.css": "4f35080c8f443adab53e865ace30edf7731b429182f612a55753ab349f819020",
+    "src/features/hub/PortfolioIdentity.tsx": "bb98098b5e188afe12f6b17af8eef1ac453e292dfff4ab2ada06b5c2e1a39b9b",
+    "src/features/hub/HubExperience.tsx": "3940d1f2bd5a8252e6848a0794562c21d9877e8cdc05c105c11cfbbbf49ac6b1",
+    "src/features/hub/identity.module.css": "640a73784349417cef08785f0bd88ba7fc9dc4664bac46c1c293d6ebdcb9f3e8",
+    "src/app/hub/page.tsx": "09811c3a0caf0d0ad9693b38f5b73d59584d030eca015adf7c82984fbf368517",
+    "src/features/hub/deskPortals.ts": "f7559554171f9c7dcaa2e6e4f64551fc45e54a0b318e73312f5b50ceca98cda3",
+    "src/features/hub/DeskGuidance.tsx": "7c92a771a9aef1faf8a3f90c7ff098676879140a5a5a227da1f9cb8b1b5e718f",
+    "src/features/hub/desk-guidance.module.css": "32dc2f18e1cd7d9b8863d7b38a9edd24575cdf1dcac39b8f4650a4f2cfd8a626"
+  },
+  "screenshotsSHA256": {
+    "before-390x844.png": "6d08fbdebb92bdb3f689a4383d273a32392f07f2b25a435909a030ee46fad3ca",
+    "narrow-320x480-top.png": "854687be68e41388302c0b04065f114d9e909d557ef65c5d9cb8f65a2f222705",
+    "after-740x360.png": "420af16f6f4e90f37e40dfefa665b4d51835344b358814627ee45960964e4cc8",
+    "before-1600x1100.png": "ed70711dc7eabf914a194e65247b87274be3166d381e18be55bacf9bd00d947d",
+    "reduced-01-landing.png": "8745f967d814c62a2c55bbe0578d4da222260ca4c56f0421b6774eec20a7f7cd",
+    "initial-after-320x568.png": "87b2d5030570fb3a7273ef965a137778ec3526dc38f6217c3f390fdb0f3758f1",
+    "after-320x568.png": "20c4be072ea7245a463b8186c7ca3bc1c03d48bcb210c7808770468652066841",
+    "mobile-05-control-preview.png": "57e6cd42b45bafe2f725d07b33b8c5ae5e63a68298170a58c9cd36b92fd7cfb4",
+    "hover-Software.png": "09eb0a29fc8433658b804f89d1c33b01c8d85698c0dc2dd83f4de8d1044cc6b7",
+    "mobile-04-workshop.png": "ae6d633a151276dc7026a216fcac53db5889323c8b67344b8fa64a60034494c1",
+    "narrow-375x500-top.png": "f03493335d2ab3090f3fbcff6ffefaff96390aea25c4c77015771ef74e2aeb30",
+    "initial-after-740x360.png": "a8618f6671b2cdb877249dd544501a768f8f992cde2211dde8aa7322b6f56598",
+    "hover-Personal.png": "091e80b6884d2b96d8f16f51267876650b4b4e88877d8810ab8fb9749ecdf188",
+    "hover-Robotics.png": "3e92d47dca68efefacb0824801d3f2f125aa1753b5d1270cda9ff32943e022dd",
+    "reduced-03-about.png": "5e7ab7359504ecd188acc39226c481d4be127bae040648f873a3ef2819efa76e",
+    "01-desktop-landing.png": "387197f9613c96fb80ddaf149201c21859f27422c89d9d4809f3163b21843775",
+    "before-1280x720.png": "743891d17404cd818fe1e283406728d1be2e4515f6b3d3803a5a8b2cdaf50667",
+    "narrow-320x568-preview.png": "043d1822dd2ee9643cc4e903e0ff99097545637231c661dc3f28b5648de32391",
+    "narrow-375x500-preview.png": "1cc4849782b449876f1a4fb7982e49586f16bce2cffd285b5c32454a97946589",
+    "mobile-01-landing.png": "ff043ee06dcfb3148287c27e05d596b2df7e4fe5c79a750c5c297dfb24e0e3a9",
+    "after-1024x768.png": "9677a9457402005a889d4df909a50942bfc6ec4ff474fb0536ba792ef910a284",
+    "02-about.png": "7b33e42fbb5d7d3b6c0614943d29f910a90915f1d29573da6a429070af23aa02",
+    "after-1280x720.png": "b5da9f717569fcc8b4614ab28f6e353082804de5944b5ce751b218a190e5b363",
+    "reduced-04-workshop.png": "047598524426fa5034828cc8dce97a07df84072650a8178a29ce53033094d0f9",
+    "hover-Photography.png": "8eb8667944e7868c4c7d620bc36485ec44641b58f5087267385102e95fb3925a",
+    "after-1600x1100.png": "44886236c6d718a170ad9b1a6c23147db953876e6e3b80d9f317cc2002d6fbca",
+    "05-workshop.png": "0ba7037c6836aab0a5cd32dad002129031cf150929e1b626a09f1dccab97130c",
+    "mobile-03-about.png": "711cf28a0bf001c988b9da7de99045cf3d1fca9adda0f3b9f1f902a247adbf39",
+    "narrow-320x568-top.png": "be5d28f5f89a782f048e0f64edf60da3ed52161c88f7a46fed4f8f654cbc2441",
+    "narrow-320x480-preview.png": "4c002c4ace2a86de40b303d4b38eab8bbe818aa48d648e83b871a04f006091ba",
+    "after-390x844.png": "7ccee3418f3d437242ad880f314184a540d0299c73ffc73460f4f9a483629e42",
+    "04-approach.png": "f320f3decc05947506a86e893f2c7c027cf0e069067ee009e33e4ce27035f60f",
+    "after-1280x880.png": "b23d674906f26c06c4e7bff72e456fb8724ea18d8ae154da7101335635775202",
+    "mobile-02-preview.png": "c9d60be34a180954581f6f0be161e2dcae7047f413a239eee01046731685c883",
+    "first-hover-target-miss.png": "b8bba036447a6d2ec43668cf2bc5f320afd91603ba435c2732a96df16146e922",
+    "03-resume-unavailable.png": "a83e13477d432d16a24ee6939dbf26659d4434381bfce2fe2c9b7029dd706be3",
+    "initial-after-1024x768.png": "cf10fb016499ee9d2fb3302233c7e2d7186305f3ba9907bdadf32678d50f8f82",
+    "reduced-02-preview.png": "f45396c6e94657a37d03d50f13daf332e739da98bbf8587a70f0b5fbea3652c4"
+  },
+  "browserResults": {
+    "desktop": {
+      "checks": {
+        "fourActualMeshHovers": "Pass",
+        "unfinishedActualClicksDoNotTravel": "Pass",
+        "fourKeyboardFocusLabels": "Pass",
+        "firstVisitDismissReloadAndReplay": "Pass",
+        "aboutAndMissingResume": "Pass",
+        "github": "Pass",
+        "pointerOrbitAndRobotWaveTravel": "Pass",
+        "bothProjectMeshPanels": "Pass",
+        "modalEscape": "Pass",
+        "sameCanvasExactOrbitedReturnAndFocus": "Pass",
+        "manualPause": "Pass"
+      },
+      "hoverResults": [
+        {
+          "id": "Robotics",
+          "text": "Robotics\nOpen the robotics workshop",
+          "box": {
+            "x": 960.4996337890625,
+            "y": 318.6981506347656,
+            "width": 174,
+            "height": 52.890625
+          },
+          "result": "Pass"
+        },
+        {
+          "id": "Software",
+          "text": "Software Engineering\nWorld in progress \u00b7 Preview only",
+          "box": {
+            "x": 719.0213012695312,
+            "y": 468.35540771484375,
+            "width": 174,
+            "height": 52.890625
+          },
+          "result": "Pass"
+        },
+        {
+          "id": "Photography",
+          "text": "Photography\nWorld in progress \u00b7 Preview only",
+          "box": {
+            "x": 457.96990966796875,
+            "y": 383.9117736816406,
+            "width": 174,
+            "height": 52.890625
+          },
+          "result": "Pass"
+        },
+        {
+          "id": "Personal",
+          "text": "Basketball\nWorld in progress \u00b7 Preview only",
+          "box": {
+            "x": 908.71337890625,
+            "y": 440.6004333496094,
+            "width": 174,
+            "height": 52.890625
+          },
+          "result": "Pass"
+        }
+      ],
+      "invoking": {
+        "position": "[5.8270046274787735,9.343785287381632,12.601423079382288]",
+        "target": "[0,2.9,-0.1]"
+      },
+      "environment": {
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5, Unspecified Version)",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "viewport": [
+          1280,
+          880
+        ],
+        "canvasCount": 1
+      },
+      "errors": [],
+      "failed": [],
+      "warnings": [
+        "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+        "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.",
+        "THREE.Clock: This module has been deprecated. Please use THREE.Timer instead."
+      ]
+    },
+    "responsive": {
+      "mobile": [
+        {
+          "mode": "mobile",
+          "viewport": [
+            390,
+            844
+          ],
+          "intro": {
+            "x": 20,
+            "y": 136,
+            "width": 350,
+            "height": 159.890625
+          },
+          "scene": {
+            "x": 0,
+            "y": 310,
+            "width": 390,
+            "height": 344
+          },
+          "touch": [
+            {
+              "id": "Software",
+              "point": [
+                196.28657526678887,
+                483.01442481488846
+              ],
+              "box": {
+                "x": 111.30044555664062,
+                "y": 447.2815246582031,
+                "width": 170,
+                "height": 51.59375
+              },
+              "result": "Pass"
+            },
+            {
+              "id": "Photography",
+              "point": [
+                140.50699821966336,
+                464.95301293451075
+              ],
+              "box": {
+                "x": 54.92015075683594,
+                "y": 429.04388427734375,
+                "width": 170,
+                "height": 51.59375
+              },
+              "result": "Pass"
+            },
+            {
+              "id": "Personal",
+              "point": [
+                236.58035786593715,
+                483.93411624443536
+              ],
+              "box": {
+                "x": 152.26898193359375,
+                "y": 441.28717041015625,
+                "width": 170,
+                "height": 51.59375
+              },
+              "result": "Pass"
+            }
+          ],
+          "loadedAssets": "desk.glb,monitor.glb,keyboard.glb,chair.glb,lamp.glb,books.glb,mug.glb,plant.glb,/models/robot-expressive.glb,basketball.glb,camera.glb,chip.glb,/models/guiding-hardware/projector.glb,/models/guiding-hardware/webcam.glb,/models/guiding-hardware/office_plant.glb",
+          "checks": "Pass: actual future mesh taps/preview controls, no future travel, guidance dismiss, About/Resume, actual robot/project taps, return/same Canvas, initial motion preference",
+          "errors": [],
+          "failed": []
+        },
+        {
+          "mode": "reduced",
+          "viewport": [
+            390,
+            844
+          ],
+          "intro": {
+            "x": 20,
+            "y": 136,
+            "width": 350,
+            "height": 159.890625
+          },
+          "scene": {
+            "x": 0,
+            "y": 310,
+            "width": 390,
+            "height": 344
+          },
+          "touch": [
+            {
+              "id": "Software",
+              "point": [
+                196.28657526678887,
+                483.01442481488846
+              ],
+              "box": {
+                "x": 111.30044555664062,
+                "y": 444.2815246582031,
+                "width": 170,
+                "height": 51.59375
+              },
+              "result": "Pass"
+            },
+            {
+              "id": "Photography",
+              "point": [
+                140.50699821966336,
+                464.95301293451075
+              ],
+              "box": {
+                "x": 54.92015075683594,
+                "y": 426.04388427734375,
+                "width": 170,
+                "height": 51.59375
+              },
+              "result": "Pass"
+            },
+            {
+              "id": "Personal",
+              "point": [
+                236.58035786593715,
+                483.93411624443536
+              ],
+              "box": {
+                "x": 152.26898193359375,
+                "y": 438.28717041015625,
+                "width": 170,
+                "height": 51.59375
+              },
+              "result": "Pass"
+            }
+          ],
+          "loadedAssets": "desk.glb,monitor.glb,keyboard.glb,chair.glb,lamp.glb,books.glb,mug.glb,plant.glb,/models/robot-expressive.glb,basketball.glb,camera.glb,chip.glb,/models/guiding-hardware/projector.glb,/models/guiding-hardware/webcam.glb,/models/guiding-hardware/office_plant.glb",
+          "checks": "Pass: actual future mesh taps/preview controls, no future travel, guidance dismiss, About/Resume, actual robot/project taps, return/same Canvas, initial motion preference",
+          "errors": [],
+          "failed": []
+        }
+      ],
+      "deniedStorage": "Pass: guide visible/dismisses without storage",
+      "narrow": [
+        {
+          "viewport": [
+            375,
+            500
+          ],
+          "frame": {
+            "x": 0,
+            "y": 310,
+            "width": 375,
+            "height": 280
+          },
+          "checks": "Pass: scrollable full room, all label bounds, persistent header, world scroll reset/return"
+        },
+        {
+          "viewport": [
+            320,
+            480
+          ],
+          "frame": {
+            "x": 0,
+            "y": 336,
+            "width": 320,
+            "height": 280
+          },
+          "checks": "Pass: scrollable full room, all label bounds, persistent header, world scroll reset/return"
+        },
+        {
+          "viewport": [
+            320,
+            568
+          ],
+          "frame": {
+            "x": 0,
+            "y": 336,
+            "width": 320,
+            "height": 280
+          },
+          "checks": "Pass: scrollable full room, all label bounds, persistent header, world scroll reset/return"
+        }
+      ]
+    },
+    "touch-preview": [
+      {
+        "id": "Software",
+        "visibleAfterTap": true
+      },
+      {
+        "id": "Photography",
+        "visibleAfterTap": true
+      },
+      {
+        "id": "Personal",
+        "visibleAfterTap": true
+      }
+    ],
+    "final-layout": {
+      "layouts": [
+        {
+          "viewport": [
+            1600,
+            1100
+          ],
+          "bounds": {
+            "nav": {
+              "left": 1381.3125,
+              "right": 1566
+            },
+            "intro": {
+              "left": 35,
+              "right": 225,
+              "top": 176,
+              "bottom": 391.671875
+            },
+            "canvas": {
+              "left": 0,
+              "top": 0,
+              "width": 1600,
+              "height": 1100
+            }
+          },
+          "result": "Pass"
+        },
+        {
+          "viewport": [
+            1280,
+            880
+          ],
+          "bounds": {
+            "nav": {
+              "left": 1061.3125,
+              "right": 1246
+            },
+            "intro": {
+              "left": 35,
+              "right": 225,
+              "top": 152,
+              "bottom": 367.671875
+            },
+            "canvas": {
+              "left": 0,
+              "top": 0,
+              "width": 1280,
+              "height": 880
+            }
+          },
+          "result": "Pass"
+        },
+        {
+          "viewport": [
+            1280,
+            720
+          ],
+          "bounds": {
+            "nav": {
+              "left": 1061.3125,
+              "right": 1246
+            },
+            "intro": {
+              "left": 35,
+              "right": 225,
+              "top": 152,
+              "bottom": 367.671875
+            },
+            "canvas": {
+              "left": 0,
+              "top": 0,
+              "width": 1280,
+              "height": 720
+            }
+          },
+          "result": "Pass"
+        },
+        {
+          "viewport": [
+            1024,
+            768
+          ],
+          "bounds": {
+            "nav": {
+              "left": 805.3125,
+              "right": 990
+            },
+            "intro": {
+              "left": 35,
+              "right": 225,
+              "top": 152,
+              "bottom": 367.671875
+            },
+            "canvas": {
+              "left": 235,
+              "top": 0,
+              "width": 789,
+              "height": 768
+            }
+          },
+          "result": "Pass"
+        },
+        {
+          "viewport": [
+            390,
+            844
+          ],
+          "bounds": {
+            "nav": {
+              "left": 210,
+              "right": 372
+            },
+            "intro": {
+              "left": 20,
+              "right": 370,
+              "top": 136,
+              "bottom": 295.890625
+            },
+            "canvas": {
+              "left": 0,
+              "top": 310,
+              "width": 390,
+              "height": 344
+            }
+          },
+          "result": "Pass"
+        },
+        {
+          "viewport": [
+            740,
+            360
+          ],
+          "bounds": {
+            "nav": {
+              "left": 560,
+              "right": 722
+            },
+            "intro": {
+              "left": 20,
+              "right": 198,
+              "top": 124,
+              "bottom": 204.5
+            },
+            "canvas": {
+              "left": 215,
+              "top": 0,
+              "width": 525,
+              "height": 360
+            }
+          },
+          "result": "Pass"
+        }
+      ],
+      "narrow": [
+        {
+          "viewport": [
+            375,
+            500
+          ],
+          "labels": [
+            {
+              "id": "Software",
+              "box": {
+                "x": 103.55850219726562,
+                "y": 126.49949645996094,
+                "width": 170,
+                "height": 51.59375
+              },
+              "opacity": 1
+            },
+            {
+              "id": "Photography",
+              "box": {
+                "x": 57.66755676269531,
+                "y": 111.65491485595703,
+                "width": 170,
+                "height": 51.59374237060547
+              },
+              "opacity": 1
+            },
+            {
+              "id": "Personal",
+              "box": {
+                "x": 136.9049835205078,
+                "y": 121.62036895751953,
+                "width": 169.99998474121094,
+                "height": 51.59374237060547
+              },
+              "opacity": 1
+            }
+          ],
+          "result": "Pass"
+        },
+        {
+          "viewport": [
+            320,
+            480
+          ],
+          "labels": [
+            {
+              "id": "Software",
+              "box": {
+                "x": 76.05850219726562,
+                "y": 106.49949645996094,
+                "width": 170,
+                "height": 51.59375
+              },
+              "opacity": 1
+            },
+            {
+              "id": "Photography",
+              "box": {
+                "x": 30.167564392089844,
+                "y": 91.65491485595703,
+                "width": 170.00000762939453,
+                "height": 51.59374237060547
+              },
+              "opacity": 1
+            },
+            {
+              "id": "Personal",
+              "box": {
+                "x": 109.40498352050781,
+                "y": 101.62036895751953,
+                "width": 169.99998474121094,
+                "height": 51.59374237060547
+              },
+              "opacity": 1
+            }
+          ],
+          "result": "Pass"
+        },
+        {
+          "viewport": [
+            320,
+            568
+          ],
+          "labels": [
+            {
+              "id": "Software",
+              "box": {
+                "x": 76.05850219726562,
+                "y": 194.49949645996094,
+                "width": 170,
+                "height": 51.59375
+              },
+              "opacity": 1
+            },
+            {
+              "id": "Photography",
+              "box": {
+                "x": 30.167564392089844,
+                "y": 179.6549072265625,
+                "width": 170.00000762939453,
+                "height": 51.59375
+              },
+              "opacity": 1
+            },
+            {
+              "id": "Personal",
+              "box": {
+                "x": 109.40498352050781,
+                "y": 189.620361328125,
+                "width": 169.99998474121094,
+                "height": 51.59375
+              },
+              "opacity": 1
+            }
+          ],
+          "result": "Pass"
+        }
+      ]
+    }
+  },
+  "resume": {
+    "available": false,
+    "repositoryPdfSearch": "No PDFs, including hidden/ignored workspace files outside dependencies/builds",
+    "futureFile": "public/resume/marc-alexis-resume.pdf",
+    "realPdfViewDownload": "Not tested: actual resume missing"
+  },
+  "limits": [
+    "HeadlessChrome156/macOS; ANGLE Metal Apple M5 reported",
+    "Touch emulation, not physical phone",
+    "No other-browser, performance benchmark or screen-reader/conformance claim",
+    "Initial missed hover/stale test handle/mobile webcam-request event retained; final instrumented runs clean",
+    "HTML viewport reservation/compact-phone scrolling intentional; no camera/asset/lighting changes"
+  ]
+}

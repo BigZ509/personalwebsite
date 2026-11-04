@@ -101,3 +101,73 @@ GitHub request D-017 remains pending: creation click not executed because automa
 - Recorded blocked/unverified evidence: Kenney ZIP 403, notebook/portal demo reader access, actual Chrome camera demo WebGL creation failure, Julien room without license, object archive paths and device/runtime tests not performed.
 - Wrote five hub reports with all source fields, scene graph and requested four phases. Updated current mission, brief, shared memory and handoff coordination pointers; retained older decisions/progress.
 - Next: verify local links/fences/coverage, confirm frozen 15-file app digest, mark package ready for source/architecture review. No build/test execution is relevant to this documentation-only pass.
+
+## 2026-11-02 — Robotics showcase in progress
+
+**Status: In progress.** Current user authorizes two–three selectable placeholder exhibits in the robotics world, starting with Gesture Rover and Guiding Hands. Implement two using existing licensed assets, preserve desk/journey, no detail panels/other worlds/deployment. Baseline unit suite: 8/8 passed. Design and bounded plan in docs/superpowers/. Next: adapt workshop, browser-test and record evidence.
+
+## 2026-11-02 — D-022 showcase ready for review
+
+**Status: Ready for review.** Two licensed placeholder exhibits with independent hover/focus, persistent single selection, mesh/DOM equivalents and selection reset. Preserved desk/controller/model bytes; only portrait workshop projection widens. No panels/other worlds/Git/deploy.
+
+- Evidence: `docs/ROBOTICS_SHOWCASE_REVIEW.md`, `output/playwright/robotics-exhibits/` screenshot/CLI/JSON/source/model manifests; three-game screenshot comparison updated.
+- Passed:8 unit tests, typecheck, production/static export; desktop pointer/keyboard/drag/focus/repeat and travel lock; authored robot Wave; exact orbited pose restoration0; same Canvas; fresh standalone touch390×844 and initial reduced motion both models/labels/return.
+- Corrected mobile clipping after recorded failing bounds regression. Independent review found the same clipping and missing coverage; those checks completed. Earlier camera dataset sample was premature; final test waits for settled rendered data. Additional-context load/reload fallback/timeouts remain unestablished, retained as failures; isolated final processes pass. Software WebGL only; physical/hardware/other-browser coverage untested.
+- Files: workshop/catalog/HUD/styles, scene interaction/portrait-projection adapter, credits and lead-owned scope/memory. No dependency/model/journey/preset changes.
+- Next: stop for review, await actual project photos/appearance before replacing stand-ins.
+
+## 2026-11-02 — D-023 project detail panel in progress
+
+**Status: In progress.** User authorizes refined labels/selection and one reusable panel for Gesture Rover/Guiding Hands only. Preserve desk/room/transitions; include summary, inspiration, demo/GitHub where real, no invented content. Baseline8 tests pass. Existing D-022 uncommitted edits retained. Real Guiding Hands README/CONTEXT and hand-test recording found via GitHub; rover links not verified. Next: inspect footage, implement shared overlay and browser-test both. No other worlds/Git/deployment.
+
+## 2026-11-02 — D-023 inspector ready for review
+
+**Status: Ready for review.** One reusable nonmodal detail inspector opens from both licensed exhibits, with stronger nameplates/selection, room visible, same scene/camera/Canvas. Escape closes panel first; close restores visible exhibit control focus; header Back clears/returns. Keyed content resets scroll; labelled focusable region supports keyboard scrolling.
+
+User-confirmed Guiding Hands link/inspiration used. Both demos unavailable by explicit instruction; no hand-test recording embedded. Rover summary/repo remain unverified, inspiration provisional. KnightHacks tree/context/controls/relay checked, no Rover association verified. `docs/ROBOTICS_PROJECT_DATA.md` records exact source/blob evidence/limits.
+
+Verified8 unit tests, typecheck, build/static export (`wfegZMpmIInQSF2tPWjKQ`), actual mesh panels both, project switching/data/missing media, keyboard/focus/Escape, scroll reset/PageDown, Back/repeat, unchanged Canvas/poses; isolated touch390×844 and initial reduced motion both pass.12 GLBs identical and DeskScene matches D-022 hash. Browser paths no page errors; existing favicon/Clock/readback warnings. No physical/hardware/other-browser/conformance/video playback claim.
+
+Independent review found retained scroll, reproduced82px after prior255px, corrected keyed body; meaningful browser regression passes. Browser selected-button name failure reproduced, fixed stable aria-label, final keyboard/mobile focus passes. Evidence screenshots/CLI/JSON/manifests in `output/playwright/robotics-details/`; references compared. Changed shared panel/catalog/HUD/labels/styles and lead-owned scope/data/memory. No dependencies/assets/other worlds/Git/deployment. Next: stop for review and confirmed media/Rover data/photos.
+
+## 2026-11-02 — D-024 Guiding Hands hardware exhibit in progress
+
+**Status: In progress.** User authorizes a small hardware/computer-vision setup replacing the generic Guiding Hands exhibit. Requested office pack, specific projector/webcam and optional whiteboard/monitor; original stylized Jetson using NVIDIA references explicitly authorized. Preserve desk/rover/panels/transitions; no other worlds/Git/deployment. Baseline8 unit tests pass. Poly projector/webcam CC BY3 anchors verified; office pack archive license under inspection due page file-redistribution restriction. Next: inspect assets/bounds/reference, compose small illustrative setup, actual-browser QA and memory.
+
+## 2026-11-02 — D-024 hardware illustration ready for review
+
+**Status: Ready for review.** Guiding Hands now has actual requested generic projector/webcam, original NVIDIA-reference-guided stylized Jetson, static schematic projection area and office-pack plant/paper stack. Honest illustrative badge/note, no official/actual-hardware/demo claim. Same room/plinth/panel/selection/camera/Rover/desk transitions; no other worlds/Git/deploy.
+
+Verified final build `f3JtLGGttBH0FIGdwlPdC`,8 unit/type/static build/diff checks, desktop actual webcam/Jetson/projector clicks, Rover/native keyboard/panel/switch/close/focus/return, same Canvas/poses; touch390×844 normal and initial reduced motion all three objects plus panel/scroll/focus/return. Original12 GLBs and core camera/journey/robot/presets/asset adapter unchanged; four selected new GLBs169,180bytes. Independent review found no actionable issues.
+
+Rights: CC BY3 projector/webcam, omitted projector brown base; office archive license allows app modification/use but forbids standalone library redistribution, only two props+license included. Original Jetson code/no logo/reference image shipped. `docs/GUIDING_HARDWARE_ASSETS.md`, manifest/credits and official-reference provenance retained.
+
+Visual correction: lower Guiding portrait nameplate to expose Jetson front; before screenshot retained. Initial direct bounds check sampled stale Html projection (not a failing overlap assertion); final wait/bounds/visible capture pass. First desktop monitor caught an initial navigation-aborted robot request after all assertions; scope corrected after ready, no final scoped failures/page errors. No app-network fix claimed. Existing Clock/favicon/readback warnings and device/media limits disclosed.
+
+Evidence: `output/playwright/guiding-hardware/` screenshot/crop/CLI/JSON/hash manifest; `docs/GUIDING_HARDWARE_REVIEW.md`; reference comparison updated. Changed setup/Workshop/representation note/caption/styles, selected assets/notices and lead memory. Next: user reviews illustration; actual final hardware/photos/demo still unconfirmed.
+
+## 2026-11-03 — D-025 Guiding Hands recognizability refinement in progress
+
+**Status: In progress.** User authorizes only Guiding Hands layout/lighting/framing refinement, authentic repository screenshot if available, preserved interactions, visual tests and memory. Confirmed authentic `benchmark-results/smol-live-smoke.png` in BigZ509/guiding-hands (blob db6b70a793833c3a1acf28e76a7e618d5c302585) visibly shows FOREST MOTION experimental prototype; use original still with provenance, no new demo/performance claim. Forest map is artwork, not screenshot; omit it. Baseline8 tests pass. Keep camera/room/Rover/panels/journey unchanged; refine only equipment and projection board. Scope limited to workspace/confirmed repo after stopping an unnecessarily broad filename search; no unrelated data used.
+
+## 2026-11-04 01:02 UTC — D-025 Ready for review
+
+Completed Guiding Hands hardware default-view refinement, upright board/original archived repository prototype PNG, local fill and lower nameplate. Confirmed PNG blob/dimensions/bytes; all16 model hashes and core scene/controller/shared panel unchanged. Build `hsoZYZ1tyte_JMdQWewVf`,8 tests/type/build/diff check pass. Native desktop/portrait four-part actual mesh picks, Rover/panel switch, keyboard/focus, pause immediate journey, drag rejection/exact desk return pass. Source reviewer no actionable findings. Screenshots/native results/hash manifest/review saved; memory synchronized. Own QA tab/server closed and viewport reset; user's preview untouched.
+
+Limits: portrait pointer, no physical touch/OS preference retest; GPU/version not exposed; other-browser/performance/conformance/video playback untested. Existing Clock warnings. Partial crop retained but excluded. Read `docs/GUIDING_REFINEMENT_REVIEW.md` and `output/playwright/guiding-refinement/`. Next: user visual review; no other worlds/Git/deploy.
+
+## 2026-11-04 04:48 UTC — D-026 identity in progress
+
+User supplied Objective1: implement Marc Alexis persistent header, desk introduction and functional About/Resume/GitHub in HTML only. Preserve all 3D objects/controls/journey/robot, no other worlds/onboarding/new labels. Repository remote verifies BigZ509; no resume PDF/font or configured resume destination found in workspace. Use small native About/resume-unavailable dialogs, known user biography only. Baseline source/model/package hashes saved; browser connection is being diagnosed before captures. No Git/deployment authorized.
+
+## 2026-11-04 04:53 UTC — D-026 implementation/static verification checkpoint
+
+Identity component/dialogs, HTML caption/utility placement and metadata implemented. Independent source review identified short-landscape overlap; compact caption styles applied. Final build/typecheck/8 tests pass, all baseline sources except four intended HTML/style/metadata files unchanged,16 GLBs/packages preserved. Review/design/plan/baseline/verification written. Actual browser control fails timeoutMs; native app change warning respected. Alternate Playwright choice requested asynchronously; browser matrix/screenshots pending. Resume missing surfaced by dialog, no invented link. Continue QA after tool choice; no new worlds/Objective2/Git/deploy.
+
+## 2026-11-04 05:06 UTC — D-026 Ready for review
+
+Final build `oZiZfW_rd_HYc9lIG0Hll`. User explicitly chose Playwright after CUA failures, enabling actual rendered desktop/touch/initial reduced/short-layout acceptance. Identity/navigation/dialog/focus/Escape/GitHub popup, header pointer-through/orbit, robot Wave/mesh/travel, both exhibits, same Canvas/exact orbited return and Pause pass. All16 GLBs/packages/core sources preserved. Source review and visual landscape overlap findings corrected; final screenshots/CLI/JSON retained. Unit8/type/static/diff pass. Resume missing surfaced honestly. Updated review/memory/reference comparison; stop for visual review, no Objective2/worlds/Git/deploy. Existing Clock/favicon warnings; initial navigation cancel/missed tap retained; physical/other-browser/performance/conformance untested. Own Playwright/server cleanup only, user preview preserved; failed CUA blank tab cleanup unconfirmed.
+
+## 2026-11-04 05:32 UTC — D-027 Objective2 in progress
+
+Refine landing hierarchy/contrast/clearance and About; first-visit guidance and four honest hover/focus labels, Robotics only functional destination. Existing source/materials/camera/journey preserved. Repository-wide PDF/resume search found no resume PDF; maintain unavailable state and configure a fixed public/resume/marc-alexis-resume.pdf build-time slot. User explicitly requests terminal Playwright; own preview4184 started, baseline source/public/package hashes saved. No new worlds/assets/dependencies/Git/deploy.

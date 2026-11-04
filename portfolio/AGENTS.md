@@ -1,5 +1,25 @@
 # Agent instructions — Interactive Portfolio
 
+## Current authority — D-026, 2026-11-03
+
+User supplied Objective1 authorizes Marc Alexis persistent HTML header (About/Resume/GitHub), desk introduction and minimal accessible About panel. Keep cinematic/cozy scene, all objects/robot/camera/journey/showcase intact. No other worlds, new labels/onboarding or Git/deploy. GitHub BigZ509 verified from origin; no resume asset/URL, use unavailable explanation. Delivered and actual-browser verified after user explicitly chose terminal Playwright; final build oZiZfW_rd_HYc9lIG0Hll. Ready for visual review; resume asset still missing. Read [identity checkpoint](docs/PORTFOLIO_IDENTITY_REVIEW.md). D-025 review stop superseded only for this objective.
+
+## Current authority — D-025, 2026-11-03
+
+Refine only Guiding Hands hardware recognizability from the default camera, authentic repository forest screenshot if available, and restrained exhibit lighting/framing. Preserve room/desk/Rover/one Canvas/panel/journey; no other worlds/Git/deploy. Delivered: front-facing projector/webcam/Jetson, upright board with original archived FOREST MOTION prototype still, local fill, lower label. Both demos unavailable; setup illustrative, Jetson unofficial/stylized. Older schematic descriptions are historical. Read [current review](docs/GUIDING_REFINEMENT_REVIEW.md). Stop for visual review after browser checks and memory update.
+
+## Current authority — D-024, 2026-11-02
+
+User authorizes replacing only the Guiding Hands generic stand-in with a small honest hardware/CV setup: requested projector/webcam, reodesuxz office pack environment props, optional whiteboard/monitor, and original stylized Jetson Orin Nano using NVIDIA official references. Preserve Rover, desk, room, one Canvas, panel interactions and transitions; no other worlds/Git/deployment. Label the setup illustrative, Jetson original/stylized (not official/exact), and schematic projection marks not a real demo. Both videos remain unavailable. Asset/rights/source details: docs/GUIDING_HARDWARE_ASSETS.md. Included office LICENSE permits app integration/modification and prohibits standalone/asset-library redistribution; retain selected-file notices. Older stops/placeholder requirements are historical where conflicting.
+
+## Current authority — D-023, 2026-11-02
+
+User now authorizes refining robotics exhibit labels/selection and one reusable detail panel opened by exhibit selection. Include summary, inspiration, GitHub and demo section; room stays visible behind panel. Preserve desk/showcase/transitions; no other worlds. Guiding Hands repository/inspiration user-confirmed. Both demo videos unconfirmed: mark unavailable. KnightHacks repository is only a candidate to verify; current-main inspection did not verify rover code, so leave Gesture Rover unlinked. Rover inspiration is provisional and must be labeled. Read docs/ROBOTICS_PROJECT_DATA.md. No Git publication/deployment requested. D-022 no-panel restriction is superseded only here.
+
+## Current authority — D-022, 2026-11-02
+
+The latest user request supersedes the implementation stop only for the Robotics-world project showcase. Add two–three selectable 3D exhibits starting Gesture Rover and Guiding Hands, using clearly labeled licensed placeholders until actual project photos arrive. Preserve cinematic desk/working transitions and one Canvas; keep the scene uncluttered and game-like; test actual browser interactions, screenshot and update memory. No detail panels, other worlds or deployment. This task does not request additional Git publication. Older stops below remain historical where conflicting.
+
 ## Mission
 Build a **cinematic 3D desk / workbench hub**, similar to a solo-player game menu. Objects are portals: robot (robotics), basketball (about/personal), camera (photography/creative), and microchip or another development object (software/projects). Each supports idle, hover/focus, selection with camera approach, its own mini world, and return to the desk. Preserve accessible semantic content/navigation alongside the experience.
 

@@ -1,0 +1,180 @@
+{
+  "mobile": [
+    {
+      "mode": "mobile",
+      "viewport": [
+        390,
+        844
+      ],
+      "intro": {
+        "x": 20,
+        "y": 136,
+        "width": 350,
+        "height": 159.890625
+      },
+      "scene": {
+        "x": 0,
+        "y": 310,
+        "width": 390,
+        "height": 344
+      },
+      "touch": [
+        {
+          "id": "Software",
+          "point": [
+            196.28657526678887,
+            483.01442481488846
+          ],
+          "box": {
+            "x": 111.30044555664062,
+            "y": 447.2815246582031,
+            "width": 170,
+            "height": 51.59375
+          },
+          "result": "Pass"
+        },
+        {
+          "id": "Photography",
+          "point": [
+            140.50699821966336,
+            464.95301293451075
+          ],
+          "box": {
+            "x": 54.92015075683594,
+            "y": 429.04388427734375,
+            "width": 170,
+            "height": 51.59375
+          },
+          "result": "Pass"
+        },
+        {
+          "id": "Personal",
+          "point": [
+            236.58035786593715,
+            483.93411624443536
+          ],
+          "box": {
+            "x": 152.26898193359375,
+            "y": 441.28717041015625,
+            "width": 170,
+            "height": 51.59375
+          },
+          "result": "Pass"
+        }
+      ],
+      "loadedAssets": "desk.glb,monitor.glb,keyboard.glb,chair.glb,lamp.glb,books.glb,mug.glb,plant.glb,/models/robot-expressive.glb,basketball.glb,camera.glb,chip.glb,/models/guiding-hardware/projector.glb,/models/guiding-hardware/webcam.glb,/models/guiding-hardware/office_plant.glb",
+      "checks": "Pass: actual future mesh taps/preview controls, no future travel, guidance dismiss, About/Resume, actual robot/project taps, return/same Canvas, initial motion preference",
+      "errors": [],
+      "failed": []
+    },
+    {
+      "mode": "reduced",
+      "viewport": [
+        390,
+        844
+      ],
+      "intro": {
+        "x": 20,
+        "y": 136,
+        "width": 350,
+        "height": 159.890625
+      },
+      "scene": {
+        "x": 0,
+        "y": 310,
+        "width": 390,
+        "height": 344
+      },
+      "touch": [
+        {
+          "id": "Software",
+          "point": [
+            196.28657526678887,
+            483.01442481488846
+          ],
+          "box": {
+            "x": 111.30044555664062,
+            "y": 444.2815246582031,
+            "width": 170,
+            "height": 51.59375
+          },
+          "result": "Pass"
+        },
+        {
+          "id": "Photography",
+          "point": [
+            140.50699821966336,
+            464.95301293451075
+          ],
+          "box": {
+            "x": 54.92015075683594,
+            "y": 426.04388427734375,
+            "width": 170,
+            "height": 51.59375
+          },
+          "result": "Pass"
+        },
+        {
+          "id": "Personal",
+          "point": [
+            236.58035786593715,
+            483.93411624443536
+          ],
+          "box": {
+            "x": 152.26898193359375,
+            "y": 438.28717041015625,
+            "width": 170,
+            "height": 51.59375
+          },
+          "result": "Pass"
+        }
+      ],
+      "loadedAssets": "desk.glb,monitor.glb,keyboard.glb,chair.glb,lamp.glb,books.glb,mug.glb,plant.glb,/models/robot-expressive.glb,basketball.glb,camera.glb,chip.glb,/models/guiding-hardware/projector.glb,/models/guiding-hardware/webcam.glb,/models/guiding-hardware/office_plant.glb",
+      "checks": "Pass: actual future mesh taps/preview controls, no future travel, guidance dismiss, About/Resume, actual robot/project taps, return/same Canvas, initial motion preference",
+      "errors": [],
+      "failed": []
+    }
+  ],
+  "deniedStorage": "Pass: guide visible/dismisses without storage",
+  "narrow": [
+    {
+      "viewport": [
+        375,
+        500
+      ],
+      "frame": {
+        "x": 0,
+        "y": 310,
+        "width": 375,
+        "height": 280
+      },
+      "checks": "Pass: scrollable full room, all label bounds, persistent header, world scroll reset/return"
+    },
+    {
+      "viewport": [
+        320,
+        480
+      ],
+      "frame": {
+        "x": 0,
+        "y": 336,
+        "width": 320,
+        "height": 280
+      },
+      "checks": "Pass: scrollable full room, all label bounds, persistent header, world scroll reset/return"
+    },
+    {
+      "viewport": [
+        320,
+        568
+      ],
+      "frame": {
+        "x": 0,
+        "y": 336,
+        "width": 320,
+        "height": 280
+      },
+      "checks": "Pass: scrollable full room, all label bounds, persistent header, world scroll reset/return"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "checks": {
+    "threeHardwareMeshesTouch": "Pass",
+    "illustrativeLabelsAndNote": "Pass",
+    "mobileLabelsRoomAndPanel": "Pass",
+    "roverAndDataPreserved": "Pass",
+    "switchScrollCloseFocus": "Pass",
+    "sameCanvasDeskReturn": "Pass"
+  },
+  "reducedMotion": "false",
+  "viewport": [
+    390,
+    844
+  ],
+  "labels": [
+    {
+      "text": "Gesture Rover\nOpen project\nPlaceholder model",
+      "left": 10.710441589355469,
+      "right": 134.71044921875
+    },
+    {
+      "text": "Guiding Hands\nOpen project\nIllustrative setup",
+      "left": 149.7944793701172,
+      "right": 273.79449462890625
+    }
+  ],
+  "errors": [],
+  "failed": []
+}

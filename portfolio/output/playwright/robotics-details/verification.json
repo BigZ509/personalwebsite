@@ -1,0 +1,93 @@
+{
+  "buildId": "wfegZMpmIInQSF2tPWjKQ",
+  "sourceSHA256": {
+    "src/features/hub/ProjectDetails.tsx": "6c1ae3ad99ac50b609d02bb867a0cc4b95e67c16f583d24c9ceeebfa066a3d5b",
+    "src/features/hub/exhibits.ts": "fb0ae453da8f080be951c36f5de7337aba5b9fb608743659a36354271fc294ac",
+    "src/features/hub/HubExperience.tsx": "36a7e795efadf923539e57b44bd21183e387c97410eb4baa3cebd879adae363d",
+    "src/features/hub/Workshop.tsx": "4a5cb358babb06067f2766acf6c7c2f1446b25ab86cb35d76a3cd578716c5e8b",
+    "src/features/hub/hub.module.css": "b3bdf9fd29cd6e932283063306ad6be6679211ccd648c98bebccc8202d9d0a84"
+  },
+  "D022DeskSceneUnchanged": true,
+  "modelsUnchangedFromHEAD": [
+    {
+      "path": "public/models/robot-expressive.glb",
+      "bytes": 463988,
+      "sha256": "047f5e5fb3bb6d378bd1df16ca6137f2a596c99b3a1b5690b4020c05aaf6f319"
+    },
+    {
+      "path": "public/models/desk-compositions/monitor.glb",
+      "bytes": 12856,
+      "sha256": "be4d698aa13793ed97f425028d633ef899d04c2ad8c89fe36932e5e7810e154e"
+    },
+    {
+      "path": "public/models/desk-compositions/chair.glb",
+      "bytes": 115760,
+      "sha256": "0f1a9180dbe0dc4116fa17b9b03e6002f75110e2a0f4ed0ff20a40b384240a76"
+    },
+    {
+      "path": "public/models/desk-compositions/basketball.glb",
+      "bytes": 38288,
+      "sha256": "35197dc8ee43e3c65a7108d1c33e56dd20825f4bacb45b56ed33b3950547e755"
+    },
+    {
+      "path": "public/models/desk-compositions/camera.glb",
+      "bytes": 78276,
+      "sha256": "a2d9d9779564ec621eab298edb43849a9b59dedd91ba900cef693fe84fec6388"
+    },
+    {
+      "path": "public/models/desk-compositions/lamp.glb",
+      "bytes": 12832,
+      "sha256": "5ea86e46a2fc36f86500fa6a97dc529dc3464189dc34e586375bae3ee5f68075"
+    },
+    {
+      "path": "public/models/desk-compositions/plant.glb",
+      "bytes": 16636,
+      "sha256": "0de1daa8be12b908fb8d1bf6bd9261e2a50061783e2ebe204bfb434768ca7c53"
+    },
+    {
+      "path": "public/models/desk-compositions/desk.glb",
+      "bytes": 135916,
+      "sha256": "3878f6d93d946d77f3e1be55919627a81435696252137ae33c22391c0411f3ce"
+    },
+    {
+      "path": "public/models/desk-compositions/keyboard.glb",
+      "bytes": 140100,
+      "sha256": "ea47924f14af012329aeb68a3c3648bf5e59669a0528ad375cf301b459abc66c"
+    },
+    {
+      "path": "public/models/desk-compositions/books.glb",
+      "bytes": 15156,
+      "sha256": "8f634cc101d94538e36f57fb6c29aabbe6d35e70b157eb51db806cbca16d2326"
+    },
+    {
+      "path": "public/models/desk-compositions/chip.glb",
+      "bytes": 106144,
+      "sha256": "663abf7664fbf108dc8995d3c34994a1805c0aeaf97e26e7d6261456eb75c8a3"
+    },
+    {
+      "path": "public/models/desk-compositions/mug.glb",
+      "bytes": 4904,
+      "sha256": "28594dce6e5ff4b5ae34dd201645c2fea6d63b4b8f9c42984c45d21b89e948c2"
+    }
+  ],
+  "modelCount": 12,
+  "modelBytes": 1140856,
+  "screenshotsSHA256": {
+    "mobile-04-inspiration.png": "4085c093a5e1fc12cf54ed96f6813ca65a316166db8a672c8b8186542779cd32",
+    "mobile-03-guiding.png": "70d56159aa8d67ad71b643d6cd65b9007ba49b6a2ed0d8722ae1800c3e6b5095",
+    "03-rover-panel.png": "939875c0ccc6955a2d0680b568ddb5a4b97a17de2b10852fb3447fe8e9b1deb3",
+    "02-workshop-labels.png": "04caeaa1f16b490765914972b29dea4a069b813828017c18a891985d02a16b4c",
+    "reduced-01-labels.png": "fcdb190cee170ad78743dac68aaca8c2b6b96118a5b821082d2ff877eb803890",
+    "reduced-03-guiding.png": "445f664584867bb2d30fc3ddbc87002b7150c553b9a47ca90abf02882a533e43",
+    "01-desk.png": "e31e49b86b1ac53e5fd0d3d3b0b7e4544c86e30b69931757ecac5916961fa64f",
+    "mobile-02-rover.png": "0e24e031962d7ed17e1286afc8c468735ea0c41fe06e1a3ec3715f1d7eb053f5",
+    "06-returned-desk.png": "0b60af274037484139d0064d0677934dd30169727058d983447b91eac5a4015d",
+    "04-guiding-panel.png": "2b1076d395635cc5ac6f031c45231827966cf51b0107189c38d5a4c4b033b2a4",
+    "reduced-02-rover.png": "c1a4e9b3cd4cda65bee9bdf9045c63e71b53d09e7cf6d68ee272aa14a1f5f91f",
+    "mobile-01-labels.png": "000d1b5d6e070678013605546d5c16ecdb19e383c554c62126ee4a056755bb82",
+    "reduced-04-inspiration.png": "1a763b635d0afd1aa4a6cf6b98c031114ed9254bce6c9f276736d7d3ae6deb65",
+    "05-keyboard-panel.png": "c6d60a704a272d25c5071b6d1f0898f3252a9768cf303b8789e85f99c70a2827"
+  },
+  "scope": "Robotics only, no Git publication or deployment",
+  "videoCoverage": "Both videos null/unavailable by user instruction; no playback claim"
+}

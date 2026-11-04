@@ -175,3 +175,58 @@
 - User created public `https://github.com/BigZ509/personalwebsite`, then explicitly approved continuing with Keploy left installed. This resolves the prior automatic approval-review blocker; no attempt was made to bypass it. The earlier private default was not the visibility of the user-created repository.
 - Pushed source milestone **Working robot concept**, commit `0f67294c8205ef00d5db52011db74db3bf8e0c9d`, to main. Git ls-remote verified the exact same SHA on GitHub; main tracks origin/main.
 - Documentation-only follow-up records the publication. No new application implementation, deployment, repository visibility changes or app-permission modifications. Continue waiting for visual review before more website work.
+
+## D-022 — Robotics showcase only, licensed placeholder exhibits
+- **2026-11-02, current user authorization:** Focus exclusively on the robotics-world project showcase. Two–three selectable 3D exhibits, starting Gesture Rover and Guiding Hands; placeholders clearly labeled until real project photos arrive. Preserve cinematic desk and working transitions. Reuse licensed assets; browser-test actual interactions, capture screenshots, update memory. No detail panels or other worlds.
+- **Lead implementation choice:** exactly two stations on the existing bench, with independent hover/focus and persistent single selection. Gesture Rover uses licensed RobotExpressive as an explicitly generic stand-in, not a rover replica. Guiding Hands uses existing licensed monitor/keyboard/chip as a controller stand-in. No new project facts/links or model downloads. Two DOM buttons mirror mesh selection; no project camera moves/detail routes/panels.
+- **Responsive correction:** initial 390×844 screenshot clipped Rover nameplate (x=-53px). Regression reproduced; wider workshop-only portrait FOV76 keeps both labels visible. Desk projection, camera poses, travel/controller logic and return capture are preserved.
+- **Scope:** overrides D-020's implementation stop only here. No new Git commit/push/deployment requested. Stop at showcase review; actual photos and next scope belong to user.
+
+### D-022 delivery checkpoint
+- Two-station showcase delivered for review. Actual desktop, touch-emulated390×844 and initial reduced-motion interactions pass in standalone Chrome/SwiftShader. Numeric orbited return error0 and same Canvas;8 unit/type/build checks pass. All12 licensed GLBs byte-identical to HEAD.
+- Independent review found portrait label clipping; reproduced failing bounds test, corrected workshop-only FOV and recaptured. Touch/reduced/numeric-return coverage completed. Additional-context load/reload fallback/timeouts remain an unestablished environment/interaction limit; retained failures, not a claimed resolution.
+- Review/evidence: `docs/ROBOTICS_SHOWCASE_REVIEW.md`, `output/playwright/robotics-exhibits/`. Stop at showcase review; no details, other worlds, Git publication or deployment.
+
+## D-023 — Reusable robotics project details, confirmed content only
+- **User authority2026-11-02:** preserve working showcase/desk/transitions; refine exhibit labels/selection, then build ONE reusable project panel with demo video, GitHub, short summary and inspiration. Keep room visible behind it. Test both projects/update memory; no other worlds. Supersedes D-022 no-panel restriction only here; no Git/deployment requested.
+- **User data clarification:** use BigZ509/guiding-hands and supplied inspiration. Gesture Rover inspiration is provisional. Both demo videos unconfirmed: mark unavailable until user supplies them. Verify leonelh06-lgtm/Knight-Hacks-IX before linking rover; don't invent links or unverified capabilities.
+- **Source finding:** candidate KnightHacks current-main tree/context/controls/relay describe the Guiding Hands forest game, not verified Gesture Rover code. Leave Rover GitHub unavailable. Details, exact source URLs/blob IDs and limits in `docs/ROBOTICS_PROJECT_DATA.md`.
+- **Lead choices:** one nonmodal inspector, right on desktop/lower sheet on mobile. No backdrop, camera movement, Canvas remount or new world. Both exhibit meshes/DOM controls open same panel shell, switch keyed content. Close/Escape restores selected exhibit control; next Escape returns Desk. Explicit Back closes details and returns. Room stays visible/interactable. Selection stays on ring/nameplate/pressed button; plaques clarify Open project and Placeholder model.
+- **Review fixes:** reproduced retained scroll on project switch (82px after prior255px); key body by project ID. Explicit keyboard-focusable scroll region. Browser test caught decorative checkmark changing selected button accessible name; explicit stable project label fixes it. Retain failing logs and final regression evidence.
+
+### D-023 delivered checkpoint
+- Actual mesh-opened shared inspector and corrected selection/focus/scroll lifecycle pass on desktop, touch-emulated390×844 and initial reduced motion. Build `wfegZMpmIInQSF2tPWjKQ`,8 unit/type/static checks pass. Same Canvas/camera poses, unchanged D-022 scene adapter and12 GLBs.
+- Screenshots/evidence/limits: `docs/ROBOTICS_DETAILS_REVIEW.md`, `output/playwright/robotics-details/`. Both demos unavailable; verified Guiding data, provisional/missing Rover fields preserved. No other worlds/Git/deployment. Stop for inspector review and confirmed project media/data.
+
+## D-024 — Guiding Hands illustrative hardware setup
+- User explicitly requests replacing generic Guiding Hands placeholder with a small hardware/CV exhibit using linked reodesuxz office pack, specific projector/webcam, optional whiteboard/monitor, and a simple original stylized Jetson Orin Nano from NVIDIA references. Keep honest, clear and visually simple. Preserve working room/desk/Rover/panels/transitions; no inferred other worlds/Git/deployment.
+- Selected projector Andy Shaw and webcam dook, CC BY3 with actual publisher anchors, bytes/bounds/node checks. Removed only projector brown base scene root; disclose adaptation. Office archive LICENSE clarifies app use/modification allowed; no standalone asset/asset-library redistribution. Use only two tiny props (plant/paper stack), retain notice. Optional monitor/whiteboard omitted to avoid clutter.
+- Jetson is original code-native simplified silhouette, static cooler/fan/header/connectors, reference image outside production, no logo/official-mesh/electrical accuracy/performance claim. Projection area has an original static schematic, not actual gameplay or CV input. Illustrative setup/representation note replaces generic Guiding placeholder text; Rover stays placeholder, real project data and unavailable demos preserved.
+- Source/rights/provenance: `docs/GUIDING_HARDWARE_ASSETS.md`, `public/models/guiding-hardware/manifest.json`, `public/licenses/guiding-hardware/`.
+
+### D-024 delivered checkpoint
+- Hardware illustration, assets/rights/provenance and honest representation delivered. Source reviewer found no actionable issue. Actual desktop/touch/reduced-motion clicks on all three core objects and preserved Rover/panels/camera/desk return pass.8 unit/type/static build checks pass, final build `f3JtLGGttBH0FIGdwlPdC`.
+- Original12 model bytes/core scene adapter/journey preserved. Four new app-integrated GLBs169,180bytes. Portrait Guiding nameplate lowered to expose Jetson; final bounds/image checks pass. Test navigation-abort/early Html sampling artifacts retained and scoped honestly.
+- Review `docs/GUIDING_HARDWARE_REVIEW.md`, evidence `output/playwright/guiding-hardware/`. Stop for illustration review. No actual hardware replica, official NVIDIA mesh, real demo, other worlds, Git publication or deployment claimed.
+
+## D-025 — Guiding Hands default-view refinement · 2026-11-03
+
+- User authorizes only Guiding Hands recognizability, authentic forest-game repository screenshot if available, restrained lighting/framing, preserved interactions, browser QA and memory. No other worlds/Git/deploy. This supersedes the old visual-review stop only within this scope.
+- Use original `benchmark-results/smol-live-smoke.png` from confirmed BigZ509/guiding-hands, blob `db6b70a793833c3a1acf28e76a7e618d5c302585`: actual archived experimental FOREST MOTION prototype screenshot, 1120×760, 56832bytes. Native aspect, unchanged pixels. Label repository prototype still/archived. No substitution of forest map artwork or fabricated gameplay. Existing diagnostic text is not a new measurement. Both demo videos remain unavailable.
+- Front-face projector lens and webcam, separate Jetson at front, upright tilted board with slim supports, short-range fill, retain one small plant and omit paper stack from scene. Lower only Guiding nameplate at all widths; camera/room/Rover stay fixed. Illustration is a viewing composition, not a confirmed actual device or electrical/optical diagram. Jetson original/stylized/unofficial. Existing asset notices/16 model bytes retained.
+
+### D-025 delivered checkpoint
+
+Final build `hsoZYZ1tyte_JMdQWewVf`,8 tests/type/static build/diff check pass. Native Chrome/macOS visible 3D desktop1280×880/portrait390×844: projector/webcam/Jetson/board picks, Rover/panel switching, keyboard/Escape/focus, fixed inspection camera, manual Pause immediate trip, portrait drag rejection and exact desk return pass. Source review no actionable findings. Core scene/controller/shared panel hashes preserved. Actual touch/OS preference/other browsers/devices/performance/conformance untested this pass; native GPU/version unknown. Existing Clock warnings only. [Review](GUIDING_REFINEMENT_REVIEW.md), evidence `output/playwright/guiding-refinement/`. Ready for visual review; stop before expansion.
+
+## D-026 — Marc Alexis identity/navigation · 2026-11-03
+
+User-supplied Objective1 authorizes implementation in the existing codebase: persistent MARC ALEXIS + About/Resume/GitHub header, desk introduction, minimal About destination, confirmed resume/profile links only. All 3D scene/object/robot/camera/journey/showcase behavior remains; no other worlds, new labels/onboarding, dependencies, Git or deployment.
+
+Use existing HTML shell and palette/fonts. Native small dialogs for About and resume-unavailable; no About page/world. Escape stops before workshop shortcut; focus semantics native. Local dialog refs avoid Canvas owner updates. BigZ509 profile confirmed by origin/user account; no resume asset/config found, so no resume URL. New identity header plus separate scene utility row; compact short-height caption and lower desktop inspector avoid overlap. Existing meaningful unit regression suite and browser acceptance, no markup-mirroring tests.
+
+Implementation/source review/static checks delivered; browser acceptance pending CUA failure and user alternate-tool choice. All16 GLBs/package/core scene/controller sources preserved against starting manifest. No current browser pass or after screenshot claim until tested. [Current review](PORTFOLIO_IDENTITY_REVIEW.md).
+
+### D-026 delivered checkpoint — 2026-11-04
+
+Build `oZiZfW_rd_HYc9lIG0Hll`,8 unit/type/static checks and actual desktop/touch/initial reduced-motion/short-layout tests pass. User explicitly selected terminal Playwright after CUA failure. Native dialogs/nav/focus/Escape, actual GitHub popup, empty-header scene orbit, robot Wave/click/approach, both project panels, exact orbited return/focus/same Canvas and manual Pause pass. Source and visual review landscape overlaps corrected with HTML/CSS only. All16 GLBs/packages/core scene/controller/project data unchanged. [Review/evidence](PORTFOLIO_IDENTITY_REVIEW.md). Resume unavailable explanation remains until confirmed PDF/URL; no invented link. Ready for visual review, no Objective2/other worlds/Git/deploy.
