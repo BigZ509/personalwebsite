@@ -18,7 +18,7 @@ export default function LightingControls({ state, onEnvironment, onLamp, disable
     return () => window.removeEventListener('keydown', escape, true);
   }, [open]);
   return <div className={styles.controls}>
-    <button ref={trigger} aria-label={`Lighting controls: ${state.environment}`} aria-expanded={open} aria-controls="lighting-controls" onClick={() => setOpen(value => !value)} disabled={disabled}>{state.environment === 'day' ? '☀ Day' : '☾ Night'}</button>
+    <button ref={trigger} aria-label={`Lighting: ${state.environment === 'day' ? 'Day' : 'Night'}`} aria-expanded={open} aria-controls="lighting-controls" onClick={() => setOpen(value => !value)} disabled={disabled}>{state.environment === 'day' ? 'Day' : 'Night'}</button>
     {open && <div id="lighting-controls" className={styles.popover} role="group" aria-label="Lighting">
       <p>Room atmosphere</p><div>{(['day', 'night'] as const).map(mode => <button key={mode} aria-pressed={state.environment === mode} onClick={() => onEnvironment(mode)}>{mode === 'day' ? 'Day' : 'Night'}</button>)}</div>
       <p>Desk lamp · independent</p><button onClick={onLamp} aria-label={`Desk lamp: ${state.lamp}. Change light`}>Lamp: {state.lamp} <span aria-hidden="true">↻</span></button>

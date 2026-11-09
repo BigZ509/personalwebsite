@@ -31,7 +31,8 @@ export default function PortfolioIdentity({ resumeAvailable = false }: { resumeA
     <dialog id="about-marc" ref={about} className={styles.dialog} aria-labelledby="about-marc-title" onKeyDown={event => { if (event.key === "Escape") event.stopPropagation(); }}>
       <div className={styles.dialogHeading}><div><span className={styles.aboutLabel}>About</span><h2 id="about-marc-title">Marc Alexis</h2></div><button type="button" onClick={() => about.current?.close()}>Close</button></div>
       <p className={styles.aboutRole}>Computer science student.<br />Robotics minor.</p>
-      <p>I study at the University of Central Florida and build software, computer vision, and robotics projects. I’m also into photography and basketball.</p>
+      <p>I’m Marc, a computer science student at the University of Central Florida pursuing a minor in Intelligent Robotic Systems. I like building practical software, experimenting with computer vision and robotics, and figuring out how systems work from the inside out.</p>
+      <p>Outside of programming, I enjoy photography and basketball.</p>
       {resumeAvailable && <ResumeActions />}
       <div className={styles.dialogLinks}><a href={profile.github} target="_blank" rel="noopener noreferrer">Find me on GitHub<span className={styles.srOnly}> (opens in a new tab)</span></a>
         <a href={`mailto:${profile.email}`}>{profile.email}</a>

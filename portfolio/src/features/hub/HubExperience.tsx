@@ -28,12 +28,12 @@ class SceneBoundary extends Component<{ children: ReactNode; onFailure: () => vo
 }
 
 const messages: Record<Phase, string> = {
-  desk: "Desk ready. Select the robot for robotics, computer for the portfolio, microchip for software, or lamp for lighting.",
-  approaching: "Approaching the robot. Back to Desk cancels the visit.",
-  entering: "Opening the robotics workshop.",
-  software: "Software workspace. Select a terminal for project notes, or return to the desk.",
-  workshop: "Robotics workshop. Use Back to Desk or Escape to return.",
-  returning: "Returning to your desk view.",
+  desk: "Select an object to explore, or use Explore the room.",
+  approaching: "Moving to the selected destination.",
+  entering: "Opening the selected destination.",
+  software: "Software Lab. Choose a project or return to the Workroom.",
+  workshop: "Robotics Lab. Choose a project or return to the Workroom.",
+  returning: "Returning to the Workroom.",
 };
 
 export default function HubExperience({ resumeAvailable = false }: { resumeAvailable?: boolean }) {
@@ -51,7 +51,9 @@ export default function HubExperience({ resumeAvailable = false }: { resumeAvail
   const softwareButtons = useRef<Partial<Record<SoftwareProjectId, HTMLButtonElement | null>>>({});
   const restoreSoftwareFocus = useRef<SoftwareProjectId | null>(null);
   const computerButton = useRef<HTMLButtonElement>(null);
-  const invoker = useRef<"workshop" | "software" | "computer">("workshop");
+  const invoker = useRef<HTMLElement | null>(null);
+  const portalButtons = useRef<Partial<Record<DeskPortalId, HTMLButtonElement | null>>>({});
+  const exploreButton = useRef<HTMLButtonElement>(null);
   const [destination, setDestination] = useState<"workshop" | "software">("workshop");
   const [detailsOpen, setDetailsOpen] = useState(false);
   const [exhibitExpanded, setExhibitExpanded] = useState(false);
@@ -61,6 +63,9 @@ export default function HubExperience({ resumeAvailable = false }: { resumeAvail
   const [focusedExhibit, setFocusedExhibit] = useState<ExhibitId | null>(null);
   const [focused, setFocused] = useState(false);
   const [focusedPortal, setFocusedPortal] = useState<DeskPortalId | null>(null);
+  const [simpleDestination, setSimpleDestination] = useState<"Photography" | "Personal" | null>(null);
+  const simpleDialog = useRef<HTMLDialogElement>(null);
+  const restoreDestinationFocus = useRef(false);
   const [ready, setReady] = useState(false);
   const [failed, setFailed] = useState(false);
   const [locked, setLocked] = useState(false);
@@ -69,7 +74,7 @@ export default function HubExperience({ resumeAvailable = false }: { resumeAvail
   const [paused, setPaused] = useState(false);
   const reduce = useRef(true);
   reduce.current = reduced || paused;
-  const robotButton = useRef<HTMLButtonElement>(null);
+  const heroButton = useRef<HTMLButtonElement>(null);
   const backButton = useRef<HTMLButtonElement>(null);
   const restoreFocus = useRef(false);
   const cover = useRef<HTMLDivElement>(null);
@@ -146,8 +151,9 @@ export default function HubExperience({ resumeAvailable = false }: { resumeAvail
 
   useEffect(() => () => { journey.current?.cancel(); pending.current?.reject(new DOMException("Unmounted", "AbortError")); }, []);
   useLayoutEffect(() => { main.current?.scrollTo({ top: 0, behavior: "instant" }); }, [scene.world]);
-  const openComputer = useCallback(() => {
+  const openComputer = useCallback((trigger?: HTMLElement | null) => {
     if (phase !== "desk" || !ready || locked) return;
+    invoker.current = trigger ?? computerButton.current ?? heroButton.current;
     const bridge = camera.current;
     // Freeze any settling orbit through the existing camera owner; the dialog
     // itself never moves the camera, and closing leaves this exact pose intact.
@@ -156,10 +162,13 @@ export default function HubExperience({ resumeAvailable = false }: { resumeAvail
   }, [phase, ready, locked, onFailure]);
   const closeComputer = useCallback(() => { restoreComputerFocus.current = true; setComputerOpen(false); }, []);
   useLayoutEffect(() => {
-    if (!computerOpen && restoreComputerFocus.current) { restoreComputerFocus.current = false; computerButton.current?.focus({ preventScroll: true }); }
+    if (!computerOpen && restoreComputerFocus.current) {
+      restoreComputerFocus.current = false;
+      (invoker.current ?? computerButton.current ?? heroButton.current)?.focus({ preventScroll: true });
+    }
   }, [computerOpen]);
   const navigateFromComputer = useCallback((world: "software" | "workshop", project?: SoftwareProjectId) => {
-    setComputerOpen(false); invoker.current = "computer"; setDestination(world);
+    setComputerOpen(false); invoker.current = computerButton.current; setDestination(world);
     const visit = journey.current;
     if (!visit || visit.phase !== "desk") return;
     // Reuse the existing abortable journey. Cancelled visits never open notes.
@@ -167,13 +176,34 @@ export default function HubExperience({ resumeAvailable = false }: { resumeAvail
       if (project && visit.phase === "software") { setSelectedSoftware(project); setDetailsOpen(true); }
     });
   }, []);
-  const selectRobot = useCallback(() => { invoker.current = "workshop"; setDestination("workshop"); void journey.current?.enter(); }, []);
-  const selectSoftware = useCallback(() => { invoker.current = "software"; setDestination("software"); void journey.current?.enter("software"); }, []);
+  const selectRobot = useCallback((trigger?: HTMLElement | null) => {
+    invoker.current = trigger ?? portalButtons.current.Robotics ?? heroButton.current;
+    setDestination("workshop"); void journey.current?.enter();
+  }, []);
+  const selectSoftware = useCallback((trigger?: HTMLElement | null) => {
+    invoker.current = trigger ?? portalButtons.current.Software ?? heroButton.current;
+    setDestination("software"); void journey.current?.enter("software");
+  }, []);
   const back = useCallback(() => { setDetailsOpen(false); setExhibitExpanded(false); void journey.current?.back(); }, []);
   const closeDetails = useCallback(() => {
     restoreExhibitFocus.current = selectedExhibit; restoreSoftwareFocus.current = selectedSoftware;
     setDetailsOpen(false); setExhibitExpanded(false);
   }, [selectedExhibit, selectedSoftware]);
+  const closeSimpleDestination = useCallback(() => {
+    restoreDestinationFocus.current = true;
+    setSimpleDestination(null);
+  }, []);
+  useEffect(() => {
+    const dialog = simpleDialog.current;
+    if (simpleDestination && dialog && !dialog.open) dialog.showModal();
+    else if (!simpleDestination && dialog?.open) dialog.close();
+  }, [simpleDestination]);
+  useLayoutEffect(() => {
+    if (!simpleDestination && restoreDestinationFocus.current) {
+      restoreDestinationFocus.current = false;
+      invoker.current?.focus({ preventScroll: true });
+    }
+  }, [simpleDestination]);
   useLayoutEffect(() => {
     if (!detailsOpen && restoreSoftwareFocus.current) { softwareButtons.current[restoreSoftwareFocus.current]?.focus({ preventScroll: true }); restoreSoftwareFocus.current = null; }
     // Mobile controls become visible only after the closing state is committed.
@@ -186,7 +216,8 @@ export default function HubExperience({ resumeAvailable = false }: { resumeAvail
     // Restore only after React has committed an enabled invoking button. A RAF
     // scheduled before that commit can silently focus the still-disabled button.
     if (phase === "desk" && restoreFocus.current) {
-      restoreFocus.current = false; (invoker.current === "workshop" ? robotButton.current : computerButton.current)?.focus({ preventScroll: true });
+      restoreFocus.current = false;
+      (invoker.current ?? computerButton.current ?? heroButton.current)?.focus({ preventScroll: true });
     } else if (phase === "workshop" || phase === "software") backButton.current?.focus({ preventScroll: true });
   }, [phase]);
   useEffect(() => {
@@ -203,6 +234,21 @@ export default function HubExperience({ resumeAvailable = false }: { resumeAvail
 
   const selectExhibit = useCallback((id: ExhibitId) => { if (phase === "workshop" && !locked) { setExhibitExpanded(false); setSelectedExhibit(id); setDetailsOpen(true); } }, [phase, locked]);
   const selectSoftwareProject = useCallback((id: SoftwareProjectId) => { if (phase === "software" && !locked) { setSelectedSoftware(id); setDetailsOpen(true); } }, [phase, locked]);
+  const registerPortalButton = useCallback((id: DeskPortalId, button: HTMLButtonElement | null) => {
+    portalButtons.current[id] = button;
+    if (id === "Computer") computerButton.current = button;
+  }, []);
+  const selectSimpleDestination = useCallback((id: "Photography" | "Personal", trigger?: HTMLElement | null) => {
+    invoker.current = trigger ?? portalButtons.current[id] ?? exploreButton.current;
+    setSimpleDestination(id);
+  }, []);
+  const activatePortal = useCallback((id: DeskPortalId, trigger: HTMLButtonElement) => {
+    if (id === "Computer") openComputer(trigger);
+    else if (id === "Robotics") selectRobot(trigger);
+    else if (id === "Software") selectSoftware(trigger);
+    else if (id === "Lamp") cycleLight();
+    else selectSimpleDestination(id, trigger);
+  }, [cycleLight, openComputer, selectRobot, selectSoftware, selectSimpleDestination]);
   const softwareProject = softwareProjects.find(item => item.id === selectedSoftware);
   const selectedProject = exhibits.find(item => item.id === selectedExhibit);
   const inWorkshop = scene.world === "workshop";
@@ -211,28 +257,48 @@ export default function HubExperience({ resumeAvailable = false }: { resumeAvail
   const status = phase === "approaching" ? `Approaching the ${destination === "software" ? "monitor" : "robot"}. Back to Desk cancels the visit.` : phase === "entering" ? `Opening the ${destination === "software" ? "software workspace" : "robotics workshop"}.` : messages[phase];
   const deskAttention = phase === "desk" && !locked ? active ?? focusedPortal ?? (focused ? "Robotics" : null) : null;
   const activePortal = deskPortals.find(portal => portal.id === deskAttention);
-  return <main ref={main} className={styles.hub} data-computer-open={computerOpen} data-active-object={deskAttention ?? undefined} data-details-open={detailsOpen} data-exhibit-expanded={exhibitExpanded} data-phase={phase} data-world={scene.world} data-ready={ready && !failed} data-reduced-motion={reduced || paused} aria-label="Interactive workroom">
+  return <main ref={main} className={styles.hub} data-theme={lighting.environment} data-computer-open={computerOpen} data-active-object={deskAttention ?? undefined} data-details-open={detailsOpen} data-exhibit-expanded={exhibitExpanded} data-phase={phase} data-world={scene.world} data-ready={ready && !failed} data-reduced-motion={reduced || paused} aria-label="Interactive workroom">
     {!failed && <div className={styles.scene} aria-hidden="true"><SceneBoundary onFailure={onFailure}>
       <DeskScene view="cinematic" themeOverride={approvedComposition} active={deskAttention} reset={0} onActive={setActive} onReady={onReady} onFailure={onFailure}
-        experience={{ ...scene, lighting, onCycleLamp: cycleLight, reducedMotion: reduced || paused, locked: locked || computerOpen, onSelectComputer: openComputer, onSelectRobot: selectRobot, onSelectSoftware: selectSoftware, software: { selected: selectedSoftware, attention: softwareAttention, disabled: phase !== "software" || locked, onHover: setSoftwareAttention, onSelect: selectSoftwareProject }, exhibits: { selected: selectedExhibit, attention: hoveredExhibit ?? focusedExhibit, disabled: phase !== "workshop" || locked, onHover: setHoveredExhibit, onSelect: selectExhibit }, onCameraReady: cameraReady, onWorldReady: worldReady }} />
+        experience={{ ...scene, lighting, onCycleLamp: cycleLight, reducedMotion: reduced || paused, locked: locked || computerOpen, onSelectComputer: openComputer, onSelectRobot: selectRobot, onSelectSoftware: selectSoftware, onSelectPhotography: () => selectSimpleDestination("Photography"), onSelectPersonal: () => selectSimpleDestination("Personal"), software: { selected: selectedSoftware, attention: softwareAttention, disabled: phase !== "software" || locked, onHover: setSoftwareAttention, onSelect: selectSoftwareProject }, exhibits: { selected: selectedExhibit, attention: hoveredExhibit ?? focusedExhibit, disabled: phase !== "workshop" || locked, onHover: setHoveredExhibit, onSelect: selectExhibit }, onCameraReady: cameraReady, onWorldReady: worldReady }} />
     </SceneBoundary></div>}
     <div ref={cover} className={styles.cover} aria-hidden="true" />
     <PortfolioIdentity resumeAvailable={resumeAvailable} />
     {computerOpen && !failed && <ComputerDashboard resumeAvailable={resumeAvailable} onClose={closeComputer} onNavigate={navigateFromComputer} />}
+    {simpleDestination && <dialog
+      ref={simpleDialog}
+      className={styles.destinationDialog}
+      aria-labelledby="simple-destination-title"
+      onCancel={event => { event.preventDefault(); closeSimpleDestination(); }}
+      onKeyDown={event => { if (event.key === "Escape") event.stopPropagation(); }}
+    >
+      <div className={styles.panelHeader}>
+        <div>
+          <span className={styles.panelLocation}>{simpleDestination === "Photography" ? "Camera / gallery" : "Basketball / personal"}</span>
+          <h2 id="simple-destination-title">{simpleDestination === "Photography" ? "Through My Lens" : "Off the Clock"}</h2>
+        </div>
+        <button className={styles.panelClose} onClick={closeSimpleDestination}>Back to Workroom</button>
+      </div>
+      <div className={styles.panelBody}>
+        <p className={styles.projectSummary}>{simpleDestination === "Photography"
+          ? "A small photography gallery is in the works."
+          : "When I’m not building something, basketball is one of the ways I unplug."}</p>
+      </div>
+    </dialog>}
     <div className={`${styles.header} ${styles.sceneHeader}`} role="group" aria-label="Workroom controls">
       <div><span className={styles.signal} aria-hidden="true" /><strong>{inSoftware ? "Software workspace" : inWorkshop ? "Robotics workshop" : "The workroom"}</strong><span className={styles.location}>{inSoftware ? "Inside the monitor’s world" : inWorkshop ? "Inside the robot’s world" : "An interactive portfolio"}</span></div>
       <div className={styles.actions}>
         <LightingControls state={lighting} onEnvironment={environment => setLighting(value => ({ ...value, environment }))} onLamp={cycleLight} disabled={failed} />
-        <button onClick={() => setPaused(value => !value)} aria-pressed={paused} disabled={reduced || failed}>{reduced ? "Reduced motion on" : paused ? "Resume motion" : "Pause motion"}</button>
-        {phase !== "desk" && !failed && <button ref={backButton} className={styles.back} onClick={back} disabled={phase === "returning"}>← Back to Desk</button>}
+        <button onClick={() => setPaused(value => !value)} aria-label={paused ? "Resume motion" : "Pause motion"} aria-pressed={paused} disabled={failed}>{paused ? "Resume motion" : "Pause motion"}</button>
+        {phase !== "desk" && !failed && <button ref={backButton} className={styles.back} onClick={back} disabled={phase === "returning"}>Back to Workroom</button>}
       </div>
     </div>
     {!failed && <>
       <section className={`${styles.caption} ${inWorld ? styles.workshopCaption : styles.introduction}`} aria-label={inWorld ? "Project exhibits" : "Desk navigation"}>
-        <p className={styles.place}>{inSoftware ? "Software / development console" : inWorkshop ? "Robotics / workbench" : "Hey, I’m"}</p>
-        <h1>{inWorld ? "Choose a project." : "Marc Alexis."}</h1>
-        <p>{inSoftware ? "Three terminals, three engineering projects. Select a screen to explore the work behind it." : inWorkshop ? "Two experiments on the workbench. Select an exhibit to read its project notes." : "Computer science student at UCF, building software and robotics projects."}</p>
-        {!inWorld && <button ref={robotButton} className={styles.enter} onClick={selectRobot} disabled={!ready || phase !== "desk"} onFocus={() => { setActive(null); setFocused(true); }} onBlur={() => setFocused(false)} onPointerEnter={() => setActive("Robotics")} onPointerLeave={() => setActive(null)}>Explore robotics projects <span aria-hidden="true">↗</span></button>}
+        <p className={styles.place}>{inSoftware ? "SOFTWARE LAB" : inWorkshop ? "ROBOTICS LAB" : "SOFTWARE × ROBOTICS"}</p>
+        <h1>{inWorld ? "Choose a project." : "Hey, I’m Marc."}</h1>
+        <p>{inSoftware ? "The architecture, interfaces, and engineering decisions behind my software projects." : inWorkshop ? "Computer vision, embedded systems, and robots that move from an idea into a working prototype." : "I build software, robots, and interactive experiences."}</p>
+        {!inWorld && <button ref={heroButton} className={styles.enter} onClick={() => openComputer(heroButton.current)} disabled={!ready || phase !== "desk"} onFocus={() => { setActive(null); setFocused(true); }} onBlur={() => setFocused(false)} onPointerEnter={() => setActive("Computer")} onPointerLeave={() => setActive(null)}>Explore my work <span aria-hidden="true">↗</span></button>}
         {inWorkshop && <>
           <div className={styles.exhibitChoices} role="group" aria-label="Select a project exhibit">
             {exhibits.map(exhibit => <button key={exhibit.id} ref={element => { exhibitButtons.current[exhibit.id] = element; }} aria-label={exhibit.name} aria-pressed={selectedExhibit === exhibit.id} aria-haspopup="dialog" disabled={phase !== "workshop" || locked} onClick={() => selectExhibit(exhibit.id)} onFocus={() => setFocusedExhibit(exhibit.id)} onBlur={() => setFocusedExhibit(null)} onPointerEnter={() => setHoveredExhibit(exhibit.id)} onPointerLeave={() => setHoveredExhibit(null)}>{exhibit.name}</button>)}
@@ -240,7 +306,14 @@ export default function HubExperience({ resumeAvailable = false }: { resumeAvail
           <p className={styles.exhibitStatus} role="status" aria-live="polite">{selectedProject ? `${selectedProject.name} selected · ${selectedProject.model}.` : "Select an exhibit to open its project notes."}</p>
         </>}
       </section>
-      {!inWorld && <DeskGuidance onComputer={openComputer} computerRef={computerButton} disabled={!ready || phase !== "desk" || locked} onPreview={setActive} onFocusPreview={setFocusedPortal} />}
+      {!inWorld && <DeskGuidance
+        disabled={!ready || phase !== "desk" || locked}
+        onActivate={activatePortal}
+        registerButton={registerPortalButton}
+        registerToggle={button => { exploreButton.current = button; }}
+        onPreview={setActive}
+        onFocusPreview={setFocusedPortal}
+      />}
       {inSoftware && <div className={`${styles.caption} ${styles.workshopCaption} ${styles.softwareChoices}`}>
         <div className={styles.exhibitChoices} role="group" aria-label="Select a software project">{softwareProjects.map(project => <button key={project.id} ref={element => { softwareButtons.current[project.id] = element; }} aria-pressed={selectedSoftware === project.id} disabled={phase !== "software" || locked} onClick={() => selectSoftwareProject(project.id)} onFocus={() => setSoftwareAttention(project.id)} onBlur={() => setSoftwareAttention(null)} onPointerEnter={() => setSoftwareAttention(project.id)} onPointerLeave={() => setSoftwareAttention(null)}>{project.name}</button>)}</div>
       </div>}
@@ -250,7 +323,7 @@ export default function HubExperience({ resumeAvailable = false }: { resumeAvail
       {!ready && <div className={styles.loading} role="status">Opening the workroom…</div>}
     </>}
     {failed && <section className={styles.fallback} role="alert"><h1>The workshop is still open.</h1><p>This browser couldn’t keep the 3D room running. You can read the robotics notes or try the room again.</p><a href="/hub/software/">Read software notes</a><a href="/hub/robotics/">Read robotics notes</a><a href="/hub/">Try the 3D room again</a></section>}
-    <footer className={styles.footer}><span>{failed ? "3D unavailable · Robotics notes remain available" : phase === "desk" ? "Drag to look around · Robot: robotics · Computer: portfolio · Microchip: software · Lamp: light" : inWorld && (phase === "workshop" || phase === "software") ? detailsOpen ? "Escape closes project notes · Back to Desk returns to the room" : "Select an exhibit · Drag to look around · Escape returns to the desk" : status}</span><a href={`mailto:${profile.email}`} aria-label="Contact Marc by email">Contact</a><a href="/hub/software/">Software notes</a><a href="/hub/robotics/">Robotics notes</a><a href="/licenses/desk-compositions/ATTRIBUTION.md">Asset credits</a></footer>
+    <footer className={styles.footer}><a href={`mailto:${profile.email}`} aria-label="Contact Marc by email">Contact</a><a href="/licenses/desk-compositions/ATTRIBUTION.md">Credits</a></footer>
     <p className={styles.srOnly} role="status" aria-live="polite" aria-atomic="true">{failed ? "3D unavailable. Robotics notes and retry links are available." : ready ? status : "Loading the 3D workroom."}</p>
     <noscript><div className={styles.fallback}><h1>Robotics workshop</h1><p>The interactive room requires JavaScript. Robotics notes are available as a regular page.</p><a href="/hub/software/">Read software notes</a><a href="/hub/robotics/">Read robotics notes</a></div></noscript>
   </main>;

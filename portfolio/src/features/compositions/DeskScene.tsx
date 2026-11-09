@@ -24,6 +24,7 @@ export type CameraBridge = {
 export type HubSceneProps = {
   world: World; revision: number; reducedMotion: boolean; locked: boolean;
   onSelectComputer: () => void; onSelectRobot: () => void; onSelectSoftware: () => void;
+  onSelectPhotography: () => void; onSelectPersonal: () => void;
   software: SoftwareInteraction;
   lighting: LightingState; onCycleLamp: () => void;
   exhibits: ExhibitInteraction;
@@ -43,9 +44,12 @@ function PortalObject({ name, position, radius, active, onActive, children, onSe
     {portal && <Html center position={[0, portal.labelHeight, 0]} style={{ pointerEvents: "none" }} zIndexRange={[2, 0]}
       calculatePosition={(object, camera, size) => {
         const projected = new Vector3().setFromMatrixPosition(object.matrixWorld).project(camera);
-        return [Math.max(96, Math.min(size.width - 96, (projected.x + 1) * size.width / 2)), Math.max(44, Math.min(size.height - 44, (1 - projected.y) * size.height / 2))];
+        const horizontalOffset = portal.id === "Robotics" ? 28 : 0;
+        const x = (projected.x + 1) * size.width / 2 + horizontalOffset;
+        const y = (1 - projected.y) * size.height / 2;
+        return [Math.max(96, Math.min(size.width - 96, x)), Math.max(44, Math.min(size.height - 44, y))];
       }}>
-      <div className={portalStyles.portalLabel} data-desk-label={portal.id}><strong>{portal.title}</strong><span>{portal.description}</span></div>
+      <div className={portalStyles.portalLabel} data-desk-label={portal.id}><strong>{portal.object}</strong><span>{portal.title}</span></div>
     </Html>}
   </group>;
 }
@@ -97,8 +101,8 @@ function Workroom({ theme, active, onActive, experience }: { theme: Composition;
     <FlatPrint position={[-1.64, top + 0.01, 0.21]} size={[1.32, 1.66]} texture={textures.notes} rotation={[-Math.PI / 2, 0, -0.12]} />
 
     <PortalObject label={!!experience} name="Robotics" position={[2.25, top, -0.75]} radius={0.46} active={active} onActive={onActive} onSelect={experience?.onSelectRobot} disabled={experience ? experience.locked || experience.world !== "desk" : false}>{experience ? <group rotation={[0, 0.45, 0]}><RobotCharacter height={1.5} color={theme.robot} reacting={active === "Robotics"} reducedMotion={experience.reducedMotion} running={experience.world === "desk"} /></group> : <Asset file="/models/robot-expressive.glb" position={[0, 0, 0]} height={1.5} rotation={[0, -0.45, 0]} robot color={theme.robot} />}</PortalObject>
-    <PortalObject label={!!experience} disabled={experience ? experience.locked || experience.world !== "desk" : false} name="Personal" position={[2.82, top, 0.95]} radius={0.48} active={active} onActive={onActive}><Asset file="basketball.glb" position={[0, 0.01, 0]} height={0.88} rotation={[0.15, 0.4, 0.2]} /></PortalObject>
-    <PortalObject label={!!experience} disabled={experience ? experience.locked || experience.world !== "desk" : false} name="Photography" position={[-2.62, top, 0.73]} radius={0.62} active={active} onActive={onActive}><Asset file="camera.glb" position={[0, 0.015, 0]} height={0.62} rotation={[0, 2.7, 0]} /></PortalObject>
+    <PortalObject label={!!experience} disabled={experience ? experience.locked || experience.world !== "desk" : false} name="Personal" position={[2.82, top, 0.95]} radius={0.48} active={active} onActive={onActive} onSelect={experience?.onSelectPersonal}><Asset file="basketball.glb" position={[0, 0.01, 0]} height={0.88} rotation={[0.15, 0.4, 0.2]} /></PortalObject>
+    <PortalObject label={!!experience} disabled={experience ? experience.locked || experience.world !== "desk" : false} name="Photography" position={[-2.62, top, 0.73]} radius={0.62} active={active} onActive={onActive} onSelect={experience?.onSelectPhotography}><Asset file="camera.glb" position={[0, 0.015, 0]} height={0.62} rotation={[0, 2.7, 0]} /></PortalObject>
     <PortalObject label={!!experience} name="Software" position={[.9, top + .02, .93]} radius={.48} active={active} onActive={onActive} onSelect={experience?.onSelectSoftware} disabled={experience ? experience.locked || experience.world !== "desk" : false}><Asset file="chip.glb" position={[0, 0, 0]} width={.9} rotation={[0, -.25, 0]} /></PortalObject>
 
     {/* Inexpensive room dressing: shelf, sketch pins and work-in-progress papers, no game media. */}

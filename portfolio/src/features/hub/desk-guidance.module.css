@@ -1,33 +1,174 @@
-.guidance{margin-top:12px;max-width:230px;pointer-events:none;font-family:Arial,Helvetica,sans-serif;color:#dddccd;text-shadow:0 1px 5px #10212c}
-.previews{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
-.previews button{border:0;border-bottom:1px solid #b5c5bd66;border-radius:0;background:none;padding:0;font-size:11px!important;color:#e0e5dc;pointer-events:auto;min-height:44px}
-.previews button:hover{color:#f1d193;border-color:#f1d193}
-.guideRow{display:flex;align-items:center;gap:10px;margin-top:6px}
-.guideRow p{font-size:11px;line-height:1.55;margin:0;flex:1}
-.guideToggle{flex-shrink:0;border:0;background:none;padding:0;font-size:10px!important;text-decoration:underline;text-underline-offset:4px;pointer-events:auto;color:#eac68f!important}
-.portalLabel{width:174px;padding:9px 12px;border-left:2px solid #eac68f;border-radius:2px;background:#142e37f2;color:#f5efde;box-shadow:0 4px 20px #091e2840;font:13px/1.3 Arial,Helvetica,sans-serif;pointer-events:none;animation:labelReveal .16s ease-out}
-.portalLabel strong{display:block;font-size:13px;font-weight:500}
-.portalLabel span{display:block;font-size:11px;line-height:1.4;color:#e6d4b2;margin-top:5px}
-@keyframes labelReveal{from{opacity:0;transform:translateY(3px)}to{opacity:1;transform:none}}
-@media(max-width:760px){.guidance{position:fixed;left:20px;right:20px;bottom:76px;max-width:none;margin:0;z-index:2}.previews{gap:24px}.guideRow{max-width:350px}.guideRow p{font-size:11px}.portalLabel{width:170px}.portalLabel strong{font-size:12px}}
-@media(prefers-reduced-motion:reduce){.portalLabel{animation:none}}
-@media(max-height:540px){
-  .guidance{position:fixed;left:35px;right:auto;bottom:66px;max-width:190px;margin:0;z-index:2}
-  .guideRow p{font-size:9px;line-height:1.5}.previews{gap:10px}
+.guidance {
+  position: absolute;
+  bottom: 76px;
+  left: 32px;
+  z-index: 5;
+  display: grid;
+  justify-items: start;
+  gap: 8px;
+  pointer-events: auto;
+  font-family: var(--font-body);
 }
-@media(max-height:540px) and (max-width:760px){.guidance{left:20px;max-width:178px}}
-/* Kept outside the copy block so compact viewports can scroll naturally. */
-@media(min-width:761px) and (min-height:541px){.guidance{position:absolute;left:35px;top:calc(clamp(152px,16vh,180px) + 292px);margin:0;max-width:190px;z-index:2}}
-.guideRow p[hidden]{display:none}
-@media(max-width:370px) and (min-height:541px) and (max-height:700px){.guidance{position:absolute;top:628px;bottom:auto}}
-@media(max-height:540px){.guidance{bottom:61px}}
-@media(max-width:540px) and (max-height:700px),(min-width:541px) and (max-width:760px) and (min-height:541px) and (max-height:700px){.guidance{position:absolute;left:20px;right:20px;top:602px;bottom:auto;max-width:none}.previews{gap:24px}.guideRow p{font-size:11px;line-height:1.55}}
-@media(max-width:370px) and (max-height:700px){.guidance{top:628px}}
 
-.guidance{padding:8px 10px;border:1px solid #26354b14;border-radius:12px;background:#fffdf8e8;box-shadow:0 10px 24px #26354b16;color:#35465d;text-shadow:none}
-.previews button{border-color:#26354b42;color:#35465d}
-.previews button:hover{color:#2c48c8;border-color:#2c48c8}
-.guideRow p{color:#53647a}
-.guideToggle{color:#2c48c8!important}
-.portalLabel{border-left-color:#ff916a;border-radius:0 12px 12px 0;background:#fffdf8f5;color:#26354b;box-shadow:0 10px 28px #26354b26}
-.portalLabel span{color:#53647a}
+.guideToggle {
+  min-height: 44px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0 16px;
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: var(--shadow-warm);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.guideToggle:hover {
+  border-color: var(--accent);
+  background: var(--surface-alt);
+}
+
+.hint {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: min(390px, calc(100vw - 48px));
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 8px 12px 8px 16px;
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: var(--shadow-warm);
+}
+
+.hint p {
+  margin: 0;
+  color: var(--ink-muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.hint button {
+  min-height: 36px;
+  flex: 0 0 auto;
+  border: 0;
+  padding: 0 4px;
+  background: transparent;
+  color: var(--accent-hover);
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.directory {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 0;
+  display: grid;
+  width: min(360px, calc(100vw - 48px));
+  max-height: min(60vh, 500px);
+  gap: 4px;
+  overflow: auto;
+  overscroll-behavior: contain;
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--accent);
+  border-radius: 14px;
+  padding: 8px;
+  background: var(--surface);
+  box-shadow: var(--shadow-warm);
+}
+
+.directory button {
+  display: grid;
+  min-height: 62px;
+  grid-template-columns: 90px minmax(0, 1fr);
+  align-items: center;
+  column-gap: 8px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  padding: 8px 10px;
+  background: transparent;
+  color: var(--ink);
+  text-align: left;
+}
+
+.directory button:hover:not(:disabled),
+.directory button:focus-visible {
+  border-color: var(--border);
+  background: var(--surface-alt);
+}
+
+.directory button > span {
+  grid-row: span 2;
+  color: var(--sage);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.directory button strong {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.directory button small {
+  color: var(--ink-muted);
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.portalLabel {
+  width: max-content;
+  max-width: 160px;
+  box-sizing: border-box;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 8px;
+  padding: 7px 10px;
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: var(--shadow-warm);
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.25;
+  pointer-events: none;
+  animation: labelReveal 140ms ease-out;
+}
+
+.portalLabel strong {
+  display: block;
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.portalLabel span {
+  display: block;
+  margin-top: 2px;
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.25;
+  white-space: nowrap;
+}
+
+@keyframes labelReveal {
+  from { opacity: 0; transform: translateY(3px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 767px) {
+  .guidance {
+    bottom: 72px;
+    left: 16px;
+  }
+
+  .directory {
+    width: min(360px, calc(100vw - 32px));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portalLabel {
+    animation: none;
+  }
+}

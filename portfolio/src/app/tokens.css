@@ -1,0 +1,41 @@
+:root {
+  color-scheme: light;
+  --canvas: #F8F4EC;
+  --surface: #FFFDF8;
+  --surface-alt: #F0E5D7;
+  --ink: #26343B;
+  --ink-muted: #55636A;
+  --border: #CCBCA8;
+  --accent: #B74E33;
+  --accent-hover: #963F2B;
+  --accent-soft: #FBE7DD;
+  --sage: #3E7467;
+  --sage-soft: #DCE9DD;
+  --sun: #F3C66E;
+  --focus: #26343B;
+  --on-accent: #FFFFFF;
+  --on-ink: #FFFFFF;
+  --shadow-warm: 0 12px 30px rgba(38, 52, 59, .10);
+  --font-display: var(--font-space-grotesk), "Space Grotesk", sans-serif;
+  --font-body: var(--font-dm-sans), "DM Sans", sans-serif;
+  --font-label: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+[data-theme="night"] {
+  color-scheme: dark;
+  --canvas: #17242A;
+  --surface: #213238;
+  --surface-alt: #2B4246;
+  --ink: #F8F2E9;
+  --ink-muted: #BEC8C4;
+  --border: #50605E;
+  --accent: #FFAB79;
+  --accent-hover: #FFC69F;
+  --accent-soft: #3E3530;
+  --sage: #A9D4BF;
+  --sage-soft: #29413C;
+  --sun: #E8B96B;
+  --focus: #FFCC92;
+  --on-accent: #17242A;
+  --on-ink: #17242A;
+}

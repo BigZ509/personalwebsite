@@ -64,6 +64,7 @@ export const approvedComposition: Composition = {
   ...compositions.cinematic,
   name: "Sunlit creative studio",
   description: "A bright, warm studio for building and making.",
+  camera: [8.55, 6.8, 10.48],
   background: "#c5d3d0", wall: "#f2e7d4", sideWall: "#dfd2bb", floor: "#c5a987", edge: "#8a7560",
   wood: "#956344", rug: "#d8a27a", rugLine: "#f5d894", metal: "#536c83", paper: "#fff5df",
   accent: "#d95d35", robot: "#e5aa58",
