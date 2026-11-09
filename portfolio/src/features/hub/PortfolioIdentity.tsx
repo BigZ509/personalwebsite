@@ -1,11 +1,15 @@
 "use client";
 
 import { useRef } from "react";
+import { profile } from "./profile";
 import styles from "./identity.module.css";
 
-// Verified against the repository's origin and the user's confirmed account.
-const githubProfile = "https://github.com/BigZ509";
-const resumePath = "/resume/marc-alexis-resume.pdf";
+function ResumeActions() {
+  return <div className={styles.resumeActions}>
+    <a href={profile.resume} target="_blank" rel="noopener noreferrer">View Resume<span className={styles.srOnly}> (PDF, opens in a new tab)</span></a>
+    <a href={profile.resume} download="Marc-Alexis-Resume.pdf">Download PDF</a>
+  </div>;
+}
 
 export default function PortfolioIdentity({ resumeAvailable = false }: { resumeAvailable?: boolean }) {
   const about = useRef<HTMLDialogElement>(null);
@@ -16,8 +20,8 @@ export default function PortfolioIdentity({ resumeAvailable = false }: { resumeA
       <strong className={styles.name}>MARC ALEXIS</strong>
       <nav aria-label="Personal navigation">
         <button type="button" aria-haspopup="dialog" aria-controls="about-marc" onClick={() => about.current?.showModal()}>About</button>
-        {resumeAvailable ? <a href={resumePath} target="_blank" rel="noopener noreferrer">Resume<span className={styles.srOnly}> (view PDF in a new tab)</span></a> : <button type="button" aria-haspopup="dialog" aria-controls="marc-resume" onClick={() => resume.current?.showModal()} aria-describedby="resume-availability">Resume</button>}
-        <a href={githubProfile} target="_blank" rel="noopener noreferrer">GitHub<span className={styles.srOnly}> (opens in a new tab)</span></a>
+        <button type="button" aria-haspopup="dialog" aria-controls="marc-resume" onClick={() => resume.current?.showModal()} aria-describedby={resumeAvailable ? undefined : "resume-availability"}>Resume</button>
+        <a href={profile.github} target="_blank" rel="noopener noreferrer">GitHub<span className={styles.srOnly}> (opens in a new tab)</span></a>
       </nav>
       {!resumeAvailable && <span id="resume-availability" className={styles.srOnly}>Resume not available yet.</span>}
     </header>
@@ -26,18 +30,25 @@ export default function PortfolioIdentity({ resumeAvailable = false }: { resumeA
         control. Stop Escape before the workshop's global shortcut sees it. */}
     <dialog id="about-marc" ref={about} className={styles.dialog} aria-labelledby="about-marc-title" onKeyDown={event => { if (event.key === "Escape") event.stopPropagation(); }}>
       <div className={styles.dialogHeading}><div><span className={styles.aboutLabel}>About</span><h2 id="about-marc-title">Marc Alexis</h2></div><button type="button" onClick={() => about.current?.close()}>Close</button></div>
-      <p className={styles.aboutRole}>Computer science student.<br />Aspiring software engineer.</p>
-      <p>I build software and experiment with robotics. I’m also into photography and basketball.</p>
-      <div className={styles.dialogLinks}><a href={githubProfile} target="_blank" rel="noopener noreferrer">Find me on GitHub<span className={styles.srOnly}> (opens in a new tab)</span></a>
-        {resumeAvailable && <a href={resumePath} download="Marc-Alexis-Resume.pdf">Download resume (PDF)</a>}
+      <p className={styles.aboutRole}>Computer science student.<br />Robotics minor.</p>
+      <p>I study at the University of Central Florida and build software, computer vision, and robotics projects. I’m also into photography and basketball.</p>
+      {resumeAvailable && <ResumeActions />}
+      <div className={styles.dialogLinks}><a href={profile.github} target="_blank" rel="noopener noreferrer">Find me on GitHub<span className={styles.srOnly}> (opens in a new tab)</span></a>
+        <a href={`mailto:${profile.email}`}>{profile.email}</a>
       </div>
     </dialog>
 
     <dialog id="marc-resume" ref={resume} className={styles.dialog} aria-labelledby="resume-title" onKeyDown={event => { if (event.key === "Escape") event.stopPropagation(); }}>
       <div className={styles.dialogHeading}><h2 id="resume-title">Resume</h2><button type="button" onClick={() => resume.current?.close()}>Close</button></div>
-      <p>My resume isn’t available here yet.</p>
-      <p className={styles.context}>You can explore my projects in the robotics workshop or visit my GitHub profile.</p>
-      <a href={githubProfile} target="_blank" rel="noopener noreferrer">Visit GitHub<span className={styles.srOnly}> (opens in a new tab)</span></a>
+      {resumeAvailable ? <>
+        <p>View or download my current resume.</p>
+        <p className={styles.context}>Marc Alexis · Computer Science · Robotics minor</p>
+        <ResumeActions />
+      </> : <>
+        <p>My resume isn’t available here yet.</p>
+        <p className={styles.context}>You can explore my projects in the robotics workshop or visit my GitHub profile.</p>
+        <a href={profile.github} target="_blank" rel="noopener noreferrer">Visit GitHub<span className={styles.srOnly}> (opens in a new tab)</span></a>
+      </>}
     </dialog>
   </>;
 }

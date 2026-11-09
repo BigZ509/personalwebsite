@@ -2,39 +2,130 @@
 
 import { useEffect, useRef, useState } from "react";
 import { exhibits, type Exhibit, type ExhibitId } from "./exhibits";
+import { getProjectCaseStudy } from "../projects/projectData";
+import ProjectExhibit from "../projects/ProjectExhibit";
 import styles from "./hub.module.css";
 
-// Nonmodal: the room and the other exhibit controls remain available.
-export default function ProjectDetails({ project, onClose, onSelect }: { project: Exhibit; onClose: () => void; onSelect: (id: ExhibitId) => void }) {
+export default function ProjectDetails({
+  project,
+  expanded,
+  onExpandedChange,
+  onClose,
+  onSelect,
+}: {
+  project: Exhibit;
+  expanded: boolean;
+  onExpandedChange: (expanded: boolean) => void;
+  onClose: () => void;
+  onSelect: (id: ExhibitId) => void;
+}) {
+  const panel = useRef<HTMLDialogElement>(null);
   const close = useRef<HTMLButtonElement>(null);
-  useEffect(() => { close.current?.focus({ preventScroll: true }); }, [project.id]);
-  return <aside className={styles.projectPanel} role="dialog" aria-modal="false" aria-labelledby="project-title" aria-describedby="project-summary">
+  const compact = useRef<HTMLButtonElement>(null);
+  const expand = useRef<HTMLButtonElement>(null);
+  const wasExpanded = useRef(false);
+  const caseStudy = project.id === "guiding-hands" ? getProjectCaseStudy("guiding-hands") : undefined;
+
+  useEffect(() => {
+    const element = panel.current;
+    if (!element) return;
+    const shouldBeModal = expanded;
+    if (!element.open) {
+      if (shouldBeModal) element.showModal();
+      else element.show();
+    } else if (element.matches(":modal") !== shouldBeModal) {
+      element.close();
+      if (shouldBeModal) element.showModal();
+      else element.show();
+    }
+  }, [expanded]);
+
+  useEffect(() => {
+    if (expanded) compact.current?.focus({ preventScroll: true });
+    else if (wasExpanded.current) (expand.current ?? close.current)?.focus({ preventScroll: true });
+    else close.current?.focus({ preventScroll: true });
+    wasExpanded.current = expanded;
+  }, [expanded, project.id]);
+
+  useEffect(() => {
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key !== "Escape" || event.defaultPrevented || !panel.current?.open) return;
+      event.preventDefault();
+      if (expanded) onExpandedChange(false);
+      else onClose();
+    };
+    window.addEventListener("keydown", handleEscape);
+    return () => window.removeEventListener("keydown", handleEscape);
+  }, [expanded, onExpandedChange, onClose]);
+
+  useEffect(() => () => { if (panel.current?.open) panel.current.close(); }, []);
+
+  return <dialog
+    ref={panel}
+    className={styles.projectPanel}
+    data-expanded={expanded}
+    aria-modal={expanded}
+    aria-labelledby="project-title"
+    onCancel={(event) => {
+      event.preventDefault();
+      if (expanded) onExpandedChange(false);
+      else onClose();
+    }}
+    onKeyDown={(event) => {
+      if (event.key !== "Escape") return;
+      event.preventDefault();
+      event.stopPropagation();
+      if (expanded) onExpandedChange(false);
+      else onClose();
+    }}
+    onClick={(event) => {
+      if (event.target === event.currentTarget) {
+        if (expanded) onExpandedChange(false);
+        else onClose();
+      }
+    }}
+  >
     <div className={styles.panelHeader}>
-      <div><span className={styles.panelLocation}>Robotics / project notes</span><h2 id="project-title">{project.name}</h2></div>
-      <button ref={close} className={styles.panelClose} onClick={onClose} aria-label="Close project details">Close <span aria-hidden="true">×</span></button>
+      <div>
+        <span className={styles.panelLocation}>{expanded ? "Robotics / exhibit" : "Robotics / selected project"}</span>
+        <h2 id="project-title">{project.name}</h2>
+      </div>
+      <div className={styles.panelActions}>
+        {expanded && <button ref={compact} className={styles.panelBack} onClick={() => onExpandedChange(false)}>← Back to overview</button>}
+        <button ref={close} className={styles.panelClose} onClick={onClose} aria-label="Close project details">Close <span aria-hidden="true">×</span></button>
+      </div>
     </div>
     <nav className={styles.panelTabs} aria-label="Project details">
       {exhibits.map(item => <button key={item.id} onClick={() => onSelect(item.id)} aria-current={item.id === project.id ? "true" : undefined}>{item.name}</button>)}
     </nav>
-    <div key={project.id} className={styles.panelBody} tabIndex={0} role="region" aria-label={`${project.name} details`}>
-      <p className={styles.projectState}>{project.status}<span>{project.representation}</span></p>
-      {project.representationNote && <p className={styles.representationNote}>{project.representationNote}</p>}
-      <p id="project-summary" className={styles.projectSummary}>{project.summary}</p>
-      <section aria-label="Demo video" className={styles.projectSection}>
-        <h3>Demo video</h3>
-        {project.video ? <ProjectVideo key={project.id} video={project.video} /> : <div className={styles.missingVideo}><span aria-hidden="true">▷</span><p>No demo video provided yet.</p></div>}
-      </section>
-      <section aria-label="Source code" className={styles.projectSection}>
-        <h3>GitHub</h3>
-        {project.github ? <a className={styles.projectLink} href={project.github} target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span><span className={styles.srOnly}> (opens in a new tab)</span></a> : <p className={styles.missingContent}>Repository link not provided yet.</p>}
-      </section>
-      <section aria-label="Inspiration" className={styles.projectSection}>
-        <h3>Inspiration{project.inspirationProvisional && <span className={styles.provisional}>Provisional description</span>}</h3>
-        <p>{project.inspiration ?? "The inspiration behind this project has not been shared yet."}</p>
-      </section>
-      {project.source && <a className={styles.contentSource} href={project.source} target="_blank" rel="noopener noreferrer">Project context on GitHub<span className={styles.srOnly}> (opens in a new tab)</span></a>}
+    <div key={project.id} className={styles.panelBody} tabIndex={-1} role="region" aria-label={`${project.name} details`}>
+      {caseStudy ? (
+        <>
+          {!expanded && <button ref={expand} className={`${styles.projectLink} ${styles.projectExplore}`} onClick={() => onExpandedChange(true)}>Explore the build <span aria-hidden="true">↗</span></button>}
+          <ProjectExhibit project={caseStudy} expanded={expanded} representationNote={project.representationNote} contextSource={project.source} />
+        </>
+      ) : (
+        <>
+          <p className={styles.projectState}>{project.status}<span>{project.representation}</span></p>
+          {project.representationNote && <p className={styles.representationNote}>{project.representationNote}</p>}
+          <p className={styles.projectSummary}>{project.summary}</p>
+          <section aria-label="Demo video" className={styles.projectSection}>
+            <h3>Demo video</h3>
+            {project.video ? <ProjectVideo key={project.id} video={project.video} /> : <div className={styles.missingVideo}><span aria-hidden="true">▷</span><p>No verified demo video is available.</p></div>}
+          </section>
+          <section aria-label="Source code" className={styles.projectSection}>
+            <h3>GitHub</h3>
+            {project.github ? <a className={styles.projectLink} href={project.github} target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span><span className={styles.srOnly}> (opens in a new tab)</span></a> : <p className={styles.missingContent}>Repository link not provided yet.</p>}
+          </section>
+          <section aria-label="Inspiration" className={styles.projectSection}>
+            <h3>Inspiration{project.inspirationProvisional && <span className={styles.provisional}>Provisional description</span>}</h3>
+            <p>{project.inspiration ?? "The inspiration behind this project has not been shared yet."}</p>
+          </section>
+          {project.source && <a className={styles.contentSource} href={project.source} target="_blank" rel="noopener noreferrer">Project context on GitHub<span className={styles.srOnly}> (opens in a new tab)</span></a>}
+        </>
+      )}
     </div>
-  </aside>;
+  </dialog>;
 }
 
 function ProjectVideo({ video }: { video: NonNullable<Exhibit["video"]> }) {

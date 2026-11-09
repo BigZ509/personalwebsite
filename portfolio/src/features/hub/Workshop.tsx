@@ -1,12 +1,14 @@
 "use client";
 
-import { useEffect, type ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import { Html } from "@react-three/drei";
 import { type ThreeEvent } from "@react-three/fiber";
 import { Asset, Surface, FlatPrint, usePrintedTextures } from "../compositions/SceneAssets";
 import type { Composition, Vec3 } from "../compositions/presets";
 import { exhibits, type ExhibitId, type ExhibitInteraction } from "./exhibits";
 import GuidingHandsSetup from "./GuidingHandsSetup";
+import { InteractiveLamp } from "./SceneLighting";
+import type { LightingState } from "./lighting";
 import styles from "./hub.module.css";
 
 function Exhibit({ id, position, interaction, children }: { id: ExhibitId; position: Vec3; interaction: ExhibitInteraction; children: ReactNode }) {
@@ -14,13 +16,13 @@ function Exhibit({ id, position, interaction, children }: { id: ExhibitId; posit
   const exhibit = exhibits.find(item => item.id === id)!;
   const selected = interaction.selected === id;
   const attentive = interaction.attention === id;
-  const color = selected ? "#f1d193" : attentive ? "#fff0c6" : "#75958c";
+  const color = selected ? "#ff916a" : attentive ? "#4c6fff" : "#a8b6a8";
   const hover = (event: ThreeEvent<PointerEvent>) => { event.stopPropagation(); interaction.onHover(id); };
   return <group position={position} userData={{ exhibit: id }}
     onPointerOver={interaction.disabled ? undefined : hover}
     onPointerOut={interaction.disabled ? undefined : () => interaction.onHover(null)}
     onClick={interaction.disabled ? undefined : event => { event.stopPropagation(); if (event.delta < 4) interaction.onSelect(id); }}>
-    <Surface position={[0, 0.055, 0]} size={[2.7, 0.11, 2.1]} color="#293f3c" radius={0.06} />
+    <Surface position={[0, 0.055, 0]} size={[2.7, 0.11, 2.1]} color="#b98a61" radius={0.06} />
     <mesh position={[0, 0.12, 0]} rotation={[-Math.PI / 2, 0, 0]}>
       <ringGeometry args={[1.02, selected || attentive ? 1.055 : 1.035, 64]} />
       <meshBasicMaterial color={color} />
@@ -36,8 +38,9 @@ function Exhibit({ id, position, interaction, children }: { id: ExhibitId; posit
 }
 
 // One preserved workshop; each exhibit owns its explicit representation label.
-export default function Workshop({ theme, interaction }: { theme: Composition; interaction: ExhibitInteraction }) {
+export default function Workshop({ theme, interaction, lighting, reduced, onCycleLamp }: { theme: Composition; interaction: ExhibitInteraction; lighting: LightingState; reduced: boolean; onCycleLamp: () => void }) {
   const textures = usePrintedTextures(theme);
+  const [lampHover, setLampHover] = useState(false);
   useEffect(() => () => Object.values(textures).forEach(texture => texture.dispose()), [textures]);
   return <group userData={{ world: "workshop" }}>
     <Surface position={[0, -0.2, 0]} size={[11, 0.4, 8]} color={theme.edge} radius={0.12} />
@@ -50,9 +53,8 @@ export default function Workshop({ theme, interaction }: { theme: Composition; i
     <Exhibit id="guiding-hands" position={[1.65, 2.62, 0.05]} interaction={interaction}>
       <GuidingHandsSetup />
     </Exhibit>
-    <Asset file="lamp.glb" position={[3.3, 2.62, -1.35]} height={1.65} rotation={[0, -0.9, 0]} color={theme.metal} />
-    <pointLight position={[2.9, 4.15, -0.45]} intensity={48} color="#ffce8b" distance={8} />
-    <pointLight position={[-2.5, 3.8, 0.2]} intensity={5} color={theme.accent} distance={4} />
+    <InteractiveLamp position={[3.3, 2.62, -1.35]} height={1.65} rotation={[0, -.9, 0]} color={theme.metal} lightOffset={[-.4, 1.53, .9]} intensity={48} distance={8} mode={lighting.lamp} reduced={reduced} active={lampHover} disabled={interaction.disabled} onHover={setLampHover} onCycle={onCycleLamp} />
+    <pointLight position={[-2.5, 3.8, 0.2]} intensity={2.6} color="#ffd19e" distance={4} />
     <Asset file="books.glb" position={[-3.25, 2.61, -1.25]} width={0.65} />
     <Surface position={[0, 5.4, -2.55]} size={[7.6, 0.12, 0.18]} color={theme.wood} />
     {[-2.8, 0, 2.8].map((x, i) => <FlatPrint key={x} position={[x, 4.35, -2.58]} size={[0.72, 0.92]} texture={textures.notes} rotation={[0, 0, (i - 1) * 0.04]} />)}

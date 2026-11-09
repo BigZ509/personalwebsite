@@ -4,7 +4,8 @@ import path from "node:path";
 
 const root = path.resolve("out");
 const port = Number(process.env.PORT || 4179);
-const mime = { ".html": "text/html; charset=utf-8", ".css": "text/css", ".js": "text/javascript", ".json": "application/json", ".svg": "image/svg+xml", ".png": "image/png", ".woff2": "font/woff2", ".glb": "model/gltf-binary", ".txt": "text/plain" };
+const host = process.env.HOST || "127.0.0.1";
+const mime = { ".html": "text/html; charset=utf-8", ".css": "text/css", ".js": "text/javascript", ".json": "application/json", ".svg": "image/svg+xml", ".png": "image/png", ".pdf": "application/pdf", ".woff2": "font/woff2", ".glb": "model/gltf-binary", ".txt": "text/plain" };
 createServer(async (request, response) => {
   try {
     const pathname = decodeURIComponent(new URL(request.url, "http://localhost").pathname);
@@ -26,4 +27,4 @@ createServer(async (request, response) => {
   } catch {
     response.writeHead(400).end("Bad request");
   }
-}).listen(port, "127.0.0.1", () => console.log(`Local: http://127.0.0.1:${port}`));
+}).listen(port, host, () => console.log(`Local: http://localhost:${port}`));

@@ -91,8 +91,8 @@
   .hub[data-world=desk] .scene{top:336px;bottom:auto;height:280px}
   .hub[data-world=desk] .footer{top:738px;bottom:auto;padding-bottom:16px}
 }
-/* Portrait-sized windows need vertical space, including short phone heights. */
-@media(max-width:540px) and (max-height:700px){
+/* Give short stacked layouts room to scroll; keep wide, short landscape beside the copy. */
+@media(max-width:540px) and (max-height:700px),(min-width:541px) and (max-width:760px) and (min-height:541px) and (max-height:700px){
   .hub[data-world=desk]{overflow-y:auto;overscroll-behavior:contain}
   .hub[data-world=desk] .scene{left:0;top:310px;bottom:auto;height:280px}
   .introduction{top:136px;bottom:auto;left:20px;right:20px;max-width:none;overflow:visible;padding:0}
@@ -109,3 +109,117 @@
   .hub[data-world=desk] .footer{top:738px}
   .hub[data-world=desk] .sceneHeader>div:first-child{max-width:none}
 }
+
+/* Lighting popover stays above the nonmodal project inspector. */
+.sceneHeader{z-index:5}.sceneHeader .actions{flex-wrap:wrap;justify-content:flex-end}
+
+.projectSection ul{padding-left:18px;margin:0 0 10px;color:#d0d9d5;font-size:13px;line-height:1.7}.projectSection li+li{margin-top:8px}
+.hub[data-world=software] .workshopCaption:not(.softwareChoices){bottom:156px}
+.softwareChoices{max-width:480px}.softwareLabel{width:145px}
+@media(max-width:760px){.softwareLabel{width:88px;padding:6px 4px}.softwareLabel strong{font-size:10px}.softwareChoices{bottom:104px;max-width:none}.hub[data-world=software] .workshopCaption:not(.softwareChoices){bottom:160px}.hub[data-world=software] .exhibitChoices{gap:6px}.hub[data-world=software] .exhibitChoices button{padding:9px 10px}}
+@media(max-height:540px){.hub[data-world=software] .workshopCaption:not(.softwareChoices){bottom:230px}.softwareChoices{bottom:80px}.hub[data-world=software] .workshopCaption{max-width:185px}.hub[data-world=software] .softwareChoices .exhibitChoices{flex-direction:column}}
+@media(max-width:370px){.sceneHeader>div:first-child{display:none}.sceneHeader .actions{width:100%;justify-content:flex-end;gap:6px}.sceneHeader{top:112px}.hub[data-world=software] .exhibitChoices button{font-size:10px;padding:8px}}
+
+.hub[data-active-object] .scene canvas{cursor:pointer}.notesPage li{font-size:15px;line-height:1.8}.notesPage section{margin-top:44px}
+.projectPanel .projectExplore{width:100%;margin:14px 0 2px;font-weight:600}
+
+/* Sunlit studio surfaces keep the live room readable without dimming the scene. */
+.hub{background:#c5d3d0;color:#26354b}
+.header{color:#26354b;text-shadow:none;background:linear-gradient(#f8f4ebf2 70%,#f8f4eb00)}
+.sceneHeader{background:none}
+.signal{background:#d95d35;box-shadow:0 0 0 4px #d95d3520}
+.location{color:#53647a}
+.actions button{border:1px solid #26354b30;background:#fffdf8eF;color:#26354b;border-radius:999px;box-shadow:0 5px 16px #26354b12}
+.actions .back{background:#2c48c8;color:#fffdf8;border-color:#2c48c8}
+.actions button:hover{border-color:#4c6fff}
+.hub button:focus-visible,.hub a:focus-visible{outline-color:#2c48c8}
+.caption{color:#26354b;text-shadow:none}
+.place{color:#79452f}
+.caption h1{font-family:Georgia,"Times New Roman",serif;letter-spacing:-.8px}
+.caption>p:not(.place){color:#43546a}
+.introduction{box-sizing:border-box;width:min(270px,calc(100vw - 40px));max-width:270px;padding:18px 18px 16px;border:1px solid #26354b18;border-left:3px solid #ff916a;border-radius:0 16px 16px 0;background:#fffdf8ef;box-shadow:0 18px 44px #26354b18}
+.introduction h1{max-width:none;color:#26354b;font:400 31px/1.12 Georgia,"Times New Roman",serif;white-space:nowrap}
+.introduction .place{color:#79452f}
+.introduction>p:not(.place){color:#43546a}
+.enter{border:1px solid #2c48c8;border-radius:999px;background:#2c48c8;color:#fffdf8;box-shadow:0 8px 24px #26354b1a}
+.hub button.enter{color:#fffdf8}
+.enter:hover{background:#203aad}
+.enter span{color:#fffdf8}
+.notes{color:#26354b}
+.footer{padding:9px 14px;border:1px solid #26354b14;border-radius:999px;background:#fffdf8eF;color:#35465d;box-shadow:0 6px 20px #26354b12}
+.footer a{text-underline-offset:3px}
+.footer a:hover{color:#2c48c8}
+.robotLabel,.loading{border:1px solid #26354b18;border-left:3px solid #ff916a;border-radius:0 12px 12px 0;background:#fffdf8;color:#26354b;text-shadow:none;box-shadow:0 12px 30px #26354b20}
+.robotLabel span{color:#53647a}
+.exhibitLabel{border-color:#26354b20;border-radius:12px;background:#fffdf8f2;color:#26354b;box-shadow:0 8px 22px #26354b24}
+.exhibitLabel strong{color:#26354b}
+.exhibitLabel .exhibitPrompt{color:#43546a}
+.exhibitLabel .placeholderBadge{color:#53647a}
+.exhibitLabel[data-selected=true]{border-color:#ff916a;box-shadow:0 0 0 2px #ff916a4a,0 8px 22px #26354b24}
+.exhibitLabel[data-attention=true]{border-color:#4c6fff}
+.exhibitChoices button{border:1px solid #26354b20;border-radius:999px;background:#fffdf8;color:#26354b;box-shadow:0 6px 18px #26354b12}
+.exhibitChoices button[aria-pressed=true]{border-color:#ff916a;background:#ffe0d2;color:#26354b}
+.exhibitChoices button:hover{border-color:#4c6fff}
+.workshopCaption .exhibitStatus{color:#43546a}
+.projectPanel{position:fixed;z-index:7;top:150px;right:26px;left:auto;bottom:28px;width:clamp(340px,31vw,440px);max-width:calc(100vw - 32px);margin:0;padding:0;display:flex;flex-direction:column;overflow:hidden;border:1px solid #26354b1c;border-top:3px solid #ff916a;border-radius:18px;background:#fffdf8;color:#26354b;box-shadow:0 24px 70px #26354b26}
+.projectPanel[data-expanded=true]{top:142px;right:auto;left:24px;bottom:24px;width:min(640px,44vw);max-width:calc(100vw - 48px);border-top-color:#4c6fff;border-radius:20px}
+.projectPanel::backdrop{background:#26354b20}
+.panelHeader{align-items:center;padding:18px 20px 12px}
+.panelLocation{color:#79452f;font-size:10px;letter-spacing:.08em;text-transform:uppercase}
+.panelHeader h2{color:#26354b;font:400 27px/1.1 Georgia,"Times New Roman",serif;letter-spacing:-.03em}
+.panelActions{display:flex;align-items:center;justify-content:flex-end;gap:8px;flex-shrink:0}
+.panelClose,.panelBack{min-height:42px!important;display:inline-flex;align-items:center;justify-content:center;gap:7px;border:1px solid #26354b20;border-radius:999px;padding:0 13px;background:#fffdf8;color:#26354b;font-size:11px!important;white-space:nowrap}
+.panelClose span{font-size:18px;color:#79452f}
+.panelBack{border-color:#2c48c8;background:#2c48c8;color:#fffdf8}
+.hub button.panelBack{color:#fffdf8}
+.panelTabs{gap:8px;padding:0 20px 12px;border-bottom:1px solid #26354b18}
+.panelTabs button{min-height:40px!important;border:1px solid #26354b1c;border-radius:999px;background:#f8f4eb;color:#43546a}
+.panelTabs button[aria-current=true]{border-color:#ff916a;background:#ffe0d2;color:#26354b}
+.panelBody{min-height:0;flex:1;padding:14px 20px 24px;scrollbar-color:#b4a58f #f8f4eb}
+.panelBody p{color:#43546a}
+.panelBody .projectState{color:#79452f}
+.projectState span{border-color:#26354b20;background:#f8f4eb;color:#43546a}
+.panelBody .projectSummary{color:#35465d}
+.projectSection h3{color:#79452f}
+.projectSection>p,.projectVideo figcaption,.projectVideo figcaption strong,.panelBody .missingContent{color:#53647a}
+.missingVideo{border:1px dashed #26354b38;background:#f8f4eb}
+.missingVideo>span,.missingVideo p{color:#53647a}
+.projectLink{min-height:44px;background:#2c48c8;color:#fffdf8}
+.hub button.projectLink{color:#fffdf8}
+.projectPanel .projectExplore{position:sticky;top:0;z-index:2;margin:0 0 14px;box-shadow:0 5px 16px #26354b24}
+.projectLink:hover{background:#203aad}
+.projectVideo video{background:#26354b;border-color:#26354b20}
+.projectVideo>a,.contentSource{color:#2c48c8}
+.provisional{border-color:#26354b20;color:#79452f}
+.panelBody .representationNote{border-color:#ff916a;color:#53647a}
+.projectPanel :focus-visible{outline-color:#2c48c8;outline-offset:3px!important}
+.hub[data-details-open=true] .workshopCaption,.hub[data-details-open=true] .footer{visibility:hidden}
+.hub[data-details-open=true] .scene canvas{pointer-events:none}
+.hub[data-exhibit-expanded=true] .projectPanel{overscroll-behavior:contain}
+@media(min-width:761px) and (max-width:980px){.projectPanel[data-expanded=true]{top:138px;left:16px;right:auto;bottom:18px;width:min(480px,44vw);max-width:calc(100vw - 48px)}}
+@media(max-width:760px){
+  .header{background:#f8f4ebf2}
+  .sceneHeader{background:none}
+  .introduction{width:auto;padding:14px 15px 13px;border-radius:0 14px 14px 0}
+  .footer{border-radius:16px;padding:7px 10px}
+  .projectPanel{top:auto;left:10px;right:10px;bottom:10px;width:auto;max-width:none;max-height:74svh;border-radius:16px}
+  .projectPanel[data-expanded=true]{inset:0;width:100vw;height:100svh;max-width:none;max-height:none;border:0;border-radius:0;padding-bottom:env(safe-area-inset-bottom);box-shadow:none}
+  .panelHeader{padding:calc(env(safe-area-inset-top) + 13px) 16px 9px}
+  .panelHeader h2{font-size:22px}
+  .panelLocation{font-size:9px}
+  .panelActions{gap:5px}
+  .panelClose,.panelBack{min-height:40px!important;padding:0 10px;font-size:10px!important}
+  .panelTabs{padding:0 14px 9px}
+  .panelBody{padding:12px 16px calc(18px + env(safe-area-inset-bottom))}
+  .projectPanel[data-expanded=true] .panelBody{padding-bottom:calc(24px + env(safe-area-inset-bottom))}
+  .hub[data-details-open=true] .workshopCaption,.hub[data-details-open=true] .footer{visibility:hidden}
+}
+@media(max-width:370px){
+  .projectPanel{left:8px;right:8px;bottom:8px;max-height:calc(100svh - 126px)}
+  .panelHeader{gap:6px;padding-right:10px;padding-left:12px}
+  .panelActions{gap:4px}
+  .panelClose,.panelBack{padding:0 8px}
+  .panelTabs{padding-right:12px;padding-left:12px}
+  .panelBody{padding-right:12px;padding-left:12px}
+}
+@media(prefers-reduced-motion:reduce){.portalLabel{animation:none}}

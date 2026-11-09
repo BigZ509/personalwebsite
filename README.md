@@ -8,15 +8,15 @@ The app and persistent project memory live in [portfolio/](portfolio/). Start wi
 
 ## Run
 
-Requires Node.js22.18 or newer.
+Requires Node.js 22.18 or newer.
 
 ```bash
 cd portfolio
 npm ci
-npm run dev
+npm start
 ```
 
-Open `http://localhost:3000/` (alias `/hub/`). For static production preview, run `npm run build`, then `npm run preview` and open `http://127.0.0.1:4179/`. The current review server uses port4182.
+Open `http://localhost:3000/` (alias `/hub/`). `npm start` builds and serves the production preview on port3000, which is the stable viewing mode. Use `npm run dev` only for editing and open it through localhost; changing network addresses can block development hot reload and leave the loading screen stuck. Plain `npm run preview` serves an existing export on loopback4179.
 
 ## Review
 

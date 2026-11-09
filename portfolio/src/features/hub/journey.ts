@@ -1,6 +1,6 @@
 export type Pose = { position: [number, number, number]; target: [number, number, number] };
-export type World = 'desk' | 'workshop';
-export type Phase = 'desk' | 'approaching' | 'entering' | 'workshop' | 'returning';
+export type World = 'desk' | 'workshop' | 'software';
+export type Phase = 'desk' | 'approaching' | 'entering' | 'workshop' | 'software' | 'returning';
 export type JourneyPorts = {
   capture: () => Pose;
   move: (pose: Pose, animate: boolean, signal: AbortSignal) => Promise<void>;
@@ -15,6 +15,15 @@ export const approach: Pose = { position: [4.15, 4.85, 2.8], target: [2.25, 3.94
 export const workshopEntry: Pose = { position: [1.6, 3.7, 3.7], target: [0, 3.1, 0] };
 export const workshopOverview: Pose = { position: [6.6, 5.5, 8.1], target: [0, 2.65, -0.3] };
 
+export const destinations = {
+  workshop: { approach, entry: workshopEntry, overview: workshopOverview },
+  software: {
+    approach: { position: [.05, 4.22, 1.7], target: [.05, 4.19, -1.08] } as Pose,
+    entry: { position: [0, 3.9, 4.2], target: [0, 3.1, -.4] } as Pose,
+    overview: { position: [3.8, 5.6, 10.4], target: [0, 2.8, -.3] } as Pose,
+  },
+};
+
 // CameraControls and the DOM fade are abortable ports. Racing every await also
 // prevents stale React/world-load completions from advancing a cancelled visit.
 export function abortable<T>(promise: Promise<T>, signal: AbortSignal): Promise<T> {
@@ -28,6 +37,7 @@ export function abortable<T>(promise: Promise<T>, signal: AbortSignal): Promise<
 
 export function createJourney(ports: JourneyPorts, reduce: () => boolean) {
   let phase: Phase = 'desk';
+  let destination: keyof typeof destinations = 'workshop';
   let original: Pose | null = null;
   let current: AbortController | null = null;
   const setPhase = (value: Phase) => { phase = value; ports.phase(value); };
@@ -55,19 +65,21 @@ export function createJourney(ports: JourneyPorts, reduce: () => boolean) {
   }
   return {
     get phase() { return phase; },
-    enter() {
+    enter(next: keyof typeof destinations = 'workshop') {
       if (phase !== 'desk') return Promise.resolve();
+      destination = next;
+      const config = destinations[destination];
       original = ports.capture();
       const controller = start(); setPhase('approaching');
       return run(controller, async signal => {
-        await abortable(ports.move(approach, !reduce(), signal), signal);
+        await abortable(ports.move(config.approach, !reduce(), signal), signal);
         await abortable(ports.cover(true, !reduce(), signal), signal);
         setPhase('entering');
-        await abortable(ports.show('workshop', signal), signal);
-        await abortable(ports.move(workshopEntry, false, signal), signal);
+        await abortable(ports.show(destination, signal), signal);
+        await abortable(ports.move(config.entry, false, signal), signal);
         await abortable(ports.cover(false, !reduce(), signal), signal);
-        await abortable(ports.move(workshopOverview, !reduce(), signal), signal);
-        setPhase('workshop');
+        await abortable(ports.move(config.overview, !reduce(), signal), signal);
+        setPhase(destination);
       });
     },
     back() {
@@ -76,7 +88,7 @@ export function createJourney(ports: JourneyPorts, reduce: () => boolean) {
       return run(controller, async signal => {
         await abortable(ports.cover(true, !reduce(), signal), signal);
         await abortable(ports.show('desk', signal), signal);
-        await abortable(ports.move(approach, false, signal), signal);
+        await abortable(ports.move(destinations[destination].approach, false, signal), signal);
         await abortable(ports.cover(false, !reduce(), signal), signal);
         await abortable(ports.move(original!, !reduce(), signal), signal);
         setPhase('desk'); ports.returned();

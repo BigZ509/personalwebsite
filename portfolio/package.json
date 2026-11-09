@@ -5,6 +5,7 @@
   "type": "module",
   "engines": { "node": ">=22.18.0" },
   "scripts": {
+    "start": "npm run build && HOST=0.0.0.0 PORT=3000 npm run preview",
     "dev": "next dev --webpack",
     "build": "next build --webpack",
     "preview": "node scripts/serve.mjs",

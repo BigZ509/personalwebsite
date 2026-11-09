@@ -1,17 +1,21 @@
 "use client";
 
 import { Canvas, useFrame, useThree, type ThreeEvent } from "@react-three/fiber";
-import { CameraControls, CatmullRomLine, Html, OrthographicCamera, RoundedBox } from "@react-three/drei";
+import { useTexture, CameraControls, CatmullRomLine, Html, OrthographicCamera, RoundedBox } from "@react-three/drei";
 import { lazy, Suspense, useEffect, useRef } from "react";
-import { ACESFilmicToneMapping, PCFShadowMap, Vector3 } from "three";
+import { ACESFilmicToneMapping, PCFShadowMap, SRGBColorSpace, Vector3 } from "three";
 import { compositions, type Composition, type CompositionId, type Vec3 } from "./presets";
 import { Asset, Surface, FlatPrint, usePrintedTextures } from "./SceneAssets";
+import { SceneLighting, InteractiveLamp, DayWindow } from "../hub/SceneLighting";
+import type { LightingState } from "../hub/lighting";
 import RobotCharacter from "../hub/RobotCharacter";
 import { abortable, type Pose, type World } from "../hub/journey";
 import type { ExhibitInteraction } from "../hub/exhibits";
 import { visibleDeadline } from "../hub/visibleDeadline";
 import { deskPortals } from "../hub/deskPortals";
 import portalStyles from "../hub/desk-guidance.module.css";
+import type { SoftwareInteraction } from "../hub/softwareProjects";
+const SoftwareWorld = lazy(() => import("../hub/SoftwareWorld"));
 const Workshop = lazy(() => import("../hub/Workshop"));
 export type CameraBridge = {
   capture: () => Pose;
@@ -19,7 +23,9 @@ export type CameraBridge = {
 };
 export type HubSceneProps = {
   world: World; revision: number; reducedMotion: boolean; locked: boolean;
-  onSelectRobot: () => void;
+  onSelectComputer: () => void; onSelectRobot: () => void; onSelectSoftware: () => void;
+  software: SoftwareInteraction;
+  lighting: LightingState; onCycleLamp: () => void;
   exhibits: ExhibitInteraction;
   onCameraReady: (camera: CameraBridge) => void;
   onWorldReady: (revision: number) => void;
@@ -46,6 +52,8 @@ function PortalObject({ name, position, radius, active, onActive, children, onSe
 
 function Workroom({ theme, active, onActive, experience }: { theme: Composition; active: Props["active"]; onActive: Props["onActive"]; experience?: HubSceneProps }) {
   const textures = usePrintedTextures(theme);
+  const portfolioScreen = useTexture("/previews/portfolio-desktop.svg");
+  portfolioScreen.colorSpace = SRGBColorSpace;
   useEffect(() => () => Object.values(textures).forEach(texture => texture.dispose()), [textures]);
   return <group>
     {/* Architectural planes are original set construction. Principal props below are source GLBs. */}
@@ -59,7 +67,8 @@ function Workroom({ theme, active, onActive, experience }: { theme: Composition;
 
     {/* A window with a visible sill and slats gives the room a light source and a scale. */}
     <Surface position={[-5.94, 4.65, -0.55]} size={[0.1, 3.7, 3.4]} color={theme.wood} />
-    <mesh position={[-5.87, 4.65, -0.55]} rotation={[0, Math.PI / 2, 0]}><planeGeometry args={[3.1, 3.4]} /><meshBasicMaterial map={textures.window} color={theme.id === "cinematic" ? "#b4cddb" : "#f6f4e9"} /></mesh>
+    <mesh position={[-5.87, 4.65, -0.55]} rotation={[0, Math.PI / 2, 0]}><planeGeometry args={[3.1, 3.4]} /><meshBasicMaterial map={textures.window} color={theme.id === "cinematic" ? "#f5e5bb" : "#f6f4e9"} /></mesh>
+    {experience && <DayWindow day={experience.lighting.environment === "day"} reduced={experience.reducedMotion} />}
     <Surface position={[-5.79, 4.65, -0.55]} size={[0.12, 3.5, 0.085]} color={theme.paper} />
     <Surface position={[-5.79, 4.65, -0.55]} size={[0.12, 0.09, 3.2]} color={theme.paper} />
     <Surface position={[-5.7, 2.9, -0.55]} size={[0.4, 0.12, 3.5]} color={theme.wood} />
@@ -67,13 +76,14 @@ function Workroom({ theme, active, onActive, experience }: { theme: Composition;
 
     {/* Selected desk mesh remains provisional; its proportions are adapted for the study. */}
     <Asset file="desk.glb" position={[0, 0, -0.3]} dimensions={[8.6, 3.1, 3.8]} color={theme.wood} />
-    <Asset file="monitor.glb" position={[0.05, top, -1.35]} height={1.72} rotation={[0, Math.PI, 0]} color={theme.metal} />
+    <PortalObject label={!!experience} name="Computer" position={[.05, top, -1.35]} radius={1.1} active={active} onActive={onActive} onSelect={experience?.onSelectComputer} disabled={experience ? experience.locked || experience.world !== "desk" : false}>
+      <Asset file="monitor.glb" position={[0, 0, 0]} height={1.72} rotation={[0, Math.PI, 0]} color={theme.metal} />
+      <mesh position={[0, 1.07, .27]}><planeGeometry args={[2.38, 1.30]} /><meshStandardMaterial map={experience ? portfolioScreen : textures.screen} emissiveMap={experience ? portfolioScreen : textures.screen} emissive="#fffdf0" emissiveIntensity={active === "Computer" ? .85 : .5} roughness={.7} /></mesh>
+    </PortalObject>
     <Asset file="keyboard.glb" position={[0.02, top + 0.02, -0.05]} width={1.9} rotation={[0, -0.04, 0]} />
     <Asset file="chair.glb" position={[0.3, 0.03, 2.65]} height={2.9} rotation={[0, Math.PI - 0.2, 0]} color={theme.metal} />
-    <mesh position={[0.05, top + 1.07, -1.08]}><planeGeometry args={[2.38, 1.30]} /><meshStandardMaterial map={textures.screen} emissiveMap={textures.screen} emissive="#fffdf0" emissiveIntensity={0.5} roughness={0.7} /></mesh>
-    <pointLight position={[0.05, top + 1.2, -0.7]} color="#a7cfb4" intensity={theme.id === "cinematic" ? 3 : 0.8} distance={4} decay={2} />
-    <Asset file="lamp.glb" position={[-3.45, top, -1.15]} height={1.9} rotation={[0, 0.7, 0]} color={theme.metal} />
-    <pointLight position={[-2.95, top + 1.56, -0.8]} color="#ffd38d" intensity={theme.lampIntensity} distance={7} decay={2} />
+    <pointLight position={[0.05, top + 1.2, -0.7]} color="#ffe0ad" intensity={theme.id === "cinematic" ? 1.2 : 0.8} distance={4} decay={2} />
+    {experience ? <InteractiveLamp position={[-3.45, top, -1.15]} height={1.9} rotation={[0, .7, 0]} color={theme.metal} lightOffset={[.5, 1.56, .35]} intensity={theme.lampIntensity} distance={7} mode={experience.lighting.lamp} reduced={experience.reducedMotion} active={active === "Lamp"} disabled={experience.locked || experience.world !== "desk"} onHover={value => onActive(value ? "Lamp" : null)} onCycle={experience.onCycleLamp} evidence /> : <><Asset file="lamp.glb" position={[-3.45, top, -1.15]} height={1.9} rotation={[0, .7, 0]} color={theme.metal} /><pointLight position={[-2.95, top + 1.56, -.8]} color="#ffd38d" intensity={theme.lampIntensity} distance={7} decay={2} /></>}
     <Asset file="books.glb" position={[-2.1, top, -1.25]} width={1.25} rotation={[0, 0.15, 0]} />
     <Asset file="mug.glb" position={[-1.2, top, 0.92]} height={0.43} rotation={[0, -0.6, 0]} color={theme.id === "stylized-game" ? "#e1b35c" : "#d5d0b4"} />
     <Asset file="plant.glb" position={[-4.85, 0, 2.0]} height={2.1} />
@@ -89,7 +99,7 @@ function Workroom({ theme, active, onActive, experience }: { theme: Composition;
     <PortalObject label={!!experience} name="Robotics" position={[2.25, top, -0.75]} radius={0.46} active={active} onActive={onActive} onSelect={experience?.onSelectRobot} disabled={experience ? experience.locked || experience.world !== "desk" : false}>{experience ? <group rotation={[0, 0.45, 0]}><RobotCharacter height={1.5} color={theme.robot} reacting={active === "Robotics"} reducedMotion={experience.reducedMotion} running={experience.world === "desk"} /></group> : <Asset file="/models/robot-expressive.glb" position={[0, 0, 0]} height={1.5} rotation={[0, -0.45, 0]} robot color={theme.robot} />}</PortalObject>
     <PortalObject label={!!experience} disabled={experience ? experience.locked || experience.world !== "desk" : false} name="Personal" position={[2.82, top, 0.95]} radius={0.48} active={active} onActive={onActive}><Asset file="basketball.glb" position={[0, 0.01, 0]} height={0.88} rotation={[0.15, 0.4, 0.2]} /></PortalObject>
     <PortalObject label={!!experience} disabled={experience ? experience.locked || experience.world !== "desk" : false} name="Photography" position={[-2.62, top, 0.73]} radius={0.62} active={active} onActive={onActive}><Asset file="camera.glb" position={[0, 0.015, 0]} height={0.62} rotation={[0, 2.7, 0]} /></PortalObject>
-    <PortalObject label={!!experience} disabled={experience ? experience.locked || experience.world !== "desk" : false} name="Software" position={[0.9, top + 0.02, 0.93]} radius={0.48} active={active} onActive={onActive}><Asset file="chip.glb" position={[0, 0, 0]} width={0.9} rotation={[0, -0.25, 0]} /></PortalObject>
+    <PortalObject label={!!experience} name="Software" position={[.9, top + .02, .93]} radius={.48} active={active} onActive={onActive} onSelect={experience?.onSelectSoftware} disabled={experience ? experience.locked || experience.world !== "desk" : false}><Asset file="chip.glb" position={[0, 0, 0]} width={.9} rotation={[0, -.25, 0]} /></PortalObject>
 
     {/* Inexpensive room dressing: shelf, sketch pins and work-in-progress papers, no game media. */}
     <Surface position={[2.95, 5.65, -2.78]} size={[4.3, 0.13, 0.58]} color={theme.wood} />
@@ -113,7 +123,7 @@ function CameraRig({ theme, reset, experience }: { theme: Composition; reset: nu
   useEffect(() => {
     // The wider portrait workshop projection keeps both exhibit silhouettes and
     // nameplates in view. Desk projection and all saved/travel poses stay intact.
-    if ("fov" in camera) { camera.fov = size.width < 760 && experience?.world === "workshop" ? 76 : theme.fov + (size.width < 760 ? 15 : 0); camera.updateProjectionMatrix(); }
+    if ("fov" in camera) { camera.fov = size.width < 760 && experience?.world !== "desk" && experience ? (experience.world === "software" ? 88 : 76) : theme.fov + (size.width < 760 ? 15 : 0); camera.updateProjectionMatrix(); }
     else { camera.zoom = size.width / (size.width < 760 ? 16 : 20); camera.updateProjectionMatrix(); }
     invalidate();
   }, [theme, reset, camera, invalidate, size.width, experience?.world]);
@@ -198,6 +208,10 @@ function SceneEvidence({ view, onReady, onFailure, experience }: Pick<Props, "vi
       const point = new Vector3(2.25, 3.95, -0.75).project(camera);
       const rect = gl.domElement.getBoundingClientRect();
       data.robotScreen = JSON.stringify([rect.x + (point.x + 1) * rect.width / 2, rect.y + (1 - point.y) * rect.height / 2]);
+      const project = (point: number[]) => { const p = new Vector3(...point as Vec3).project(camera); return [rect.x + (p.x + 1) * rect.width / 2, rect.y + (1 - p.y) * rect.height / 2]; };
+      data.monitorScreen = JSON.stringify(project([.05, 4.19, -1.08]));
+      data.lampScreen = JSON.stringify(project([-3.05, 4.65, -.8]));
+      data.softwareScreens = JSON.stringify([-2.8, 0, 2.8].map(x => project([x, 3.69, -.375])));
       scene.traverseVisible(object => {
         if (object.userData.robotAnimation) data.robotAnimation = JSON.stringify(object.userData.robotAnimation);
       });
@@ -221,15 +235,18 @@ export default function DeskScene(props: Props) {
     <color attach="background" args={[theme.background]} />
     <RendererTheme theme={theme} />
     <CameraRig theme={theme} reset={props.reset} experience={props.experience} />
+    {props.experience ? <SceneLighting state={props.experience.lighting} world={props.experience.world} reduced={props.experience.reducedMotion} /> : <>
     <ambientLight color={theme.ambient} intensity={theme.ambientIntensity} />
     <hemisphereLight args={[theme.ambient, theme.floor, 0.6]} />
     <directionalLight position={[-4, 9, 3]} intensity={theme.keyIntensity} color={theme.key} castShadow shadow-mapSize={[2048, 2048]} shadow-camera-left={-9} shadow-camera-right={9} shadow-camera-top={9} shadow-camera-bottom={-9} shadow-camera-near={0.5} shadow-camera-far={30} shadow-bias={-0.0002} shadow-normalBias={0.025} shadow-radius={4} />
     <directionalLight position={[4, 7, -1]} intensity={theme.fillIntensity} color={theme.fill} />
+    </>}
     <Suspense fallback={null}>
       <group visible={!props.experience || props.experience.world === "desk"}>
         <Workroom theme={theme} active={props.active} onActive={props.onActive} experience={props.experience} />
       </group>
-      {props.experience?.world === "workshop" && <Workshop theme={theme} interaction={props.experience.exhibits} />}
+      {props.experience?.world === "workshop" && <Workshop theme={theme} interaction={props.experience.exhibits} lighting={props.experience.lighting} reduced={props.experience.reducedMotion} onCycleLamp={props.experience.onCycleLamp} />}
+      {props.experience?.world === "software" && <SoftwareWorld theme={theme} interaction={props.experience.software} lighting={props.experience.lighting} reduced={props.experience.reducedMotion} onCycleLamp={props.experience.onCycleLamp} />}
       <SceneEvidence view={props.view} onReady={props.onReady} onFailure={props.onFailure} experience={props.experience} />
     </Suspense>
   </Canvas>;

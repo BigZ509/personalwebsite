@@ -11,7 +11,7 @@ export const exhibits: readonly Exhibit[] = [
   {
     id: "gesture-rover", name: "Gesture Rover", model: "Robot stand-in", representation: "Placeholder model",
     status: "Project notes pending",
-    summary: "A robotics project in the workshop. A confirmed project summary is still to come.",
+    summary: "Project details and media have not been confirmed yet.",
     inspiration: "Exploring gesture-based control of physical robots.", inspirationProvisional: true, github: null, source: null, video: null,
   },
   {

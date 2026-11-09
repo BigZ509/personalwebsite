@@ -59,14 +59,16 @@ export const compositions: Record<CompositionId, Composition> = {
 
 export const compositionIds = Object.keys(compositions) as CompositionId[];
 
-// The approved treatment preserves Cinematic framing/night light and borrows
-// Cozy's warmer tactile surfaces. Original comparison presets stay unchanged.
+// Keep the Cinematic camera with a warm afternoon palette; comparison presets stay unchanged.
 export const approvedComposition: Composition = {
   ...compositions.cinematic,
-  name: "The workroom",
-  wood: compositions.cozy.wood, rug: compositions.cozy.rug,
-  paper: compositions.cozy.paper, rugLine: compositions.cozy.rugLine,
-  ambientIntensity: 0.8, keyIntensity: 2.1, fillIntensity: 2.3,
+  name: "Sunlit creative studio",
+  description: "A bright, warm studio for building and making.",
+  background: "#c5d3d0", wall: "#f2e7d4", sideWall: "#dfd2bb", floor: "#c5a987", edge: "#8a7560",
+  wood: "#956344", rug: "#d8a27a", rugLine: "#f5d894", metal: "#536c83", paper: "#fff5df",
+  accent: "#d95d35", robot: "#e5aa58",
+  ambient: "#eee5d3", ambientIntensity: 1.15, key: "#fff0d5", keyIntensity: 4.2,
+  fill: "#c9ddec", fillIntensity: 1.8, lampIntensity: 22, exposure: 1.16,
 };
 
 export function isCompositionId(value: string | null): value is CompositionId {

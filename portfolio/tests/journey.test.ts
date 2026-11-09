@@ -79,3 +79,25 @@ test('turning on reduced motion during approach makes all later stages immediate
   const entry = journey.enter(); reduced = true; complete(); await entry;
   assert.deepEqual(f.state().animated, [true, false, false, false, false]);
 });
+
+test('software destination restores its own approach and exact desk pose', async () => {
+  const f = setup(); const journey = createJourney(f.ports, () => true);
+  await journey.enter('software');
+  assert.equal(f.state().world, 'software'); assert.equal(journey.phase, 'software');
+  await journey.back();
+  assert.equal(f.state().world, 'desk');
+  assert.deepEqual(f.state().pose, { position: [8, 6, 10], target: [1, 3, 0] });
+  await journey.enter(); assert.equal(f.state().world, 'workshop');
+});
+
+test('cancelling software load cannot reopen it after Back', async () => {
+  const f = setup(); let loaded!: () => void;
+  const normal = f.ports.show;
+  f.ports.show = async (world, signal) => { if (world === 'software') await new Promise<void>(resolve => { loaded = resolve; }); if (!signal.aborted) await normal(world, signal); };
+  const journey = createJourney(f.ports, () => true);
+  const visit = journey.enter('software');
+  for (let n = 0; n < 10 && !loaded; n++) await new Promise(resolve => setImmediate(resolve));
+  assert.ok(loaded, "software load was requested");
+  await journey.back(); loaded(); await visit;
+  assert.equal(journey.phase, 'desk'); assert.equal(f.state().world, 'desk');
+});
